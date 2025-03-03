@@ -5,7 +5,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
 import { motion, AnimatePresence } from "framer-motion"
-import { ExternalLink, Share2 } from "lucide-react"
+import { ExternalLink, Share2, ChevronRight } from "lucide-react"
 import CountUp from "react-countup"
 
 interface StatDetails {
@@ -51,8 +51,42 @@ export function ExpandableStat({ title, value, subtitle, details, colorClass }: 
 
   return (
     <>
-      <Card className={`${colorClass} cursor-pointer hover:shadow-md transition-shadow`}
-        onClick={() => setIsOpen(true)}>
+      <Card 
+        className={`
+          ${colorClass} 
+          cursor-pointer 
+          hover:shadow-md 
+          transition-all 
+          duration-200
+          relative
+          group
+          active:scale-95
+          after:absolute
+          after:inset-0
+          after:rounded-lg
+          after:border-2
+          after:border-primary/0
+          after:transition-all
+          after:duration-200
+          hover:after:border-primary/10
+          md:after:opacity-0
+        `}
+        onClick={() => setIsOpen(true)}
+      >
+        {/* Add a subtle indicator that's more visible on mobile */}
+        <div className="absolute right-3 top-3 opacity-0 group-hover:opacity-100 transition-opacity md:hidden">
+          <motion.div
+            animate={{ scale: [1, 1.2, 1] }}
+            transition={{ 
+              duration: 1.5, 
+              repeat: Infinity, 
+              ease: "easeInOut" 
+            }}
+          >
+            <ChevronRight className="h-4 w-4 text-primary/50" />
+          </motion.div>
+        </div>
+
         <CardHeader className="pb-2">
           <CardTitle className="text-lg font-medium">{title}</CardTitle>
         </CardHeader>

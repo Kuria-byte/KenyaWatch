@@ -569,7 +569,7 @@ export default function Dashboard() {
                 <Users className="h-5 w-5 mr-2" />
                 Accountablity Center
               </CardTitle>
-              <CardDescription>Track performance metrics and approval ratings for elected officials</CardDescription>
+              <CardDescription>Track performance metrics for elected officials</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="flex items-center justify-between mb-4">
@@ -587,62 +587,75 @@ export default function Dashboard() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <LeaderCard
-                  name="Johnson Sakaja"
-                  position="Governor, Nairobi County"
-                  metrics={{
-                    projectsExecuted: 15,
-                    projectsPromised: 35,
-                    fundsAllocated: "KES 38.8B",
-                    fundsUtilized: "KES 28.2B",
-                    attendance: "78%",
-                  }}
-                  approvalRating={{
-                    performance: 3.2,
-                    integrity: 3.5,
-                    wouldVoteAgain: 3.1,
-                  }}
-                  imageUrl="/placeholder.svg?height=100&width=100"
-                />
+              <div className="relative">
+                {/* Add fade indicators for scroll */}
+                <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none md:hidden" />
+                <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none md:hidden" />
+                
+                {/* Container for horizontal scrolling */}
+                <div className="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 overflow-x-auto pb-4 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0 snap-x snap-mandatory">
+                  {/* Update LeaderCard container to support snap scrolling */}
+                  <div className="min-w-[300px] md:min-w-0 snap-center">
+                    <LeaderCard
+                      name="Johnson Sakaja"
+                      position="Governor, Nairobi County"
+                      metrics={{
+                        projectsExecuted: 15,
+                        projectsPromised: 35,
+                        fundsAllocated: "KES 38.8B",
+                        fundsUtilized: "KES 28.2B",
+                        attendance: "78%",
+                      }}
+                      approvalRating={{
+                        performance: 3.2,
+                        integrity: 3.5,
+                        wouldVoteAgain: 3.1,
+                      }}
+                      imageUrl="/placeholder.svg?height=100&width=100"
+                    />
+                  </div>
 
-                <LeaderCard
-                  name="Kimani Ichung'wah"
-                  position="MP, Kikuyu Constituency"
-                  metrics={{
-                    projectsExecuted: 12,
-                    projectsPromised: 20,
-                    fundsAllocated: "KES 137M",
-                    fundsUtilized: "KES 98M",
-                    attendance: "92%",
-                  }}
-                  approvalRating={{
-                    performance: 4.1,
-                    integrity: 3.8,
-                    wouldVoteAgain: 3.9,
-                  }}
-                  imageUrl="/placeholder.svg?height=100&width=100"
-                />
+                  <div className="min-w-[300px] md:min-w-0 snap-center">
+                    <LeaderCard
+                      name="Kimani Ichung'wah"
+                      position="MP, Kikuyu Constituency"
+                      metrics={{
+                        projectsExecuted: 12,
+                        projectsPromised: 20,
+                        fundsAllocated: "KES 137M",
+                        fundsUtilized: "KES 98M",
+                        attendance: "92%",
+                      }}
+                      approvalRating={{
+                        performance: 4.1,
+                        integrity: 3.8,
+                        wouldVoteAgain: 3.9,
+                      }}
+                      imageUrl="/placeholder.svg?height=100&width=100"
+                    />
+                  </div>
 
-                <LeaderCard
-                  name="David Kamau"
-                  position="MCA, Eastern Ward"
-                  metrics={{
-                    projectsExecuted: 5,
-                    projectsPromised: 10,
-                    fundsAllocated: "KES 50M",
-                    fundsUtilized: "KES 25M",
-                    attendance: "78%",
-                  }}
-                  approvalRating={{
-                    performance: 3.1,
-                    integrity: 3.5,
-                    wouldVoteAgain: 3.0,
-                  }}
-                  imageUrl="/placeholder.svg?height=100&width=100"
-                />
+                  <div className="min-w-[300px] md:min-w-0 snap-center">
+                    <LeaderCard
+                      name="David Kamau"
+                      position="MCA, Eastern Ward"
+                      metrics={{
+                        projectsExecuted: 5,
+                        projectsPromised: 10,
+                        fundsAllocated: "KES 50M",
+                        fundsUtilized: "KES 25M",
+                        attendance: "78%",
+                      }}
+                      approvalRating={{
+                        performance: 3.1,
+                        integrity: 3.5,
+                        wouldVoteAgain: 3.0,
+                      }}
+                      imageUrl="/placeholder.svg?height=100&width=100"
+                    />
+                  </div>
+                </div>
               </div>
-
             </CardContent>
           </Card>
         </motion.section>

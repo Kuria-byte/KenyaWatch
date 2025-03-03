@@ -55,7 +55,7 @@ export function DataVisualization() {
           <div>
             <CardTitle className="text-2xl font-semibold">Data Visualization</CardTitle>
             <CardDescription className="text-base">
-              Explore government spending, debt growth, and county performance
+              Explore government spending
             </CardDescription>
           </div>
           <div className="flex items-center gap-3">

@@ -23,7 +23,8 @@ import { ProjectTracker } from "./project-tracker"
 import { ScandalTimeline } from "./scandal-timeline"
 import { QuickStat } from "./quick-stat"
 import { AboutSection } from "./about-section";
-import { TrackRecordSection } from "./track-record-section";
+import { Card, CardContent, CardHeader, CardTitle } from "../ui/card"
+import { TrackRecordSection } from "./track-record-section"
 
 interface LeaderProfile {
   id: string
@@ -180,7 +181,87 @@ export function LeaderProfile({ leader }: { leader: LeaderProfile }) {
             <TrackRecordSection data={leader.trackRecord} />
           </TabsContent>
 
-          {/* Add other TabsContent components */}
+          {/* Scandals & Controversies */}
+          <TabsContent value="scandals" className="mt-6">
+  {leader.scandals && leader.scandals.length > 0 ? (
+    <ScandalTimeline scandals={leader.scandals} />
+  ) : (
+    <div className="text-center p-6 text-muted-foreground">
+      No scandals or controversies recorded
+    </div>
+  )}
+</TabsContent>
+
+          {/* Wealth Declaration */}
+          <TabsContent value="wealth" className="mt-6">
+            <WealthDeclaration wealth={leader.wealth} />
+          </TabsContent>
+
+          {/* Perception Tab */}
+          <TabsContent value="perception" className="mt-6">
+            <ApprovalTrend trends={leader.perception.trends} />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-lg">Endorsements</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2">
+                    {leader.perception.endorsements.map((endorsement, i) => (
+                      <li key={i} className="flex items-center gap-2">
+                        <Users className="h-4 w-4 text-green-500" />
+                        <span className="text-sm">{endorsement}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-lg">Common Criticisms</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2">
+                    {leader.perception.criticism.map((criticism, i) => (
+                      <li key={i} className="flex items-center gap-2">
+                        <AlertTriangle className="h-4 w-4 text-red-500" />
+                        <span className="text-sm">{criticism}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+          </TabsContent>
+
+          {/* Contact Information */}
+          <TabsContent value="contact" className="mt-6">
+            <Card>
+              <CardContent className="p-6 space-y-4">
+                <div className="space-y-2">
+                  <h3 className="font-medium">Office Location</h3>
+                  <p className="text-sm">{leader.contact.office}</p>
+                </div>
+                <div className="space-y-2">
+                  <h3 className="font-medium">Email</h3>
+                  <p className="text-sm">{leader.contact.email}</p>
+                </div>
+                <div className="space-y-2">
+                  <h3 className="font-medium">Upcoming Public Meetings</h3>
+                  <div className="space-y-2">
+                    {leader.contact.publicMeetings.map((meeting, i) => (
+                      <div key={i} className="text-sm">
+                        <p className="font-medium">{meeting.event}</p>
+                        <p className="text-muted-foreground">
+                          {meeting.date} at {meeting.location}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
         </Tabs>
       </div>
 
