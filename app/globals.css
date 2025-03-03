@@ -81,3 +81,20 @@
   @apply bg-muted-foreground/30 rounded-full hover:bg-muted-foreground/50 transition-colors;
 }
 
+@layer components {
+  .tabs-list {
+    @apply overflow-x-auto scrollbar-hide;
+  }
+
+  /* Custom scrollbar styling */
+  .overflow-x-auto {
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+  
+  .overflow-x-auto::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+}
+

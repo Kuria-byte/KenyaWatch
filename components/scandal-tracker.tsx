@@ -7,6 +7,8 @@ import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { School, RouteIcon as Road, Hospital, Users, Briefcase } from "lucide-react"
 import { Progress } from "@/components/ui/progress"
+import { Slider } from "@/components/ui/slider"
+import { cn } from "@/lib/utils"
 
 const scandals = [
   {
@@ -38,6 +40,16 @@ const scandals = [
     ],
   },
 ]
+
+const formatCurrency = (amount: number) => {
+  return new Intl.NumberFormat('en-KE', {
+    style: 'currency',
+    currency: 'KES',
+    maximumFractionDigits: 0,
+    notation: 'compact',
+    compactDisplay: 'short',
+  }).format(amount)
+}
 
 export function ScandalTracker() {
   const [selectedAmount, setSelectedAmount] = useState(scandals[0].amount)
@@ -139,42 +151,94 @@ export function ScandalTracker() {
           {/* Impact Calculator */}
           <Card className="p-6">
             <h3 className="font-semibold text-lg mb-4">Impact Calculator</h3>
-            <div className="space-y-4">
-              <div>
-                <label className="text-sm font-medium">Enter Amount (KES)</label>
-                <Input
-                  type="number"
-                  value={selectedAmount}
-                  onChange={(e) => setSelectedAmount(Number(e.target.value))}
-                  className="mt-1"
-                />
+            <div className="space-y-6">
+              <div className="space-y-4">
+                <label className="text-sm font-medium">Amount (KES)</label>
+                <div className="grid gap-2">
+                  <div className="relative">
+                    <Input
+                      type="text"
+                      value={formatCurrency(selectedAmount)}
+                      onChange={(e) => {
+                        // Extract numbers only from input
+                        const value = Number(e.target.value.replace(/[^0-9.-]+/g, ""))
+                        if (!isNaN(value)) {
+                          setSelectedAmount(value)
+                        }
+                      }}
+                      className="pl-12 font-mono"
+                    />
+                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground">
+                      KES
+                    </span>
+                  </div>
+                  
+                  <Slider
+                    min={1000000} // 1M
+                    max={100000000000} // 100B
+                    step={1000000} // 1M steps
+                    value={[selectedAmount]}
+                    onValueChange={([value]) => setSelectedAmount(value)}
+                    className={cn(
+                      "w-full",
+                      selectedAmount > 50000000000 ? "text-destructive" : "text-primary"
+                    )}
+                  />
+                  <div className="flex justify-between text-xs text-muted-foreground">
+                    <span>1M</span>
+                    <span>50B</span>
+                    <span>100B</span>
+                  </div>
+                </div>
               </div>
 
               <div className="grid gap-4">
                 <div className="space-y-2">
                   <div className="flex justify-between text-sm">
-                    <span>Primary Education</span>
-                    <span>
-                      {Math.round(calculateImpact(selectedAmount, "education")).toLocaleString()} children for 1 year
+                    <span className="flex items-center gap-2">
+                      <School className="h-4 w-4" />
+                      Primary Education
+                    </span>
+                    <span className="font-mono">
+                      {Math.round(calculateImpact(selectedAmount, "education")).toLocaleString()} children/year
                     </span>
                   </div>
-                  <Progress value={(calculateImpact(selectedAmount, "education") / 1000) * 100} className="h-2" />
+                  <Progress 
+                    value={(calculateImpact(selectedAmount, "education") / 1000) * 100} 
+                    className="h-2"
+                  />
                 </div>
 
                 <div className="space-y-2">
                   <div className="flex justify-between text-sm">
-                    <span>Level 4 Hospitals</span>
-                    <span>{Math.round(calculateImpact(selectedAmount, "hospitals")).toLocaleString()} facilities</span>
+                    <span className="flex items-center gap-2">
+                      <Hospital className="h-4 w-4" />
+                      Level 4 Hospitals
+                    </span>
+                    <span className="font-mono">
+                      {Math.round(calculateImpact(selectedAmount, "hospitals")).toLocaleString()} facilities
+                    </span>
                   </div>
-                  <Progress value={(calculateImpact(selectedAmount, "hospitals") / 10) * 100} className="h-2" />
+                  <Progress 
+                    value={(calculateImpact(selectedAmount, "hospitals") / 10) * 100} 
+                    className="h-2"
+                  />
                 </div>
 
                 <div className="space-y-2">
                   <div className="flex justify-between text-sm">
-                    <span>Rural Roads</span>
-                    <span>{Math.round(calculateImpact(selectedAmount, "roads")).toLocaleString()} km</span>
+                    <span className="flex items-center gap-2">
+                      <Road className="h-4 w-4" />
+                      Rural Roads
+                    </span>
+                    <span className="font-mono">
+                      {Math.round(calculateImpact(selectedAmount, "roads")).toLocaleString()} km
+                    </span>
                   </div>
-                  <Progress value={(calculateImpact(selectedAmount, "roads") / 10) * 100} className="h-2" />
+                  <Progress 
+                    value={(calculateImpact(selectedAmount, "roads") / 10) * 100} 
+                    className="h-2"
+                  />
                 </div>
               </div>
             </div>

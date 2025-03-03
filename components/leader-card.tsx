@@ -4,6 +4,8 @@ import { Star } from "lucide-react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ThumbsUp, ThumbsDown } from "lucide-react"
+import Link from "next/link"
+import { ExternalLink } from "lucide-react"
 
 interface LeaderCardProps {
   name: string
@@ -25,18 +27,29 @@ interface LeaderCardProps {
 
 export default function LeaderCard({ name, position, metrics, approvalRating, imageUrl }: LeaderCardProps) {
   const projectCompletion = (metrics.projectsExecuted / metrics.projectsPromised) * 100
+  const profileUrl = `/leader/${encodeURIComponent(name.toLowerCase().replace(/\s+/g, '-'))}`
 
   return (
     <Card>
       <CardHeader className="pb-2">
-        <div className="flex items-center gap-3">
-          <div className="relative h-12 w-12 rounded-full overflow-hidden">
-            <Image src={imageUrl || "/placeholder.svg"} alt={name} fill className="object-cover" />
-          </div>
-          <div>
-            <h3 className="font-semibold">{name}</h3>
-            <p className="text-sm text-muted-foreground">{position}</p>
-          </div>
+        <div className="flex items-center justify-between">
+          <Link 
+            href={profileUrl}
+            className="flex items-center gap-3 group hover:opacity-90 transition-opacity"
+          >
+            <div className="relative h-12 w-12 rounded-full overflow-hidden ring-2 ring-transparent group-hover:ring-primary/20 transition-all">
+              <Image 
+                src={imageUrl || "/placeholder.svg"} 
+                alt={name} 
+                fill 
+                className="object-cover" 
+              />
+            </div>
+            <div className="group-hover:text-primary transition-colors">
+              <h3 className="font-semibold">{name}</h3>
+              <p className="text-sm text-muted-foreground">{position}</p>
+            </div>
+          </Link>
         </div>
       </CardHeader>
       <CardContent className="space-y-4">

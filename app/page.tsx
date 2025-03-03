@@ -39,6 +39,13 @@ import { ThemeToggle } from "@/components/theme-toggle"
 import { BudgetVisualization } from "@/components/budget-visualization"
 import { ScandalTracker } from "@/components/scandal-tracker"
 import { AnimatedGreeting } from "@/components/animated-greeting"
+import { ErrorBoundary } from "@/components/error-boundary"
+import BudgetTreemap from "@/components/budget-treemap"
+import DebtGrowthChart from "@/components/debt-growth-chart"
+import CountyPerformanceChart from "@/components/county-performance-chart"
+import { PriceImpactTracker } from "@/components/price-impact-tracker"
+import { ExpandableStat } from "@/components/expanadable-stats"
+import { WelcomeSection } from "@/components/welcome-section"
 
 // Real Kenyan political figures data
 const leaders = [
@@ -86,21 +93,35 @@ export default function Dashboard() {
     <div className="flex min-h-screen flex-col">
       <header className="sticky top-0 z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between py-4">
-          <div className="flex items-center gap-2">
+          {/* Mobile Layout */}
+          <div className="flex w-full md:hidden items-center justify-between px-4">
             <Button
               variant="ghost"
               size="icon"
-              className="md:hidden"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
+
+            {/* Centered Logo */}
+            <div className="flex items-center gap-2 absolute left-1/2 -translate-x-1/2">
+              <WatchingEyes />
+              <span className="font-bold text-xl">KenyaWatch</span>
+            </div>
+
+            {/* Right-aligned Theme Toggle */}
+            <ThemeToggle />
+          </div>
+
+          {/* Desktop Layout - hidden on mobile */}
+          <div className="hidden md:flex items-center gap-2 pl-4">
             <div className="flex items-center gap-2">
               <WatchingEyes />
               <span className="font-bold text-xl">KenyaWatch</span>
             </div>
           </div>
 
+          {/* Desktop Navigation - hidden on mobile */}
           <nav className="hidden md:flex items-center gap-6">
             <a href="#" className="text-sm font-medium hover:text-primary">
               Dashboard
@@ -116,6 +137,7 @@ export default function Dashboard() {
             </a>
           </nav>
 
+          {/* Desktop Action Buttons - hidden on mobile */}
           <div className="hidden md:flex items-center gap-4">
             <ThemeToggle />
             <Button variant="ghost" size="icon">
@@ -172,76 +194,277 @@ export default function Dashboard() {
         </AnimatePresence>
       </header>
 
-      <main className="flex-1 container py-6 px-4 md:px-6">
-        {/* Add the greeting section */}
-        <AnimatedGreeting />
-
-        {/* Key Impact Stats */}
+      <main className="flex-1 container py-6 px-8 md:px-10"> {/* Increased horizontal padding */}
+        {/* <AnimatedGreeting /> */}
+        <WelcomeSection />
         <motion.section
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8 ml-4" 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
         >
-          <Card className="bg-red-50 dark:bg-red-950/20">
-            <CardHeader className="pb-2">
-              <CardTitle className="text-lg font-medium">Government Debt</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold">KES 10.2T</div>
-              <p className="text-sm text-muted-foreground">National Debt = KES 200K per Citizen</p>
-            </CardContent>
-          </Card>
+          <ExpandableStat
+            title="Government Debt"
+            value="KES 10.2T"
+            subtitle="National Debt = KES 200K per Citizen"
+            colorClass="bg-red-50 dark:bg-red-950/20"
+            details={{
+              internal: {
+                amount: "KES 4.1T",
+                breakdown: [
+                  { category: "Treasury Bonds", amount: "KES 2.8T" },
+                  { category: "Treasury Bills", amount: "KES 1.3T" },
+                ]
+              },
+              external: {
+                amount: "KES 6.1T",
+                breakdown: [
+                  { 
+                    country: "China", 
+                    amount: "KES 1.4T",
+                    terms: "3.5% interest rate, 15-year maturity" 
+                  },
+                  { 
+                    country: "World Bank", 
+                    amount: "KES 1.2T",
+                    terms: "2.8% interest rate, 20-year maturity" 
+                  },
+                  // Add more lenders...
+                ]
+              },
+              history: [
+                {
+                  period: "2013-2022",
+                  leader: "Uhuru Kenyatta",
+                  amountAdded: "KES 7.2T",
+                  keyProjects: ["SGR", "Expressway", "Laptop Project"]
+                },
+                {
+                  period: "2022-2025",
+                  leader: "William Ruto",
+                  amountAdded: "KES 2.1T",
+                  keyProjects: ["Affordable Housing", "Hustler Fund"]
+                }
+              ],
+              paymentStatus: {
+                paid: "KES 2.1T",
+                remaining: "KES 8.1T",
+                nextPayment: "KES 800B (June 2025)"
+              },
+              impact: [
+                "Each Kenyan owes KES 200,000 in public debt",
+                "50% of tax revenue goes to debt repayment",
+                "Reduced funding for essential services",
+                "Higher taxes to service debt"
+              ],
+              sources: [
+                { title: "CBK Report 2024", url: "https://www.centralbank.go.ke" },
+                { title: "Treasury Portal", url: "https://www.treasury.go.ke" }
+              ]
+            }}
+          />
 
-          <Card className="bg-amber-50 dark:bg-amber-950/20">
-            <CardHeader className="pb-2">
-              <CardTitle className="text-lg font-medium">Unemployment</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold">34%</div>
-              <p className="text-sm text-muted-foreground">Youth Unemployment (15–34 yrs)</p>
-            </CardContent>
-          </Card>
+          {/* Annual Budget Stat */}
+          <ExpandableStat
+            title="Annual Budget"
+            value="KES 3.9T"
+            subtitle="2024/25 Financial Year"
+            colorClass="bg-blue-50 dark:bg-blue-950/20"
+            details={{
+              internal: {
+                amount: "KES 3.9T",
+                breakdown: [
+                  { category: "Recurrent Expenditure", amount: "KES 2.3T" },
+                  { category: "Development", amount: "KES 1.1T" },
+                  { category: "County Allocation", amount: "KES 385B" },
+                ]
+              },
+              history: [
+                {
+                  period: "2023-2024",
+                  leader: "William Ruto",
+                  amountAdded: "KES 300B",
+                  keyProjects: ["Housing Fund", "Universal Healthcare"]
+                }
+              ],
+              paymentStatus: {
+                paid: "KES 1.8T",
+                remaining: "KES 2.1T",
+                nextPayment: "KES 350B (July 2024)"
+              },
+              impact: [
+                "Development budget reduced by 15%",
+                "Increased taxation to fund budget",
+                "Focus on Bottom-up economic model"
+              ],
+              sources: [
+                { title: "Treasury Budget", url: "https://treasury.go.ke" },
+                { title: "Parliamentary Reports", url: "#" }
+              ]
+            }}
+          />
 
-          <Card className="bg-blue-50 dark:bg-blue-950/20">
-            <CardHeader className="pb-2">
-              <CardTitle className="text-lg font-medium">Annual Budget</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold">KES 4.2T</div>
-              <p className="text-sm text-muted-foreground">2024 Budget | 30% Allocated to Debt Repayment</p>
-            </CardContent>
-          </Card>
+          {/* Unemployment Stat */}
+          <ExpandableStat
+            title="Unemployment Rate"
+            value="12.3%"
+            subtitle="5.3M Kenyans Unemployed"
+            colorClass="bg-yellow-50 dark:bg-yellow-950/20"
+            details={{
+              internal: {
+                amount: "5.3M",
+                breakdown: [
+                  { category: "Youth (18-35)", amount: "3.2M" },
+                  { category: "Graduate Level", amount: "1.1M" },
+                  { category: "Skilled Labor", amount: "1M" }
+                ]
+              },
+              history: [
+                {
+                  period: "2022-2025",
+                  leader: "William Ruto",
+                  amountAdded: "Created 2.1M jobs",
+                  keyProjects: ["Hustler Fund", "Digital Jobs"]
+                }
+              ],
+              paymentStatus: {
+                paid: "KES 50B",
+                remaining: "KES 150B",
+                nextPayment: "KES 30B (Youth Fund)"
+              },
+              impact: [
+                "1 in 3 youth unemployed",
+                "Rising informal sector",
+                "Brain drain to foreign countries"
+              ],
+              sources: [
+                { title: "KNBS Report", url: "https://knbs.go.ke" },
+                { title: "World Bank Data", url: "#" }
+              ]
+            }}
+          />
 
-          <Card className="bg-orange-50 dark:bg-orange-950/20">
-            <CardHeader className="pb-2">
-              <CardTitle className="text-lg font-medium">Inflation</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold">9.1%</div>
-              <p className="text-sm text-muted-foreground">Food Prices Up 15%</p>
-            </CardContent>
-          </Card>
+          {/* Inflation Rate Stat */}
+          <ExpandableStat
+            title="Inflation Rate"
+            value="7.2%"
+            subtitle="Above CBK Target of 5%"
+            colorClass="bg-red-50 dark:bg-red-950/20"
+            details={{
+              internal: {
+                amount: "7.2%",
+                breakdown: [
+                  { category: "Food & Beverages", amount: "9.4%" },
+                  { category: "Transport", amount: "8.1%" },
+                  { category: "Housing & Utilities", amount: "6.3%" }
+                ]
+              },
+              history: [
+                {
+                  period: "2022-2025",
+                  leader: "William Ruto",
+                  amountAdded: "+2.1%",
+                  keyProjects: ["Price Control Measures", "Fuel Subsidies"]
+                }
+              ],
+              paymentStatus: {
+                paid: "N/A",
+                remaining: "N/A",
+                nextPayment: "Monthly CBK Review"
+              },
+              impact: [
+                "Rising cost of basic goods",
+                "Reduced purchasing power",
+                "Increased poverty levels"
+              ],
+              sources: [
+                { title: "CBK Statistics", url: "https://centralbank.go.ke" },
+                { title: "KNBS Price Index", url: "#" }
+              ]
+            }}
+          />
 
-          <Card className="bg-purple-50 dark:bg-purple-950/20">
-            <CardHeader className="pb-2">
-              <CardTitle className="text-lg font-medium">Corruption Losses</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold">KES 1.2B</div>
-              <p className="text-sm text-muted-foreground">Lost to Scandals in 2024</p>
-            </CardContent>
-          </Card>
+          {/* Corruption Losses Stat */}
+          <ExpandableStat
+            title="Corruption Losses"
+            value="KES 0.8T"
+            subtitle="Annual Public Fund Loss"
+            colorClass="bg-purple-50 dark:bg-purple-950/20"
+            details={{
+              internal: {
+                amount: "KES 800B",
+                breakdown: [
+                  { category: "Public Procurement", amount: "KES 420B" },
+                  { category: "Ghost Workers", amount: "KES 180B" },
+                  { category: "Project Inflation", amount: "KES 200B" }
+                ]
+              },
+              history: [
+                {
+                  period: "2022-2025",
+                  leader: "William Ruto",
+                  amountAdded: "KES 300B recovered",
+                  keyProjects: ["Lifestyle Audits", "Digital Procurement"]
+                }
+              ],
+              paymentStatus: {
+                paid: "KES 50B recovered",
+                remaining: "KES 750B pending",
+                nextPayment: "Ongoing investigations"
+              },
+              impact: [
+                "30% of annual budget lost",
+                "Reduced service delivery",
+                "Increased public debt"
+              ],
+              sources: [
+                { title: "EACC Reports", url: "https://eacc.go.ke" },
+                { title: "Auditor General", url: "#" }
+              ]
+            }}
+          />
 
-          <Card className="bg-green-50 dark:bg-green-950/20">
-            <CardHeader className="pb-2">
-              <CardTitle className="text-lg font-medium">Poverty Rate</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold">36%</div>
-              <p className="text-sm text-muted-foreground">Live Below KES 200/day</p>
-            </CardContent>
-          </Card>
+          {/* Poverty Rate Stat */}
+          <ExpandableStat
+            title="Poverty Rate"
+            value="32.1%"
+            subtitle="15.9M Living Below Poverty Line"
+            colorClass="bg-orange-50 dark:bg-orange-950/20"
+            details={{
+              internal: {
+                amount: "15.9M",
+                breakdown: [
+                  { category: "Rural Areas", amount: "10.2M" },
+                  { category: "Urban Areas", amount: "4.1M" },
+                  { category: "Extreme Poverty", amount: "1.6M" }
+                ]
+              },
+              history: [
+                {
+                  period: "2022-2025",
+                  leader: "William Ruto",
+                  amountAdded: "-2% reduction",
+                  keyProjects: ["Social Protection", "Food Security"]
+                }
+              ],
+              paymentStatus: {
+                paid: "KES 120B in aid",
+                remaining: "Target: 25% by 2027",
+                nextPayment: "Monthly cash transfers"
+              },
+              impact: [
+                "1 in 3 Kenyans in poverty",
+                "Limited access to basic needs",
+                "Increased inequality"
+              ],
+              sources: [
+                { title: "World Bank Data", url: "#" },
+                { title: "KNBS Survey", url: "https://knbs.go.ke" }
+              ]
+            }}
+          />
+          
+          {/* Add similar ExpandableStat components for other metrics... */}
         </motion.section>
 
         {/* Data Visualization Panel */}
@@ -254,90 +477,84 @@ export default function Dashboard() {
           <Card>
             <CardHeader>
               <div className="flex items-center justify-between">
-                <CardTitle>Budget Allocation</CardTitle>
+                <CardTitle>Data Visualization</CardTitle>
                 <div className="flex items-center gap-2">
                   <Button variant="outline" size="sm">
                     <Filter className="h-4 w-4 mr-2" />
                     Filter
                   </Button>
-                  <select className="px-2 py-1 border rounded-md text-sm">
+                  <select  aria-label="Select year" className="px-2 py-1 border rounded-md text-sm">
                     <option>2024</option>
                     <option>2023</option>
                     <option>2022</option>
+                    <option>2021</option>
+                    <option>2020</option>
                   </select>
                 </div>
               </div>
-              <CardDescription>Explore government spending across different sectors</CardDescription>
+              <CardDescription>Explore government spending, debt growth, and county performance</CardDescription>
             </CardHeader>
             <CardContent>
-              <BudgetVisualization />
+              <Tabs defaultValue="budget" className="w-full">
+                <div className="overflow-x-auto pb-2">
+                  <TabsList className="mb-4 inline-flex min-w-full sm:w-auto">
+                    <TabsTrigger 
+                      value="budget" 
+                      className="flex-shrink-0 px-4 py-2"
+                    >
+                      Budget Allocation
+                    </TabsTrigger>
+                    <TabsTrigger 
+                      value="debt" 
+                      className="flex-shrink-0 px-4 py-2"
+                    >
+                      Debt Growth
+                    </TabsTrigger>
+                    <TabsTrigger 
+                      value="counties" 
+                      className="flex-shrink-0 px-4 py-2"
+                    >
+                      County Performance
+                    </TabsTrigger>
+                  </TabsList>
+                </div>
+                
+                <TabsContent value="budget" className="h-[400px]">
+                  <ErrorBoundary>
+                    <BudgetTreemap />
+                  </ErrorBoundary>
+                </TabsContent>
+                <TabsContent value="debt" className="h-[400px]">
+                  <ErrorBoundary>
+                    <DebtGrowthChart />
+                  </ErrorBoundary>
+                </TabsContent>
+                <TabsContent value="counties" className="h-[400px]">
+                  <ErrorBoundary>
+                    <CountyPerformanceChart />
+                  </ErrorBoundary>
+                </TabsContent>
+              </Tabs>
             </CardContent>
           </Card>
         </motion.section>
 
-        {/* Corruption Impact CTA */}
         <motion.section
           className="mb-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
         >
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center">
-                <AlertTriangle className="h-5 w-5 text-destructive mr-2" />
-                Scandal Spotlight
-              </CardTitle>
-              <CardDescription>See the real impact of corruption on public services</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-4">
-                  <h3 className="font-semibold text-lg">KES 1B NHIF Scandal (2023)</h3>
-                  <p className="text-muted-foreground">
-                    Could Have Built 10 Level 4 Hospitals or Paid 5,000 Doctors for 6 Months
-                  </p>
-                  <div className="space-y-2">
-                    <div className="flex justify-between text-sm">
-                      <span>Funds Lost</span>
-                      <span>KES 1B</span>
-                    </div>
-                    <Progress value={100} className="h-2 bg-red-200" />
-                    <div className="flex justify-between text-sm">
-                      <span>Potential Impact</span>
-                      <span>10 Hospitals</span>
-                    </div>
-                    <Progress value={0} className="h-2 bg-green-200" />
-                  </div>
-                </div>
-
-                <div className="space-y-4">
-                  <h3 className="font-semibold text-lg">KES 500M Road Scandal</h3>
-                  <p className="text-muted-foreground">Equivalent to 200km of Paved Roads in Rural Areas</p>
-                  <div className="space-y-2">
-                    <div className="flex justify-between text-sm">
-                      <span>Funds Lost</span>
-                      <span>KES 500M</span>
-                    </div>
-                    <Progress value={100} className="h-2 bg-red-200" />
-                    <div className="flex justify-between text-sm">
-                      <span>Potential Impact</span>
-                      <span>200km Roads</span>
-                    </div>
-                    <Progress value={0} className="h-2 bg-green-200" />
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-6 flex justify-center">
-                <Button className="gap-2">
-                  <Flag className="h-4 w-4" />
-                  Report Fraud
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
+          <PriceImpactTracker />
         </motion.section>
+
+        {/* Corruption Impact CTA
+
+
+
+      
+
+
 
         {/* Hold Leaders Accountable */}
         <motion.section
@@ -350,7 +567,7 @@ export default function Dashboard() {
             <CardHeader>
               <CardTitle className="flex items-center">
                 <Users className="h-5 w-5 mr-2" />
-                Hold Leaders Accountable
+                Accountablity Center
               </CardTitle>
               <CardDescription>Track performance metrics and approval ratings for elected officials</CardDescription>
             </CardHeader>
@@ -426,12 +643,6 @@ export default function Dashboard() {
                 />
               </div>
 
-              <div className="mt-6 flex justify-center">
-                <Button variant="destructive" className="gap-2">
-                  <FileText className="h-4 w-4" />
-                  Impeach Now
-                </Button>
-              </div>
             </CardContent>
           </Card>
         </motion.section>
@@ -443,36 +654,7 @@ export default function Dashboard() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.0 }}
         >
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center">
-                <AlertTriangle className="h-5 w-5 text-amber-500 mr-2" />
-                Citizen Alerts
-              </CardTitle>
-              <CardDescription>Current issues requiring immediate public attention</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
-                <CitizenAlert
-                  title="Lecturers Strike: Day 6"
-                  description="2M Students Affected. Share to #SaveEducation."
-                  severity="high"
-                />
-
-                <CitizenAlert
-                  title="Nairobi County Halts Garbage Collection"
-                  description="Demand Action from County Officials!"
-                  severity="medium"
-                />
-
-                <CitizenAlert
-                  title="Water Shortage in Eastern Counties"
-                  description="Affecting 500,000 residents. Share to raise awareness."
-                  severity="high"
-                />
-              </div>
-            </CardContent>
-          </Card>
+ 
 
           <Card>
             <CardHeader>
@@ -517,6 +699,37 @@ export default function Dashboard() {
               </Tabs>
             </CardContent>
           </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center">
+                <AlertTriangle className="h-5 w-5 text-amber-500 mr-2" />
+                Citizen Alerts
+              </CardTitle>
+              <CardDescription>Current issues requiring immediate public attention</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                <CitizenAlert
+                  title="Lecturers Strike: Day 6"
+                  description="2M Students Affected. Share to #SaveEducation."
+                  severity="high"
+                />
+
+                <CitizenAlert
+                  title="Nairobi County Halts Garbage Collection"
+                  description="Demand Action from County Officials!"
+                  severity="medium"
+                />
+
+                <CitizenAlert
+                  title="Water Shortage in Eastern Counties"
+                  description="Affecting 500,000 residents. Share to raise awareness."
+                  severity="high"
+                />
+              </div>
+            </CardContent>
+          </Card>
         </motion.section>
 
         {/* Add Scandal Tracker at the bottom */}
@@ -533,7 +746,7 @@ export default function Dashboard() {
       <footer className="border-t py-6 md:py-0">
         <div className="container flex flex-col md:flex-row items-center justify-between gap-4 md:h-16 px-4 md:px-6">
           <div className="flex items-center gap-2">
-            <KenyaFlag />
+         
             <p className="text-sm text-muted-foreground flex items-center gap-1">
               Built with
               <motion.div

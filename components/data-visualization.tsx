@@ -63,7 +63,7 @@ export function DataVisualization() {
               <Filter className="h-4 w-4 mr-2" />
               Filter
             </Button>
-            <select className="h-9 px-3 py-1 rounded-md border text-sm bg-background">
+            <select aria-label="Select year" className="h-9 px-3 py-1 rounded-md border text-sm bg-background">
               <option>2024</option>
               <option>2023</option>
               <option>2022</option>
