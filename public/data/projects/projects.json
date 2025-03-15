@@ -1,0 +1,650 @@
+[
+  {
+    "id": "p001",
+    "name": "Nairobi Expressway",
+    "description": "A 27km elevated highway connecting Jomo Kenyatta International Airport to Nairobi's Westlands area, designed to ease traffic congestion in Kenya's capital city.",
+    "location": {
+      "county": "Nairobi",
+      "constituency": "Multiple",
+      "coordinates": {
+        "latitude": -1.319167,
+        "longitude": 36.888333
+      }
+    },
+    "category": "Infrastructure",
+    "status": "Completed",
+    "budget": {
+      "allocated": 65000000000,
+      "spent": 67500000000,
+      "efficiency": 96
+    },
+    "timeline": {
+      "plannedStart": "2020-10-15",
+      "plannedEnd": "2022-04-30",
+      "actualStart": "2020-10-16",
+      "actualEnd": "2022-05-14",
+      "milestones": [
+        {
+          "id": "m001",
+          "title": "Design Approval",
+          "description": "Final design approval by KENHA",
+          "plannedDate": "2020-09-30",
+          "actualDate": "2020-10-05",
+          "status": "Completed"
+        },
+        {
+          "id": "m002",
+          "title": "Construction Start",
+          "description": "Breaking ground ceremony",
+          "plannedDate": "2020-10-15",
+          "actualDate": "2020-10-16",
+          "status": "Completed"
+        },
+        {
+          "id": "m003",
+          "title": "50% Completion",
+          "description": "Half of the expressway completed",
+          "plannedDate": "2021-07-15",
+          "actualDate": "2021-08-10",
+          "status": "Completed"
+        },
+        {
+          "id": "m004",
+          "title": "Completion",
+          "description": "Construction completed",
+          "plannedDate": "2022-04-30",
+          "actualDate": "2022-05-14",
+          "status": "Completed"
+        }
+      ],
+      "completionPercentage": 100
+    },
+    "impact": {
+      "beneficiaries": 1500000,
+      "jobsCreated": 6000,
+      "economicImpact": 3500000000,
+      "sdgGoals": ["SDG 9", "SDG 11"]
+    },
+    "media": {
+      "images": [
+        {
+          "id": "img001",
+          "url": "/images/projects/nairobi-expressway-1.jpg",
+          "caption": "Aerial view of Nairobi Expressway",
+          "date": "2022-05-01",
+          "source": "Official"
+        },
+        {
+          "id": "img002",
+          "url": "/images/projects/nairobi-expressway-2.jpg",
+          "caption": "Expressway toll station",
+          "date": "2022-05-10",
+          "source": "Official"
+        }
+      ],
+      "documents": [
+        {
+          "id": "doc001",
+          "title": "Environmental Impact Assessment",
+          "url": "/documents/nairobi-expressway-eia.pdf",
+          "type": "Report",
+          "uploadDate": "2020-08-15"
+        }
+      ]
+    },
+    "citizenReports": [
+      {
+        "id": "cr001",
+        "projectId": "p001",
+        "userId": "u1234",
+        "username": "James Kamau",
+        "timestamp": "2021-06-10T09:15:00Z",
+        "status": "WorkInProgress",
+        "description": "Construction ongoing at Westlands section. Many workers on site.",
+        "mediaUrls": ["/images/citizen-reports/expressway-report1.jpg"],
+        "coordinates": {
+          "latitude": -1.267941,
+          "longitude": 36.813095
+        },
+        "verified": true,
+        "rating": {
+          "progress": 4,
+          "quality": 4,
+          "impact": 5
+        }
+      },
+      {
+        "id": "cr002",
+        "projectId": "p001",
+        "userId": "u5678",
+        "username": "Sarah Odhiambo",
+        "timestamp": "2022-04-20T14:30:00Z",
+        "status": "Completed",
+        "description": "The expressway looks complete at JKIA section. Toll booths are installed.",
+        "mediaUrls": ["/images/citizen-reports/expressway-report2.jpg"],
+        "coordinates": {
+          "latitude": -1.318639,
+          "longitude": 36.927727
+        },
+        "verified": true,
+        "rating": {
+          "progress": 5,
+          "quality": 4,
+          "impact": 5
+        }
+      }
+    ],
+    "responsibleParties": {
+      "implementingAgency": "Kenya National Highways Authority (KeNHA)",
+      "contractors": ["China Road and Bridge Corporation (CRBC)"],
+      "officials": [
+        {
+          "id": "o001",
+          "name": "Eng. Peter Mundinia",
+          "position": "Former Director General, KeNHA",
+          "contactEmail": "info@kenha.co.ke"
+        }
+      ]
+    }
+  },
+  {
+    "id": "p002",
+    "name": "Dongo Kundu Bypass",
+    "description": "A 17.5km bypass connecting Mombasa Island to the South Coast, reducing travel time and congestion at the Likoni Ferry.",
+    "location": {
+      "county": "Mombasa",
+      "constituency": "Likoni",
+      "coordinates": {
+        "latitude": -4.0435,
+        "longitude": 39.6682
+      }
+    },
+    "category": "Infrastructure",
+    "status": "InProgress",
+    "budget": {
+      "allocated": 25000000000,
+      "spent": 15000000000,
+      "efficiency": 85
+    },
+    "timeline": {
+      "plannedStart": "2018-01-15",
+      "plannedEnd": "2025-12-31",
+      "actualStart": "2018-03-10",
+      "milestones": [
+        {
+          "id": "m001",
+          "title": "Phase 1 Completion",
+          "description": "Completion of Miritini to Kipevu section",
+          "plannedDate": "2019-06-30",
+          "actualDate": "2019-07-15",
+          "status": "Completed"
+        },
+        {
+          "id": "m002",
+          "title": "Phase 2 Start",
+          "description": "Start of Mwache to Mteza section",
+          "plannedDate": "2020-01-15",
+          "actualDate": "2020-02-28",
+          "status": "Completed"
+        },
+        {
+          "id": "m003",
+          "title": "Phase 3 Start",
+          "description": "Start of Mteza to Kibundani section",
+          "plannedDate": "2022-06-30",
+          "actualDate": "2022-08-15",
+          "status": "Completed"
+        }
+      ],
+      "completionPercentage": 65
+    },
+    "impact": {
+      "beneficiaries": 700000,
+      "jobsCreated": 3000,
+      "economicImpact": 1500000000,
+      "sdgGoals": ["SDG 9", "SDG 11"]
+    },
+    "media": {
+      "images": [
+        {
+          "id": "img001",
+          "url": "/images/projects/dongo-kundu-1.jpg",
+          "caption": "Dongo Kundu Bypass construction",
+          "date": "2022-03-15",
+          "source": "Official"
+        }
+      ]
+    },
+    "citizenReports": [
+      {
+        "id": "cr001",
+        "projectId": "p002",
+        "userId": "u3456",
+        "username": "Ali Hassan",
+        "timestamp": "2022-02-10T10:45:00Z",
+        "status": "WorkInProgress",
+        "description": "Construction ongoing at Mwache area. Good progress visible.",
+        "mediaUrls": ["/images/citizen-reports/dongo-kundu-report1.jpg"],
+        "coordinates": {
+          "latitude": -4.0435,
+          "longitude": 39.6682
+        },
+        "verified": true,
+        "rating": {
+          "progress": 4,
+          "quality": 3,
+          "impact": 5
+        }
+      }
+    ],
+    "responsibleParties": {
+      "implementingAgency": "Kenya National Highways Authority (KeNHA)",
+      "contractors": ["China Civil Engineering Construction Corporation"],
+      "officials": [
+        {
+          "id": "o001",
+          "name": "Eng. Kung'u Ndung'u",
+          "position": "Director General, KeNHA",
+          "contactEmail": "info@kenha.co.ke"
+        }
+      ]
+    }
+  },
+  {
+    "id": "p003",
+    "name": "Thwake Multipurpose Dam",
+    "description": "A major dam project in Makueni and Kitui counties providing water for domestic use, irrigation, and hydroelectric power generation.",
+    "location": {
+      "county": "Makueni",
+      "constituency": "Kibwezi East",
+      "coordinates": {
+        "latitude": -1.8875,
+        "longitude": 37.8942
+      }
+    },
+    "category": "Water",
+    "status": "InProgress",
+    "budget": {
+      "allocated": 81900000000,
+      "spent": 42000000000,
+      "efficiency": 78
+    },
+    "timeline": {
+      "plannedStart": "2018-11-01",
+      "plannedEnd": "2025-12-31",
+      "actualStart": "2018-12-15",
+      "milestones": [
+        {
+          "id": "m001",
+          "title": "Dam Foundation",
+          "description": "Completion of dam foundation",
+          "plannedDate": "2020-06-30",
+          "actualDate": "2020-09-15",
+          "status": "Completed"
+        },
+        {
+          "id": "m002",
+          "title": "50% Dam Wall",
+          "description": "Half of dam wall completed",
+          "plannedDate": "2022-06-30",
+          "actualDate": "2022-08-10",
+          "status": "Completed"
+        }
+      ],
+      "completionPercentage": 55
+    },
+    "impact": {
+      "beneficiaries": 1200000,
+      "jobsCreated": 3500,
+      "economicImpact": 5000000000,
+      "sdgGoals": ["SDG 6", "SDG 7", "SDG 13"]
+    },
+    "media": {
+      "images": [
+        {
+          "id": "img001",
+          "url": "/images/projects/thwake-dam-1.jpg",
+          "caption": "Thwake Dam construction site",
+          "date": "2022-05-20",
+          "source": "Official"
+        }
+      ]
+    },
+    "citizenReports": [
+      {
+        "id": "cr001",
+        "projectId": "p003",
+        "userId": "u7890",
+        "username": "Joseph Mutua",
+        "timestamp": "2022-04-05T11:30:00Z",
+        "status": "WorkInProgress",
+        "description": "Construction ongoing but seems slower than expected. Many workers on site.",
+        "mediaUrls": ["/images/citizen-reports/thwake-dam-report1.jpg"],
+        "coordinates": {
+          "latitude": -1.8875,
+          "longitude": 37.8942
+        },
+        "verified": true,
+        "rating": {
+          "progress": 3,
+          "quality": 4,
+          "impact": 5
+        }
+      }
+    ],
+    "responsibleParties": {
+      "implementingAgency": "Ministry of Water, Sanitation and Irrigation",
+      "contractors": ["China Gezhouba Group Company Limited"],
+      "officials": [
+        {
+          "id": "o001",
+          "name": "Samuel Alima",
+          "position": "Project Manager, Thwake Dam",
+          "contactEmail": "info@water.go.ke"
+        }
+      ]
+    }
+  },
+  {
+    "id": "p004",
+    "name": "Konza Technopolis",
+    "description": "A smart city development project aimed at creating a technology hub in Kenya, located 60km southeast of Nairobi.",
+    "location": {
+      "county": "Machakos",
+      "constituency": "Mavoko",
+      "coordinates": {
+        "latitude": -1.7447,
+        "longitude": 37.1419
+      }
+    },
+    "category": "ICT",
+    "status": "InProgress",
+    "budget": {
+      "allocated": 172000000000,
+      "spent": 60000000000,
+      "efficiency": 70
+    },
+    "timeline": {
+      "plannedStart": "2013-01-23",
+      "plannedEnd": "2030-12-31",
+      "actualStart": "2013-01-23",
+      "milestones": [
+        {
+          "id": "m001",
+          "title": "Phase 1 Infrastructure",
+          "description": "Basic infrastructure including roads and utilities",
+          "plannedDate": "2018-12-31",
+          "actualDate": "2019-06-15",
+          "status": "Completed"
+        },
+        {
+          "id": "m002",
+          "title": "Konza Complex",
+          "description": "Completion of Konza Complex building",
+          "plannedDate": "2021-12-31",
+          "actualDate": "2022-03-10",
+          "status": "Completed"
+        }
+      ],
+      "completionPercentage": 35
+    },
+    "impact": {
+      "beneficiaries": 200000,
+      "jobsCreated": 20000,
+      "economicImpact": 10000000000,
+      "sdgGoals": ["SDG 8", "SDG 9", "SDG 11"]
+    },
+    "media": {
+      "images": [
+        {
+          "id": "img001",
+          "url": "/images/projects/konza-1.jpg",
+          "caption": "Konza Technopolis development",
+          "date": "2022-01-15",
+          "source": "Official"
+        }
+      ]
+    },
+    "citizenReports": [
+      {
+        "id": "cr001",
+        "projectId": "p004",
+        "userId": "u1122",
+        "username": "Grace Mwangi",
+        "timestamp": "2022-02-20T13:15:00Z",
+        "status": "WorkInProgress",
+        "description": "Some buildings are up but progress seems slow overall.",
+        "mediaUrls": ["/images/citizen-reports/konza-report1.jpg"],
+        "coordinates": {
+          "latitude": -1.7447,
+          "longitude": 37.1419
+        },
+        "verified": true,
+        "rating": {
+          "progress": 2,
+          "quality": 4,
+          "impact": 4
+        }
+      }
+    ],
+    "responsibleParties": {
+      "implementingAgency": "Konza Technopolis Development Authority (KoTDA)",
+      "contractors": ["Multiple contractors"],
+      "officials": [
+        {
+          "id": "o001",
+          "name": "Eng. John Tanui",
+          "position": "CEO, KoTDA",
+          "contactEmail": "info@konza.go.ke"
+        }
+      ]
+    }
+  },
+  {
+    "id": "p005",
+    "name": "Lamu Port Development",
+    "description": "Development of a deep sea port in Lamu as part of the LAPSSET Corridor Program, including berths and associated infrastructure.",
+    "location": {
+      "county": "Lamu",
+      "constituency": "Lamu East",
+      "coordinates": {
+        "latitude": -2.2697,
+        "longitude": 40.9025
+      }
+    },
+    "category": "Infrastructure",
+    "status": "InProgress",
+    "budget": {
+      "allocated": 48000000000,
+      "spent": 40000000000,
+      "efficiency": 83
+    },
+    "timeline": {
+      "plannedStart": "2012-03-02",
+      "plannedEnd": "2024-12-31",
+      "actualStart": "2012-03-02",
+      "milestones": [
+        {
+          "id": "m001",
+          "title": "First Berth",
+          "description": "Completion of first berth",
+          "plannedDate": "2019-12-31",
+          "actualDate": "2021-05-20",
+          "status": "Completed"
+        },
+        {
+          "id": "m002",
+          "title": "Second Berth",
+          "description": "Completion of second berth",
+          "plannedDate": "2021-06-30",
+          "actualDate": "2021-10-15",
+          "status": "Completed"
+        },
+        {
+          "id": "m003",
+          "title": "Third Berth",
+          "description": "Completion of third berth",
+          "plannedDate": "2022-06-30",
+          "actualDate": "2022-08-01",
+          "status": "Completed"
+        }
+      ],
+      "completionPercentage": 75
+    },
+    "impact": {
+      "beneficiaries": 500000,
+      "jobsCreated": 2500,
+      "economicImpact": 8000000000,
+      "sdgGoals": ["SDG 8", "SDG 9", "SDG 14"]
+    },
+    "media": {
+      "images": [
+        {
+          "id": "img001",
+          "url": "/images/projects/lamu-port-1.jpg",
+          "caption": "Lamu Port berths",
+          "date": "2022-06-10",
+          "source": "Official"
+        }
+      ]
+    },
+    "citizenReports": [
+      {
+        "id": "cr001",
+        "projectId": "p005",
+        "userId": "u3344",
+        "username": "Omar Fadhil",
+        "timestamp": "2022-05-15T09:30:00Z",
+        "status": "WorkInProgress",
+        "description": "Port is operational but still under development. Ships are docking at completed berths.",
+        "mediaUrls": ["/images/citizen-reports/lamu-port-report1.jpg"],
+        "coordinates": {
+          "latitude": -2.2697,
+          "longitude": 40.9025
+        },
+        "verified": true,
+        "rating": {
+          "progress": 4,
+          "quality": 4,
+          "impact": 4
+        }
+      }
+    ],
+    "responsibleParties": {
+      "implementingAgency": "LAPSSET Corridor Development Authority",
+      "contractors": ["China Communications Construction Company"],
+      "officials": [
+        {
+          "id": "o001",
+          "name": "Stephen Ikua",
+          "position": "Chairperson, LAPSSET",
+          "contactEmail": "info@lapsset.go.ke"
+        }
+      ]
+    }
+  },
+  {
+    "id": "p006",
+    "name": "Olkaria V Geothermal Power Plant",
+    "description": "A 165.4 MW geothermal power plant in Naivasha, part of Kenya's renewable energy expansion program.",
+    "location": {
+      "county": "Nakuru",
+      "constituency": "Naivasha",
+      "coordinates": {
+        "latitude": -0.9,
+        "longitude": 36.3
+      }
+    },
+    "category": "Energy",
+    "status": "Completed",
+    "budget": {
+      "allocated": 40000000000,
+      "spent": 38000000000,
+      "efficiency": 95
+    },
+    "timeline": {
+      "plannedStart": "2017-01-10",
+      "plannedEnd": "2019-12-31",
+      "actualStart": "2017-01-15",
+      "actualEnd": "2019-10-24",
+      "milestones": [
+        {
+          "id": "m001",
+          "title": "Drilling Phase",
+          "description": "Completion of well drilling",
+          "plannedDate": "2018-06-30",
+          "actualDate": "2018-07-15",
+          "status": "Completed"
+        },
+        {
+          "id": "m002",
+          "title": "Plant Construction",
+          "description": "Construction of power plant",
+          "plannedDate": "2019-09-30",
+          "actualDate": "2019-09-15",
+          "status": "Completed"
+        },
+        {
+          "id": "m003",
+          "title": "Commissioning",
+          "description": "Plant commissioning and connection to grid",
+          "plannedDate": "2019-12-31",
+          "actualDate": "2019-10-24",
+          "status": "Completed"
+        }
+      ],
+      "completionPercentage": 100
+    },
+    "impact": {
+      "beneficiaries": 5000000,
+      "jobsCreated": 800,
+      "economicImpact": 6000000000,
+      "sdgGoals": ["SDG 7", "SDG 9", "SDG 13"]
+    },
+    "media": {
+      "images": [
+        {
+          "id": "img001",
+          "url": "/images/projects/olkaria-v-1.jpg",
+          "caption": "Olkaria V Geothermal Power Plant",
+          "date": "2019-10-30",
+          "source": "Official"
+        }
+      ]
+    },
+    "citizenReports": [
+      {
+        "id": "cr001",
+        "projectId": "p006",
+        "userId": "u5566",
+        "username": "Daniel Kiprop",
+        "timestamp": "2019-11-10T14:45:00Z",
+        "status": "Completed",
+        "description": "The power plant is operational and steam can be seen. Area is secured.",
+        "mediaUrls": ["/images/citizen-reports/olkaria-report1.jpg"],
+        "coordinates": {
+          "latitude": -0.9,
+          "longitude": 36.3
+        },
+        "verified": true,
+        "rating": {
+          "progress": 5,
+          "quality": 5,
+          "impact": 5
+        }
+      }
+    ],
+    "responsibleParties": {
+      "implementingAgency": "Kenya Electricity Generating Company (KenGen)",
+      "contractors": ["Mitsubishi Corporation", "H Young & Co"],
+      "officials": [
+        {
+          "id": "o001",
+          "name": "Rebecca Miano",
+          "position": "Former CEO, KenGen",
+          "contactEmail": "info@kengen.co.ke"
+        }
+      ]
+    }
+  }
+]

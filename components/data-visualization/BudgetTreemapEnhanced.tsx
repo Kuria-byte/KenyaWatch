@@ -202,7 +202,7 @@ export default function BudgetTreemapEnhanced({ year = 2024 }: { year?: number }
       try {
         setLoading(true)
         setError(null)
-        const data = await fetchBudgetData(`/data/budget-allocation/${year}.json`)
+        const data = await fetchBudgetData(year)
         setBudgetData(data)
       } catch (err) {
         console.error("Error loading budget data:", err)

@@ -127,7 +127,7 @@ export default function Dashboard() {
             <a href="#" className="text-sm font-medium hover:text-primary">
               Dashboard
             </a>
-            <a href="#" className="text-sm font-medium hover:text-primary">
+            <a href="/leaders" className="text-sm font-medium hover:text-primary">
               Leaders
             </a>
             <a href="#" className="text-sm font-medium hover:text-primary">
@@ -168,11 +168,11 @@ export default function Dashboard() {
                   <Building2 className="h-5 w-5" />
                   Dashboard
                 </a>
-                <a href="#" className="flex items-center gap-2 p-2 rounded-lg hover:bg-accent">
+                <a href="/leaders" className="flex items-center gap-2 p-2 rounded-lg hover:bg-accent">
                   <Users className="h-5 w-5" />
                   Leaders
                 </a>
-                <a href="#" className="flex items-center gap-2 p-2 rounded-lg hover:bg-accent">
+                <a href="projects" className="flex items-center gap-2 p-2 rounded-lg hover:bg-accent">
                   <GraduationCap className="h-5 w-5" />
                   Projects
                 </a>
@@ -502,14 +502,7 @@ export default function Dashboard() {
                   <Users className="h-5 w-5 mr-2" />
                   Accountablity Center
                 </CardTitle>
-                <div className="flex items-center gap-2">
-                  <Button variant="outline" size="sm">
-                    <ChevronLeft className="h-4 w-4" />
-                  </Button>
-                  <Button variant="outline" size="sm">
-                    <ChevronRight className="h-4 w-4" />
-                  </Button>
-                </div>
+              
               </div>
               <CardDescription>Track performance metrics for elected officials</CardDescription>
             </CardHeader>
