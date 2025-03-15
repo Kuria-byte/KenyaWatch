@@ -165,4 +165,4 @@ Your Name
 
 **Get Involved**: Contribute on GitHub to help build a more transparent Kenya! 🌍✨  
 
-Let me know if you’d like to refine any section! 🚀
+Let's make Kenya work! 🚀
