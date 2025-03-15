@@ -100,7 +100,7 @@ export function WelcomeSection() {
                     <AlertCircle className="h-3.5 w-3.5 text-red-600" />
                   </div>
                   <div className="flex items-center justify-between">
-                    <div className="font-medium">8,300 wealthiest Kenyans control more assets than 53 million others combined</div>
+                    <div className="font-medium">8,300 wealthy Kenyans/ 53 Million Citizens</div>
                   </div>
                   <div className="text-xs text-muted-foreground">Top 0.1% Own More Than Bottom 99.9%</div>
                 </div>
