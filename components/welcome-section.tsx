@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { motion } from "framer-motion"
 import { KenyaFlag } from "@/components/kenya-flag"
-import { TrendingUp, AlertCircle, FileText } from "lucide-react"
+import { TrendingUp, AlertCircle, FileText, ShoppingBasket, Briefcase, Smartphone } from "lucide-react"
 import { PromiseTracker } from "./promise-tracker"
 
 export function WelcomeSection() {
@@ -54,7 +54,7 @@ export function WelcomeSection() {
               </div> */}
             </div>
 
-            {/* Quick Stats */}
+            {/* Economic & Livelihood Indicators */}
             <Card className="bg-gradient-to-br from-primary/5 to-background border-none">
               <CardHeader>
                 <CardTitle className="text-sm font-medium text-muted-foreground">
@@ -63,45 +63,52 @@ export function WelcomeSection() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="space-y-2">
-                  <div className="text-sm text-muted-foreground">Budget Utilization</div>
+                  <div className="text-sm text-muted-foreground flex items-center gap-1.5">
+                    <ShoppingBasket className="h-3.5 w-3.5" />
+                    <span>Cost of Living</span>
+                  </div>
                   <div className="flex items-center justify-between">
-                    <div className="font-medium">KES 1.2T</div>
-                    <div className="text-xs text-green-600 bg-green-100 dark:bg-green-950/50 px-2 py-1 rounded-full">
-                      +2.4%
+                    <div className="font-medium">KES 34,750</div>
+                    <div className="text-xs text-red-600 bg-red-100 dark:bg-red-950/50 px-2 py-1 rounded-full">
+                      +5.8% MoM
                     </div>
                   </div>
                   <div className="h-1 bg-primary/20 rounded-full overflow-hidden">
-                    <div className="h-full bg-primary rounded-full" style={{ width: "45%" }} />
+                    <div className="h-full bg-red-500 rounded-full" style={{ width: "68%" }} />
                   </div>
+                  <div className="text-xs text-muted-foreground">Monthly food basket for family of 4</div>
                 </div>
 
-                <div className="space-y-2">
-                  <div className="text-sm text-muted-foreground">Active Projects</div>
+                {/* <div className="space-y-2">
+                  <div className="text-sm text-muted-foreground flex items-center gap-1.5">
+                    <Briefcase className="h-3.5 w-3.5" />
+                    <span>Employment Growth</span>
+                  </div>
                   <div className="flex items-center justify-between">
-                    <div className="font-medium">2,547</div>
+                    <div className="font-medium">142,500</div>
                     <div className="text-xs text-amber-600 bg-amber-100 dark:bg-amber-950/50 px-2 py-1 rounded-full">
-                      On Track
+                      +1.2% Q1
                     </div>
                   </div>
-                </div>
+                  <div className="text-xs text-muted-foreground">New jobs created this quarter</div>
+                </div> */}
 
                 <div className="space-y-2">
-                  <div className="text-sm text-muted-foreground">Citizen Reports</div>
-                  <div className="flex items-center justify-between">
-                    <div className="font-medium">1,238</div>
-                    <div className="text-xs text-blue-600 bg-blue-100 dark:bg-blue-950/50 px-2 py-1 rounded-full">
-                      +12% this week
-                    </div>
+                  <div className="text-sm text-muted-foreground flex items-center gap-1.5">
+                    <Smartphone className="h-3.5 w-3.5" />
+                    <span>Income Inequality</span>
+                    <AlertCircle className="h-3.5 w-3.5 text-red-600" />
                   </div>
+                  <div className="flex items-center justify-between">
+                    <div className="font-medium">8,300 wealthiest Kenyans control more assets than 53 million others combined</div>
+                  </div>
+                  <div className="text-xs text-muted-foreground">Top 0.1% Own More Than Bottom 99.9%</div>
                 </div>
               </CardContent>
             </Card>
 
 {/* // Replace the Quick Stats Card with: */}
 {/* <PromiseTracker /> */}
-
-
-
           </div>
         </CardContent>
       </Card>

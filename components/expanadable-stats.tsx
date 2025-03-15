@@ -61,15 +61,8 @@ export function ExpandableStat({ title, value, subtitle, details, colorClass }: 
           relative
           group
           active:scale-95
-          after:absolute
-          after:inset-0
-          after:rounded-lg
-          after:border-2
-          after:border-primary/0
-          after:transition-all
-          after:duration-200
-          hover:after:border-primary/10
-          md:after:opacity-0
+          rounded-lg
+          overflow-hidden
         `}
         onClick={() => setIsOpen(true)}
       >

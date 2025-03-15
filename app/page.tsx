@@ -46,6 +46,7 @@ import CountyPerformanceChart from "@/components/county-performance-chart"
 import { PriceImpactTracker } from "@/components/price-impact-tracker"
 import { ExpandableStat } from "@/components/expanadable-stats"
 import { WelcomeSection } from "@/components/welcome-section"
+import DataVisualizationPanel from "@/components/data-visualization/DataVisualizationPanel"
 
 // Real Kenyan political figures data
 const leaders = [
@@ -198,14 +199,14 @@ export default function Dashboard() {
         {/* <AnimatedGreeting /> */}
         <WelcomeSection />
         <motion.section
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8 ml-4" 
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8" 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
         >
           <ExpandableStat
             title="Government Debt"
-            value="KES 10.2T"
+            value="KES 10.6T"
             subtitle="National Debt = KES 200K per Citizen"
             colorClass="bg-red-50 dark:bg-red-950/20"
             details={{
@@ -474,74 +475,11 @@ export default function Dashboard() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
         >
-          <Card>
-            <CardHeader>
-              <div className="flex items-center justify-between">
-                <CardTitle>Data Visualization</CardTitle>
-                <div className="flex items-center gap-2">
-                  <Button variant="outline" size="sm">
-                    <Filter className="h-4 w-4 mr-2" />
-                    Filter
-                  </Button>
-                  <select  aria-label="Select year" className="px-2 py-1 border rounded-md text-sm">
-                    <option>2024</option>
-                    <option>2023</option>
-                    <option>2022</option>
-                    <option>2021</option>
-                    <option>2020</option>
-                  </select>
-                </div>
-              </div>
-              <CardDescription>Explore government spending, debt growth, and county performance</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <Tabs defaultValue="budget" className="w-full">
-                <div className="overflow-x-auto pb-2">
-                  <TabsList className="mb-4 inline-flex min-w-full sm:w-auto">
-                    <TabsTrigger 
-                      value="budget" 
-                      className="flex-shrink-0 px-4 py-2"
-                    >
-                      Budget Allocation
-                    </TabsTrigger>
-                    <TabsTrigger 
-                      value="debt" 
-                      className="flex-shrink-0 px-4 py-2"
-                    >
-                      Debt Growth
-                    </TabsTrigger>
-                    <TabsTrigger 
-                      value="counties" 
-                      className="flex-shrink-0 px-4 py-2"
-                    >
-                      County Performance
-                    </TabsTrigger>
-                  </TabsList>
-                </div>
-                
-                <TabsContent value="budget" className="h-[400px]">
-                  <ErrorBoundary>
-                    <BudgetTreemap />
-                  </ErrorBoundary>
-                </TabsContent>
-                <TabsContent value="debt" className="h-[400px]">
-                  <ErrorBoundary>
-                    <DebtGrowthChart />
-                  </ErrorBoundary>
-                </TabsContent>
-                <TabsContent value="counties" className="h-[400px]">
-                  <ErrorBoundary>
-                    <CountyPerformanceChart />
-                  </ErrorBoundary>
-                </TabsContent>
-              </Tabs>
-            </CardContent>
-          </Card>
+          <DataVisualizationPanel />
         </motion.section>
 
-
-             {/* Hot Topics Section - Standalone section after Accountability Center */}
-             <motion.section
+        {/* Hot Topics Section - Standalone section after Accountability Center */}
+        <motion.section
           className="mb-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -549,24 +487,7 @@ export default function Dashboard() {
         >
           <HotTopics />
         </motion.section>
-
-        <motion.section
-          className="mb-8"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-        >
-          <PriceImpactTracker />
-        </motion.section>
-
-       
-
-
-
       
-
-
-
         {/* Hold Leaders Accountable */}
         <motion.section
           className="mb-8"
@@ -781,6 +702,16 @@ export default function Dashboard() {
               </div>
             </CardContent>
           </Card>
+        </motion.section>
+
+
+        <motion.section
+          className="mb-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6 }}
+        >
+          <PriceImpactTracker />
         </motion.section>
 
         {/* Add Scandal Tracker at the bottom */}

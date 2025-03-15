@@ -1,0 +1,161 @@
+{
+  "year": 2024,
+  "quarter": 1,
+  "currency": "KES",
+  "unit": "million",
+  "source": "Controller of Budget, Kenya",
+  "lastUpdated": "2025-03-15",
+  "fiscalYear": "2023/2024",
+  "counties": [
+    {
+      "name": "Makueni",
+      "code": "017",
+      "region": "Eastern",
+      "metrics": {
+        "projectCompletion": 97,
+        "fundsAllocated": 9450,
+        "fundsUtilized": 9166,
+        "utilizationRate": 97,
+        "developmentExpenditure": 42,
+        "recurrentExpenditure": 58
+      },
+      "keyProjects": [
+        "Makueni County Fruit Processing Plant",
+        "Thwake Multi-Purpose Dam",
+        "Universal Healthcare Program"
+      ]
+    },
+    {
+      "name": "Nakuru",
+      "code": "032",
+      "region": "Rift Valley",
+      "metrics": {
+        "projectCompletion": 92,
+        "fundsAllocated": 14560,
+        "fundsUtilized": 13395,
+        "utilizationRate": 92,
+        "developmentExpenditure": 38,
+        "recurrentExpenditure": 62
+      },
+      "keyProjects": [
+        "Nakuru City Infrastructure Upgrade",
+        "Lake Naivasha Conservation",
+        "County Referral Hospital Expansion"
+      ]
+    },
+    {
+      "name": "Kiambu",
+      "code": "022",
+      "region": "Central",
+      "metrics": {
+        "projectCompletion": 88,
+        "fundsAllocated": 15780,
+        "fundsUtilized": 13886,
+        "utilizationRate": 88,
+        "developmentExpenditure": 35,
+        "recurrentExpenditure": 65
+      },
+      "keyProjects": [
+        "Kiambu Level 5 Hospital Upgrade",
+        "Juja Water Supply Project",
+        "Thika Industrial Park"
+      ]
+    },
+    {
+      "name": "Machakos",
+      "code": "016",
+      "region": "Eastern",
+      "metrics": {
+        "projectCompletion": 76,
+        "fundsAllocated": 11250,
+        "fundsUtilized": 8550,
+        "utilizationRate": 76,
+        "developmentExpenditure": 31,
+        "recurrentExpenditure": 69
+      },
+      "keyProjects": [
+        "Machakos People's Park",
+        "Mavoko Housing Project",
+        "Athi River Industrial Zone"
+      ]
+    },
+    {
+      "name": "Kajiado",
+      "code": "034",
+      "region": "Rift Valley",
+      "metrics": {
+        "projectCompletion": 65,
+        "fundsAllocated": 10340,
+        "fundsUtilized": 6721,
+        "utilizationRate": 65,
+        "developmentExpenditure": 28,
+        "recurrentExpenditure": 72
+      },
+      "keyProjects": [
+        "Ngong Road Expansion",
+        "Kitengela Water Project",
+        "Livestock Market Development"
+      ]
+    },
+    {
+      "name": "Kisumu",
+      "code": "042",
+      "region": "Nyanza",
+      "metrics": {
+        "projectCompletion": 51,
+        "fundsAllocated": 12450,
+        "fundsUtilized": 6349,
+        "utilizationRate": 51,
+        "developmentExpenditure": 25,
+        "recurrentExpenditure": 75
+      },
+      "keyProjects": [
+        "Kisumu Port Revitalization",
+        "Dunga Beach Ecotourism",
+        "Urban Renewal Initiative"
+      ]
+    },
+    {
+      "name": "Mombasa",
+      "code": "001",
+      "region": "Coast",
+      "metrics": {
+        "projectCompletion": 43,
+        "fundsAllocated": 13780,
+        "fundsUtilized": 5925,
+        "utilizationRate": 43,
+        "developmentExpenditure": 22,
+        "recurrentExpenditure": 78
+      },
+      "keyProjects": [
+        "Mombasa Gateway Bridge",
+        "Coastal Tourism Infrastructure",
+        "Mikindani Housing Project"
+      ]
+    },
+    {
+      "name": "Nairobi",
+      "code": "047",
+      "region": "Nairobi",
+      "metrics": {
+        "projectCompletion": 32,
+        "fundsAllocated": 35680,
+        "fundsUtilized": 11417,
+        "utilizationRate": 32,
+        "developmentExpenditure": 18,
+        "recurrentExpenditure": 82
+      },
+      "keyProjects": [
+        "Nairobi Expressway",
+        "Dandora Waste Management",
+        "Eastlands Urban Renewal"
+      ]
+    }
+  ],
+  "insights": [
+    "Makueni County leads in project completion rate and fund utilization efficiency",
+    "Nairobi County, despite receiving the highest allocation, has the lowest utilization rate",
+    "Counties with higher development to recurrent expenditure ratios show better project completion rates",
+    "Eastern region counties (Makueni, Machakos) demonstrate above-average performance metrics"
+  ]
+}

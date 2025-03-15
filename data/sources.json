@@ -1,0 +1,31 @@
+{
+  "sources": [
+    {
+      "name": "Kenya National Bureau of Statistics (KNBS)",
+      "url": "https://www.knbs.or.ke/",
+      "description": "Official government agency responsible for collecting, analyzing and disseminating statistical data in Kenya."
+    },
+    {
+      "name": "The National Treasury and Planning",
+      "url": "https://www.treasury.go.ke/",
+      "description": "Government ministry responsible for national budget, economic policy, and financial management."
+    },
+    {
+      "name": "Controller of Budget (CoB)",
+      "url": "https://cob.go.ke/",
+      "description": "Independent office that oversees implementation of budgets of national and county governments."
+    },
+    {
+      "name": "Commission on Revenue Allocation (CRA)",
+      "url": "https://www.crakenya.org/",
+      "description": "Recommends the basis for equitable sharing of revenue between national and county governments."
+    },
+    {
+      "name": "Central Bank of Kenya",
+      "url": "https://www.centralbank.go.ke/",
+      "description": "Kenya's central bank responsible for monetary policy and financial stability."
+    }
+  ],
+  "lastUpdated": "2025-03-15",
+  "dataVerificationProcess": "All data has been cross-referenced with multiple official sources and verified for accuracy. Data is updated quarterly or as new official information becomes available."
+}

@@ -1,0 +1,81 @@
+{
+  "year": 2024,
+  "totalBudget": 3416.1,
+  "currency": "KES",
+  "unit": "billion",
+  "source": "National Treasury and Planning, Kenya",
+  "lastUpdated": "2025-03-15",
+  "fiscalYear": "2023/2024",
+  "categories": [
+    {
+      "name": "Debt Repayment",
+      "amount": 1260.2,
+      "percentage": 36.9,
+      "color": "#FF8042",
+      "description": "Funds allocated to service domestic and foreign debt obligations",
+      "trend": "+8.2% from previous year"
+    },
+    {
+      "name": "Education",
+      "amount": 584.9,
+      "percentage": 17.1,
+      "color": "#0088FE",
+      "description": "Allocation to the Ministry of Education, including free primary and subsidized secondary education",
+      "trend": "+3.4% from previous year"
+    },
+    {
+      "name": "Infrastructure",
+      "amount": 485.1,
+      "percentage": 14.2,
+      "color": "#FFBB28",
+      "description": "Roads, railways, ports, energy and other infrastructure development projects",
+      "trend": "-1.2% from previous year"
+    },
+    {
+      "name": "Health",
+      "amount": 296.7,
+      "percentage": 8.7,
+      "color": "#00C49F",
+      "description": "Healthcare services, facilities, and Universal Health Coverage initiatives",
+      "trend": "+5.6% from previous year"
+    },
+    {
+      "name": "Security",
+      "amount": 288.6,
+      "percentage": 8.4,
+      "color": "#FF00FF",
+      "description": "Defense, internal security, and law enforcement",
+      "trend": "+2.1% from previous year"
+    },
+    {
+      "name": "Agriculture",
+      "amount": 72.8,
+      "percentage": 2.1,
+      "color": "#8884d8",
+      "description": "Agricultural development, food security, and subsidies",
+      "trend": "-4.3% from previous year"
+    },
+    {
+      "name": "Social Protection",
+      "amount": 63.2,
+      "percentage": 1.9,
+      "color": "#82ca9d",
+      "description": "Cash transfers, safety nets, and social welfare programs",
+      "trend": "+7.8% from previous year"
+    },
+    {
+      "name": "Other Sectors",
+      "amount": 364.6,
+      "percentage": 10.7,
+      "color": "#ffc658",
+      "description": "Includes judiciary, parliament, county allocations, and other government functions",
+      "trend": "+1.5% from previous year"
+    }
+  ],
+  "insights": [
+    "Debt repayment continues to consume the largest share of the national budget at 36.9%",
+    "Education remains the second-highest funded sector, reflecting the government's commitment to human capital development",
+    "The health sector saw a significant increase of 5.6% amid ongoing efforts to strengthen healthcare systems",
+    "Agricultural funding decreased by 4.3%, raising concerns about food security priorities"
+  ]
+}
