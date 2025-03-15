@@ -31,7 +31,7 @@ import {
   Heart,
 } from "lucide-react"
 import LeaderCard from "@/components/leader-card"
-import CitizenAlert from "@/components/citizen-alert"
+import { HotTopics } from "@/components/hot-topics/HotTopics"
 import PerformanceLeaderboard from "@/components/performance-leaderboard"
 import { useState } from "react"
 import { AnimatePresence } from "framer-motion"
@@ -539,6 +539,17 @@ export default function Dashboard() {
           </Card>
         </motion.section>
 
+
+             {/* Hot Topics Section - Standalone section after Accountability Center */}
+             <motion.section
+          className="mb-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.9 }}
+        >
+          <HotTopics />
+        </motion.section>
+
         <motion.section
           className="mb-8"
           initial={{ opacity: 0, y: 20 }}
@@ -548,7 +559,7 @@ export default function Dashboard() {
           <PriceImpactTracker />
         </motion.section>
 
-        {/* Corruption Impact CTA
+       
 
 
 
@@ -565,10 +576,20 @@ export default function Dashboard() {
         >
           <Card>
             <CardHeader>
-              <CardTitle className="flex items-center">
-                <Users className="h-5 w-5 mr-2" />
-                Accountablity Center
-              </CardTitle>
+              <div className="flex items-center justify-between">
+                <CardTitle className="flex items-center">
+                  <Users className="h-5 w-5 mr-2" />
+                  Accountablity Center
+                </CardTitle>
+                <div className="flex items-center gap-2">
+                  <Button variant="outline" size="sm">
+                    <ChevronLeft className="h-4 w-4" />
+                  </Button>
+                  <Button variant="outline" size="sm">
+                    <ChevronRight className="h-4 w-4" />
+                  </Button>
+                </div>
+              </div>
               <CardDescription>Track performance metrics for elected officials</CardDescription>
             </CardHeader>
             <CardContent>
@@ -660,6 +681,8 @@ export default function Dashboard() {
           </Card>
         </motion.section>
 
+   
+
         {/* Social Action Panel */}
         <motion.section
           className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8"
@@ -717,29 +740,44 @@ export default function Dashboard() {
             <CardHeader>
               <CardTitle className="flex items-center">
                 <AlertTriangle className="h-5 w-5 text-amber-500 mr-2" />
-                Citizen Alerts
+                Citizen Insights
               </CardTitle>
-              <CardDescription>Current issues requiring immediate public attention</CardDescription>
+              <CardDescription>Community feedback and public opinion</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
-                <CitizenAlert
-                  title="Lecturers Strike: Day 6"
-                  description="2M Students Affected. Share to #SaveEducation."
-                  severity="high"
-                />
-
-                <CitizenAlert
-                  title="Nairobi County Halts Garbage Collection"
-                  description="Demand Action from County Officials!"
-                  severity="medium"
-                />
-
-                <CitizenAlert
-                  title="Water Shortage in Eastern Counties"
-                  description="Affecting 500,000 residents. Share to raise awareness."
-                  severity="high"
-                />
+                {/* Content for citizen insights will go here */}
+                <div className="p-4 border rounded-lg bg-muted/50">
+                  <h3 className="font-medium mb-1">Public Opinion Poll</h3>
+                  <p className="text-sm text-muted-foreground mb-2">
+                    What issue should the government prioritize?
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-center justify-between text-sm">
+                      <span>Healthcare</span>
+                      <span>42%</span>
+                    </div>
+                    <Progress value={42} className="h-2" />
+                    
+                    <div className="flex items-center justify-between text-sm">
+                      <span>Education</span>
+                      <span>28%</span>
+                    </div>
+                    <Progress value={28} className="h-2" />
+                    
+                    <div className="flex items-center justify-between text-sm">
+                      <span>Security</span>
+                      <span>18%</span>
+                    </div>
+                    <Progress value={18} className="h-2" />
+                    
+                    <div className="flex items-center justify-between text-sm">
+                      <span>Infrastructure</span>
+                      <span>12%</span>
+                    </div>
+                    <Progress value={12} className="h-2" />
+                  </div>
+                </div>
               </div>
             </CardContent>
           </Card>
@@ -797,4 +835,3 @@ export default function Dashboard() {
     </div>
   )
 }
-
