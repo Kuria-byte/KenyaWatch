@@ -6,9 +6,8 @@
 [![Node.js](https://img.shields.io/badge/Node.js-16.0.0-green.svg)](https://nodejs.org/)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-14.0-blue.svg)](https://www.postgresql.org/)
 
-**Building a transparent Kenya, one data point at a time.**
 
-![TruthKenya Banner](https://i.imgur.com/7FWz40w.png)
+![TruthKenya Banner](https://github.com/user-attachments/assets/2d5e3705-ecda-4166-a15b-19195e53e207)
 
 ## 📋 Table of Contents
 
@@ -110,7 +109,7 @@ export const EconomicIndicators = () => {
 };
 ```
 
-![Dashboard Preview](https://i.imgur.com/DjT2Wuy.png)
+
 
 ### 2. 🕵️ Corruption Impact Calculator
 
@@ -136,7 +135,7 @@ export const ImpactCalculator = ({ amount }) => {
 };
 ```
 
-![Corruption Calculator](https://i.imgur.com/7Lcm8JG.png)
+
 
 ### 3. 📑 Project Tracking System
 
@@ -204,7 +203,7 @@ export const ProjectCard = ({ project }) => {
 };
 ```
 
-![Project Tracking](https://i.imgur.com/XdI4sAZ.png)
+
 
 ### 4. 🗳️ Leader Accountability
 
@@ -276,7 +275,7 @@ export const LeaderProfile = ({ leader }) => {
 };
 ```
 
-![Leader Accountability](https://i.imgur.com/3RDC12P.png)
+
 
 ### 5. 🤖 AI-Powered Civic Education
 
@@ -380,7 +379,7 @@ export const CivicsBot = () => {
 };
 ```
 
-![AI Civic Education](https://i.imgur.com/UZqkr3i.png)
+
 
 ---
 
