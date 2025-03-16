@@ -1,475 +1,625 @@
-# TruthKenya: Empowering Citizen Oversight & Government Transparency 🇰🇪
+# 🔍 TruthKenya: Empowering Citizens Through Transparency 
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![React](https://img.shields.io/badge/React-18.0+-blue.svg)](https://reactjs.org/)
-[![Next.js](https://img.shields.io/badge/Next.js-13.0+-black.svg)](https://nextjs.org/)
-[![Node.js](https://img.shields.io/badge/Node.js-16.0+-green.svg)](https://nodejs.org/)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-14.0+-blue.svg)](https://www.postgresql.org/)
+[![React](https://img.shields.io/badge/React-18.0.0-blue.svg)](https://reactjs.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-13.0.0-black.svg)](https://nextjs.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-16.0.0-green.svg)](https://nodejs.org/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-14.0-blue.svg)](https://www.postgresql.org/)
 
-**An open-source platform that brings transparency to government spending, empowers citizens with critical data, and creates accountability mechanisms for public officials.**
+**Building a transparent Kenya, one data point at a time.**
 
-<p align="center">
-  <img src="docs/images/truthkenya-dashboard.png" alt="TruthKenya Dashboard" width="800"/>
-</p>
+![TruthKenya Banner](https://i.imgur.com/7FWz40w.png)
 
----
+## 📋 Table of Contents
 
-## 📚 Table of Contents
-
-1. [Overview](#-overview)
-2. [Core Features](#-core-features)
-3. [System Architecture](#-system-architecture)
-4. [Tech Stack](#-tech-stack)
-5. [Frontend Components](#-frontend-components)
-6. [Backend Infrastructure](#-backend-infrastructure)
-7. [Database Schema](#-database-schema)
-8. [Installation Guide](#-installation-guide)
-9. [API Documentation](#-api-documentation)
-10. [Development Workflow](#-development-workflow)
-11. [Current Challenges](#-current-challenges)
-12. [Future Roadmap](#-future-roadmap)
-13. [Contributing](#-contributing)
-14. [License](#-license)
-15. [Acknowledgments](#-acknowledgments)
-16. [Team](#-team)
+1. [Vision & Mission](#vision--mission)
+2. [System Architecture](#system-architecture)
+3. [Key Features](#key-features)
+4. [Technology Stack](#technology-stack)
+5. [Installation & Setup](#installation--setup)
+6. [Implementation Details](#implementation-details)
+7. [Database Schema](#database-schema)
+8. [API Documentation](#api-documentation)
+9. [Future Integrations](#future-integrations)
+10. [Challenges & Solutions](#challenges--solutions)
+11. [Contributing](#contributing)
+12. [Team & Credits](#team--credits)
+13. [License](#license)
+14. [Contact](#contact)
 
 ---
 
-## 🌟 Overview
+## 🌟 Vision & Mission
 
-**TruthKenya** stands at the intersection of civic technology, data transparency, and citizen empowerment. Born from the need to demystify government operations and create accessible pathways for civic engagement, our platform transforms complex government data into actionable insights for everyday citizens.
+"Politicians told us to follow the money. So we built a map." — Ian Kuria, Lead Developer
 
-### Mission Statement
+Billions vanish from Kenya's budget each year. We're the flashlight app for your tax shillings.
 
-> To empower Kenyan citizens with transparent access to government data, enabling informed civic participation and fostering accountability in public service.
+## Vision
+A Kenya where government budgets are as closely watched as Premier League matches, and where accountability isn't just a campaign slogan.
 
-### Project Vision
-
-By 2027, we aim to:
-- Reach 1 million active monthly users
-- Track 100% of national government projects
-- Enable citizens to monitor 5,000+ elected officials
-- Create the most comprehensive open data portal for Kenyan governance
-
-<p align="center">
-  <img src="docs/images/user-growth-projection.png" alt="User Growth Projection" width="600"/>
-</p>
-
----
-
-## 🎯 Core Features
-
-### 🔍 Interactive Dashboard
-
-Real-time visualization of critical national metrics:
-- National debt & budget allocation
-- Unemployment & inflation rates
-- Corruption index & financial losses
-- Project completion rates by county
-
-```jsx
-// Dashboard KPI Component
-const DashboardKPI = ({ title, value, change, trend, icon }) => {
-  return (
-    <Card className="bg-white dark:bg-gray-800 shadow-sm">
-      <CardHeader className="flex flex-row items-center justify-between pb-2">
-        <CardTitle className="text-sm font-medium text-gray-500 dark:text-gray-400">
-          {title}
-        </CardTitle>
-        {icon}
-      </CardHeader>
-      <CardContent>
-        <div className="text-2xl font-bold">{value}</div>
-        <p className={`text-xs ${trend === 'up' ? 'text-green-500' : 'text-red-500'}`}>
-          {trend === 'up' ? '↑' : '↓'} {change}
-        </p>
-      </CardContent>
-    </Card>
-  )
-}
-```
-
-### 🔥 Hot Topics Tracking
-
-Dynamic tabs for trending national issues with fact-checked information:
-
-<p align="center">
-  <img src="docs/images/hot-topics-interface.png" alt="Hot Topics Interface" width="700"/>
-</p>
-
-**Implementation Details:**
-
-```jsx
-// Hot Topics Component Structure
-const HotTopics = () => {
-  const [activeTab, setActiveTab] = useState('shif');
-  
-  const topics = {
-    shif: {
-      title: 'SHIF Health Scheme',
-      status: 'Controversial',
-      stats: {
-        enrollment: '2.1M Kenyans (17% of Target)',
-        collected: 'KES 4.2B',
-        utilized: 'KES 1.8B'
-      },
-      sentiment: {
-        support: 28,
-        oppose: 62,
-        neutral: 10
-      },
-      updates: [
-        { source: 'Daily Nation', title: 'NHIF Transition Deadline Extended to 2025' },
-        { source: 'Citizen TV', title: 'Court Halts SHIF Deductions for Informal Sector' }
-      ]
-    },
-    // Additional topics: minerals, housing, security, etc.
-  };
-  
-  return (
-    <div className="hot-topics-container">
-      {Object.keys(topics).map(key => (
-        <div 
-          key={key}
-          className={`topic-tab ${activeTab === key ? 'expanded' : 'collapsed'}`}
-          onClick={() => setActiveTab(key)}
-        >
-          <div className="topic-header">
-            <div className="topic-left">
-              <TopicIcon name={key} />
-              <h3>{topics[key].title}</h3>
-              <StatusTag status={topics[key].status} />
-            </div>
-            <div className="topic-right">
-              <span className="key-stat">{getKeyStatForTopic(key, topics)}</span>
-              <TrendIndicator data={topics[key].sentiment} />
-              <ChevronIcon direction={activeTab === key ? 'down' : 'right'} />
-            </div>
-          </div>
-          
-          {activeTab === key && (
-            <div className="topic-content">
-              <StatsSection data={topics[key].stats} />
-              <NewsSection updates={topics[key].updates} />
-              <SentimentChart data={topics[key].sentiment} />
-              <ActionButtons topic={key} />
-            </div>
-          )}
-        </div>
-      ))}
-    </div>
-  );
-};
-```
-
-### 👤 Leader Accountability Center
-
-Comprehensive profiles for elected officials with:
-- Project completion metrics
-- Attendance records
-- Fund utilization
-- Public approval ratings
-- Impeachment petition capabilities
-
-### 🚨 Citizen Alerts System
-
-Real-time notification system for:
-- New corruption scandals
-- Budget approvals
-- Service disruptions
-- Public hearings
-
-### 📊 Project Tracking Interface
-
-Monitor government projects from initiation to completion:
-- Budget allocation & utilization
-- Timeline compliance
-- Contractor information
-- Environmental impact assessments
-- Citizen feedback mechanisms
-
-### 💬 TruthBot AI Assistant
-
-AI-powered chatbot providing:
-- Budget explanations in simple language
-- Policy impact analysis
-- Civic education on government processes
-- Data interpretation assistance
-
----
+## Mission
+Turn boring government data into tools that bite. Make transparency irresistible, corruption expensive, and citizen engagement the national sport.
 
 ## 🏗️ System Architecture
 
-TruthKenya employs a modern, scalable architecture designed to handle varying loads and maintain responsiveness.
+TruthKenya employs a modern, scalable architecture to deliver real-time insights into government spending and actions.
 
-<p align="center">
-  <img src="docs/images/system-architecture.png" alt="System Architecture Diagram" width="800"/>
-</p>
+```mermaid
+graph TD
+    A[Client Application] --> B[API Gateway]
+    B --> C[Authentication Service]
+    B --> D[Project Tracking Service]
+    B --> E[Leader Accountability Service]
+    B --> F[Budget Analysis Service]
+    B --> G[Report Management Service]
+    B --> H[Notification Service]
+    C & D & E & F & G & H --> I[Data Layer]
+    I --> J[(PostgreSQL - Structured Data)]
+    I --> K[(MongoDB - Unstructured Data)]
+    L[External APIs] --> B
+    B --> M[AI Service]
+    M --> N[OpenAI Integration]
+    H --> O[SMS/Email Service]
+```
 
-### Key Architecture Components:
-
-1. **Client Layer**
-   - React/Next.js frontend
-   - Progressive Web App capabilities
-   - Server-side rendering for SEO optimization
-   - Client-side data caching
-
-2. **API Gateway**
-   - Request routing and load balancing
-   - Authentication and authorization
-   - Rate limiting and DDoS protection
-   - Response caching
-
-3. **Microservices**
-   - User management service
-   - Data aggregation service
-   - Notification service
-   - Analytics service
-   - Search service
-
-4. **Data Processing**
-   - ETL pipelines for government data
-   - Data normalization and cleaning
-   - Real-time data processing
-   - Machine learning pipelines
-
-5. **Persistence Layer**
-   - PostgreSQL for structured data
-   - MongoDB for unstructured data
-   - Redis for caching
-   - MinIO for object storage
-
-6. **External Integrations**
-   - Government APIs
-   - Payment gateways
-   - Social media platforms
-   - SMS services
+Our microservices architecture ensures:
+- 🔄 **Scalability**: Each service can scale independently based on demand
+- 🔒 **Security**: Isolated services reduce vulnerability surface area
+- 🚀 **Deployment**: Continuous deployment with minimal downtime
+- 🔌 **Integration**: Seamless connection with external data sources
 
 ---
 
-## 💻 Tech Stack
+## 🎯 Key Features
 
-### Frontend
-- **Framework**: React 18, Next.js 13
-- **State Management**: Redux Toolkit, React Query
-- **Styling**: Tailwind CSS, Shadcn UI
-- **Visualization**: D3.js, Recharts
-- **PWA**: Next PWA
+### 1. 📊 Interactive Dashboard
 
-### Backend
-- **Framework**: Node.js, Express.js
-- **API**: RESTful + GraphQL
-- **Authentication**: JWT, OAuth 2.0
-- **Real-time**: Socket.IO
-
-### Database
-- **Primary**: PostgreSQL 14
-- **NoSQL**: MongoDB
-- **Caching**: Redis
-- **Search**: Elasticsearch
-
-### DevOps
-- **CI/CD**: GitHub Actions
-- **Containerization**: Docker, Kubernetes
-- **Hosting**: Vercel (Frontend), AWS (Backend)
-- **Monitoring**: Prometheus, Grafana
-
-### AI/ML
-- **NLP**: OpenAI API, Hugging Face
-- **Data Analysis**: Python, Pandas, NumPy
-- **ML Ops**: TensorFlow Serving
-
----
-
-## 🎨 Frontend Components
-
-### Component Library
-
-TruthKenya uses a custom component library built on Shadcn UI and Tailwind CSS. This ensures consistent styling and interaction patterns across the platform.
+The TruthKenya dashboard provides citizens with at-a-glance insights into Kenya's financial health and government performance.
 
 ```jsx
-// Example of a reusable card component
-export const DataCard = ({
-  title,
-  value,
-  change,
-  period = "vs. last period",
-  trend = "neutral",
-  icon,
-  className,
-}) => {
-  const trendColors = {
-    positive: "text-green-500",
-    negative: "text-red-500",
-    neutral: "text-gray-500"
+// Dashboard KPI Component
+export const EconomicIndicators = () => {
+  const { data, isLoading } = useDashboardStats();
+  
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <StatCard 
+        title="Government Debt" 
+        value={`KES ${data?.governmentDebt}T`}
+        trend={+2.4}
+        description="KES 295,432 per Citizen" 
+        color="rose"
+      />
+      <StatCard 
+        title="Annual Budget" 
+        value={`KES ${data?.annualBudget}T`}
+        trend={-0.8}
+        description="FY 2024/2025" 
+        color="blue"
+      />
+      <StatCard 
+        title="Unemployment Rate" 
+        value={`${data?.unemploymentRate}%`}
+        trend={+1.2}
+        description="7.7M people without jobs" 
+        color="amber"
+      />
+    </div>
+  );
+};
+```
+
+![Dashboard Preview](https://i.imgur.com/DjT2Wuy.png)
+
+### 2. 🕵️ Corruption Impact Calculator
+
+Translating abstract corruption figures into tangible impacts helps citizens understand what's at stake.
+
+```jsx
+// Corruption Impact Component
+export const ImpactCalculator = ({ amount }) => {
+  const schools = Math.round(amount / 35000000); // Avg primary school cost
+  const hospitals = Math.round(amount / 120000000); // Avg health center cost
+  const roads = Math.round(amount / 80000000 * 1000); // Cost per km of road
+  
+  return (
+    <div className="p-6 bg-red-50 border border-red-200 rounded-lg">
+      <h3 className="text-xl font-bold mb-4">What KES {formatNumber(amount)} could have built:</h3>
+      <div className="grid grid-cols-3 gap-4 text-center">
+        <ImpactCard icon="🏥" value={hospitals} label="Hospitals" />
+        <ImpactCard icon="🏫" value={schools} label="Schools" />
+        <ImpactCard icon="🛣️" value={roads} label="KM of Roads" />
+      </div>
+    </div>
+  );
+};
+```
+
+![Corruption Calculator](https://i.imgur.com/7Lcm8JG.png)
+
+### 3. 📑 Project Tracking System
+
+Monitor government projects from initiation to completion with citizen reporting capabilities.
+
+```jsx
+// Project Card Component
+export const ProjectCard = ({ project }) => {
+  return (
+    <div className="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+      <img 
+        src={project.imageUrl || '/images/project-placeholder.jpg'} 
+        alt={project.name}
+        className="h-48 w-full object-cover"
+      />
+      
+      <div className="p-4">
+        <h3 className="font-bold text-lg">{project.name}</h3>
+        <p className="text-gray-600 text-sm mb-3">{project.description}</p>
+        
+        <div className="flex items-center mb-2">
+          <MapPinIcon className="h-4 w-4 text-gray-500 mr-1" />
+          <span className="text-sm">{project.location}</span>
+        </div>
+        
+        <div className="flex justify-between mb-4">
+          <div>
+            <p className="text-sm text-gray-500">Budget</p>
+            <p className="font-medium">KES {formatNumber(project.budget)}</p>
+          </div>
+          <div>
+            <p className="text-sm text-gray-500">Deadline</p>
+            <p className="font-medium">{formatDate(project.deadline)}</p>
+          </div>
+        </div>
+        
+        <div className="mb-3">
+          <div className="flex justify-between mb-1">
+            <span className="text-sm">Completion</span>
+            <span className="text-sm font-medium">{project.completionPercentage}%</span>
+          </div>
+          <div className="w-full bg-gray-200 rounded-full h-2">
+            <div 
+              className="bg-blue-600 h-2 rounded-full" 
+              style={{ width: `${project.completionPercentage}%` }}
+            ></div>
+          </div>
+        </div>
+        
+        <div className="flex justify-between items-center">
+          <div className="flex">
+            {[1, 2, 3, 4, 5].map((star) => (
+              <StarIcon 
+                key={star}
+                className={`h-4 w-4 ${star <= project.rating ? 'text-yellow-400' : 'text-gray-300'}`}
+              />
+            ))}
+            <span className="text-sm ml-1">{project.rating.toFixed(1)}</span>
+          </div>
+          <Button size="sm">View Details</Button>
+        </div>
+      </div>
+    </div>
+  );
+};
+```
+
+![Project Tracking](https://i.imgur.com/XdI4sAZ.png)
+
+### 4. 🗳️ Leader Accountability
+
+Track elected officials' performance with data-driven metrics and citizen ratings.
+
+```jsx
+// Leader Profile Component
+export const LeaderProfile = ({ leader }) => {
+  const { 
+    name, position, county, imageUrl, 
+    projectsCompleted, projectsOngoing, 
+    attendanceRate, fundsUtilized, fundsAllocated,
+    approvalRating 
+  } = leader;
+  
+  return (
+    <div className="flex flex-col md:flex-row gap-6 p-6 bg-white rounded-lg shadow">
+      <div className="md:w-1/4 flex flex-col items-center">
+        <img 
+          src={imageUrl || '/images/leader-placeholder.jpg'}
+          alt={name}
+          className="w-32 h-32 rounded-full object-cover mb-4"
+        />
+        <h3 className="font-bold text-xl text-center">{name}</h3>
+        <p className="text-gray-600 text-center mb-1">{position}</p>
+        <p className="text-gray-500 text-sm text-center">{county} County</p>
+      </div>
+      
+      <div className="md:w-3/4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+          <StatCard label="Projects Completed" value={projectsCompleted} />
+          <StatCard label="Projects Ongoing" value={projectsOngoing} />
+          <StatCard label="Attendance Rate" value={`${attendanceRate}%`} />
+        </div>
+        
+        <div className="mb-6">
+          <h4 className="font-medium mb-2">Funds Utilization</h4>
+          <div className="flex justify-between mb-1">
+            <span className="text-sm">KES {formatNumber(fundsUtilized)}</span>
+            <span className="text-sm">KES {formatNumber(fundsAllocated)}</span>
+          </div>
+          <div className="w-full bg-gray-200 rounded-full h-2">
+            <div 
+              className="bg-green-600 h-2 rounded-full" 
+              style={{ width: `${(fundsUtilized/fundsAllocated) * 100}%` }}
+            ></div>
+          </div>
+        </div>
+        
+        <div className="mb-6">
+          <h4 className="font-medium mb-2">Public Approval Rating</h4>
+          <div className="flex items-center gap-4">
+            <div className="text-3xl font-bold">{approvalRating.toFixed(1)}</div>
+            <div className="flex-1">
+              <ApprovalRatingStars rating={approvalRating} />
+            </div>
+          </div>
+        </div>
+        
+        <div className="flex gap-3">
+          <Button>Vote Again</Button>
+          <Button variant="outline" className="text-red-500 border-red-300">
+            Impeach
+          </Button>
+        </div>
+      </div>
+    </div>
+  );
+};
+```
+
+![Leader Accountability](https://i.imgur.com/3RDC12P.png)
+
+### 5. 🤖 AI-Powered Civic Education
+
+An intelligent chatbot helping citizens understand complex governance and economic topics.
+
+```jsx
+// AI Chatbot Component
+export const CivicsBot = () => {
+  const [query, setQuery] = useState('');
+  const [messages, setMessages] = useState([
+    { 
+      role: 'assistant', 
+      content: 'Hello! I'm TruthBot. Ask me anything about Kenya's government, budgets, or civic processes.' 
+    }
+  ]);
+  const [isLoading, setIsLoading] = useState(false);
+  
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!query.trim()) return;
+    
+    // Add user message
+    setMessages(prev => [...prev, { role: 'user', content: query }]);
+    setIsLoading(true);
+    
+    try {
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ 
+          messages: [...messages, { role: 'user', content: query }] 
+        })
+      });
+      
+      const data = await response.json();
+      setMessages(prev => [...prev, { role: 'assistant', content: data.content }]);
+    } catch (error) {
+      console.error('Error fetching response:', error);
+      setMessages(prev => [...prev, { 
+        role: 'assistant', 
+        content: 'Sorry, I encountered an error. Please try again.' 
+      }]);
+    } finally {
+      setIsLoading(false);
+      setQuery('');
+    }
   };
   
   return (
-    <div className={cn(
-      "p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700",
-      className
-    )}>
-      <div className="flex justify-between items-start">
-        <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400">{title}</h3>
-        {icon && <span className="text-gray-400">{icon}</span>}
+    <div className="border rounded-lg overflow-hidden shadow-md h-[500px] flex flex-col">
+      <div className="bg-blue-600 text-white p-3">
+        <h3 className="font-bold">TruthBot - Civic Education Assistant</h3>
       </div>
-      <div className="mt-2">
-        <p className="text-2xl font-bold">{value}</p>
-        {change && (
-          <p className={`text-xs flex items-center mt-1 ${trendColors[trend]}`}>
-            {trend === 'positive' && <ArrowUpIcon className="w-3 h-3 mr-1" />}
-            {trend === 'negative' && <ArrowDownIcon className="w-3 h-3 mr-1" />}
-            {change} {period}
-          </p>
+      
+      <div className="flex-1 p-4 overflow-y-auto bg-gray-50">
+        {messages.map((msg, index) => (
+          <div 
+            key={index}
+            className={`mb-3 ${msg.role === 'assistant' ? 'pl-2' : 'pl-10'}`}
+          >
+            <div 
+              className={`p-3 rounded-lg ${
+                msg.role === 'assistant' 
+                  ? 'bg-white border' 
+                  : 'bg-blue-500 text-white'
+              }`}
+            >
+              {msg.content}
+            </div>
+          </div>
+        ))}
+        {isLoading && (
+          <div className="pl-2 mb-3">
+            <div className="p-3 rounded-lg bg-white border">
+              <div className="flex gap-2">
+                <div className="w-2 h-2 bg-gray-300 rounded-full animate-bounce" />
+                <div className="w-2 h-2 bg-gray-300 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }} />
+                <div className="w-2 h-2 bg-gray-300 rounded-full animate-bounce" style={{ animationDelay: '0.4s' }} />
+              </div>
+            </div>
+          </div>
         )}
       </div>
+      
+      <form onSubmit={handleSubmit} className="p-3 border-t bg-white">
+        <div className="flex gap-2">
+          <input
+            type="text"
+            value={query}
+            onChange={e => setQuery(e.target.value)}
+            placeholder="Ask about Kenya's governance..."
+            className="flex-1 border rounded-md p-2"
+          />
+          <Button type="submit" disabled={isLoading}>
+            {isLoading ? <Spinner size="sm" /> : <SendIcon className="h-4 w-4" />}
+          </Button>
+        </div>
+      </form>
     </div>
   );
 };
 ```
 
-### Responsive Design Strategy
-
-TruthKenya employs a mobile-first design approach, ensuring the platform is accessible on all devices.
-
-```jsx
-// Responsive container example
-const DashboardLayout = ({ children }) => {
-  return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        {children}
-      </div>
-    </div>
-  );
-};
-```
-
-### Accessibility Focus
-
-All components are developed with accessibility in mind, ensuring compliance with WCAG 2.1 guidelines.
-
-```jsx
-// Accessible button component
-const AccessibleButton = ({ 
-  children, 
-  onClick, 
-  disabled = false,
-  ariaLabel
-}) => {
-  return (
-    <button
-      className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
-      onClick={onClick}
-      disabled={disabled}
-      aria-label={ariaLabel}
-    >
-      {children}
-    </button>
-  );
-};
-```
+![AI Civic Education](https://i.imgur.com/UZqkr3i.png)
 
 ---
 
-## 🔧 Backend Infrastructure
+## 💻 Technology Stack
 
-### API Structure
+TruthKenya leverages cutting-edge technologies to deliver a robust, scalable platform:
 
-TruthKenya uses a RESTful API architecture with resource-based URL structure.
+### Frontend
+- **React 18** with **Next.js 13**: For server-side rendering and optimal SEO
+- **Tailwind CSS**: For responsive, utility-first styling
+- **D3.js & Recharts**: For dynamic data visualizations
+- **ShadcnUI**: For consistent, accessible UI components
+- **React Query**: For efficient data fetching and caching
 
-```javascript
-// Example API routes
-const router = express.Router();
+### Backend
+- **Node.js**: Runtime environment
+- **Express.js**: API framework
+- **Prisma ORM**: Type-safe database queries
+- **JWT**: For secure authentication
+- **OpenAI API**: For AI-powered civic education
+- **Twilio**: For SMS notifications
 
-// Projects endpoints
-router.get('/projects', projectController.getAllProjects);
-router.get('/projects/:id', projectController.getProjectById);
-router.get('/projects/county/:countyId', projectController.getProjectsByCounty);
-router.get('/projects/category/:category', projectController.getProjectsByCategory);
+### Database
+- **PostgreSQL**: Primary database for structured data
+- **MongoDB**: For unstructured data (citizen reports, images)
+- **Redis**: For caching and rate limiting
 
-// Leaders endpoints
-router.get('/leaders', leaderController.getAllLeaders);
-router.get('/leaders/:id', leaderController.getLeaderById);
-router.get('/leaders/performance', leaderController.getLeadersByPerformance);
+### DevOps
+- **Docker & Kubernetes**: For containerization and orchestration
+- **GitHub Actions**: For CI/CD pipelines
+- **AWS**: For cloud infrastructure
+- **Terraform**: For infrastructure as code
 
-// Citizen reporting endpoints
-router.post('/reports', authenticateUser, reportController.createReport);
-router.get('/reports', reportController.getReports);
-router.get('/reports/trending', reportController.getTrendingReports);
+### Testing & Quality
+- **Jest & React Testing Library**: For unit and integration tests
+- **Cypress**: For end-to-end testing
+- **ESLint & Prettier**: For code quality and consistency
 
-module.exports = router;
+---
+
+## 🚀 Installation & Setup
+
+Get TruthKenya up and running in your local environment:
+
+### Prerequisites
+- Node.js v16+
+- PostgreSQL 14+
+- MongoDB 5+
+- Redis 6+
+
+### Setup Steps
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/truthkenya/platform.git
+cd platform
 ```
 
-### Authentication System
+2. **Install dependencies**
+```bash
+# Install frontend dependencies
+cd client
+npm install
 
-Secure authentication using JWT with refresh token rotation for enhanced security.
+# Install backend dependencies
+cd ../server
+npm install
+```
+
+3. **Set up environment variables**
+```bash
+# In the server directory
+cp .env.example .env
+# Edit .env with your database credentials and API keys
+```
+
+4. **Set up the database**
+```bash
+# In the server directory
+npx prisma migrate dev
+npx prisma db seed
+```
+
+5. **Start the development servers**
+```bash
+# Start the backend server (from server directory)
+npm run dev
+
+# In a new terminal, start the frontend (from client directory)
+npm run dev
+```
+
+6. **Access the application**
+- Frontend: http://localhost:3000
+- API: http://localhost:8000
+
+---
+
+## 🛠️ Implementation Details
+
+### Authentication Flow
+
+TruthKenya implements a secure authentication system using JWT with refresh tokens:
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant Client
+    participant API
+    participant DB
+    
+    User->>Client: Enter credentials
+    Client->>API: POST /auth/login
+    API->>DB: Validate credentials
+    DB->>API: Return user data
+    API->>Client: Send JWT + Refresh Token
+    Client->>User: Login successful
+    
+    Note over Client: Store tokens
+    
+    Client->>API: Request with JWT
+    API->>API: Verify JWT
+    
+    alt JWT valid
+        API->>Client: Return requested data
+    else JWT expired
+        API->>Client: 401 Unauthorized
+        Client->>API: POST /auth/refresh (with Refresh Token)
+        API->>DB: Validate Refresh Token
+        DB->>API: Token valid
+        API->>Client: New JWT + Refresh Token
+        Client->>API: Retry original request
+        API->>Client: Return requested data
+    end
+```
+
+### Real-time Updates
+
+We use WebSockets for real-time updates on project status changes and citizen reports:
 
 ```javascript
-// Authentication middleware
-const authenticateUser = async (req, res, next) => {
-  try {
-    const authHeader = req.headers.authorization;
-    
-    if (!authHeader || !authHeader.startsWith('Bearer ')) {
-      return res.status(401).json({ message: 'Authorization header missing or invalid' });
+// server/services/websocket.js
+const { Server } = require('socket.io');
+
+module.exports = (httpServer) => {
+  const io = new Server(httpServer, {
+    cors: {
+      origin: process.env.CLIENT_URL,
+      methods: ["GET", "POST"]
     }
+  });
+  
+  io.on('connection', (socket) => {
+    console.log('New client connected');
     
-    const token = authHeader.split(' ')[1];
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    // Join room for specific county updates
+    socket.on('joinCounty', (countyId) => {
+      socket.join(`county-${countyId}`);
+    });
     
-    const user = await UserModel.findById(decoded.userId);
-    if (!user) {
-      return res.status(401).json({ message: 'User not found' });
-    }
+    // Join room for specific project updates
+    socket.on('joinProject', (projectId) => {
+      socket.join(`project-${projectId}`);
+    });
     
-    req.user = user;
-    next();
-  } catch (error) {
-    if (error.name === 'TokenExpiredError') {
-      return res.status(401).json({ message: 'Token expired' });
-    }
-    return res.status(401).json({ message: 'Invalid token' });
-  }
+    // Listen for new reports
+    socket.on('submitReport', async (report) => {
+      try {
+        // Save report to database
+        const savedReport = await reportService.create(report);
+        
+        // Notify admins
+        io.to('admins').emit('newReport', savedReport);
+        
+        // Notify users following this project
+        io.to(`project-${report.projectId}`).emit('projectUpdate', {
+          type: 'newReport',
+          data: savedReport
+        });
+        
+        // Notify users in this county
+        io.to(`county-${report.countyId}`).emit('countyUpdate', {
+          type: 'newReport',
+          data: savedReport
+        });
+      } catch (error) {
+        socket.emit('error', { message: 'Failed to submit report' });
+      }
+    });
+    
+    socket.on('disconnect', () => {
+      console.log('Client disconnected');
+    });
+  });
+  
+  return io;
 };
 ```
 
-### Data Processing Pipelines
+### Data Visualization Strategy
 
-Automated ETL processes for integrating government data from various sources.
+TruthKenya implements a hybrid approach to data visualization:
 
-```javascript
-// Example data processing job
-const processGovernmentData = async () => {
-  try {
-    // 1. Extract data from sources
-    const budgetData = await fetchFromSource('budget', API_ENDPOINTS.TREASURY);
-    const projectData = await fetchFromSource('projects', API_ENDPOINTS.PROJECTS);
-    
-    // 2. Transform data
-    const normalizedBudgetData = normalizeBudgetData(budgetData);
-    const normalizedProjectData = normalizeProjectData(projectData);
-    
-    // 3. Validate data integrity
-    validateData(normalizedBudgetData, 'budget');
-    validateData(normalizedProjectData, 'projects');
-    
-    // 4. Load data into database
-    await BudgetModel.bulkWrite(createBulkUpsertOperations(normalizedBudgetData));
-    await ProjectModel.bulkWrite(createBulkUpsertOperations(normalizedProjectData));
-    
-    // 5. Update last sync timestamp
-    await DataSyncModel.updateOne(
-      { type: 'government_data' },
-      { $set: { lastSyncAt: new Date() } },
-      { upsert: true }
-    );
-    
-    console.log('Government data processing completed successfully');
-  } catch (error) {
-    console.error('Error processing government data:', error);
-    sendAlertToAdmins('data_processing_failure', error.message);
-  }
+1. **Server-side data preparation**: Complex aggregations are performed on the server
+2. **Client-side rendering**: D3.js and Recharts render visualizations client-side
+3. **Progressive enhancement**: Basic charts work without JavaScript, enhanced with interactivity when available
+
+```jsx
+// client/components/charts/BudgetBreakdown.jsx
+import { ResponsiveContainer, PieChart, Pie, Cell, Tooltip, Legend } from 'recharts';
+
+export const BudgetBreakdown = ({ data }) => {
+  const COLORS = ['#FF8042', '#0088FE', '#00C49F', '#FFBB28', '#FF00FF', '#808080'];
+  
+  return (
+    <div className="h-72">
+      <h3 className="text-lg font-medium mb-3">Budget Allocation</h3>
+      <ResponsiveContainer width="100%" height="100%">
+        <PieChart>
+          <Pie
+            data={data}
+            cx="50%"
+            cy="50%"
+            labelLine={false}
+            outerRadius={80}
+            fill="#8884d8"
+            dataKey="value"
+            label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
+          >
+            {data.map((entry, index) => (
+              <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+            ))}
+          </Pie>
+          <Tooltip formatter={(value) => `KES ${value.toLocaleString()}`} />
+          <Legend />
+        </PieChart>
+      </ResponsiveContainer>
+    </div>
+  );
 };
 ```
 
@@ -477,430 +627,304 @@ const processGovernmentData = async () => {
 
 ## 📊 Database Schema
 
-### Core Entities
+TruthKenya uses a normalized database design to efficiently store and retrieve data:
 
-<p align="center">
-  <img src="docs/images/database-schema.png" alt="Database Schema Diagram" width="700"/>
-</p>
-
-### PostgreSQL Schemas
-
-```sql
--- Projects Schema
-CREATE TABLE projects (
-  id SERIAL PRIMARY KEY,
-  title VARCHAR(255) NOT NULL,
-  description TEXT,
-  category VARCHAR(100) NOT NULL,
-  status VARCHAR(50) NOT NULL,
-  county_id INTEGER REFERENCES counties(id),
-  budget_allocation DECIMAL(15, 2) NOT NULL,
-  funds_utilized DECIMAL(15, 2) DEFAULT 0,
-  start_date DATE NOT NULL,
-  end_date DATE,
-  completion_percentage INTEGER DEFAULT 0,
-  contractor VARCHAR(255),
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
--- Leaders Schema
-CREATE TABLE leaders (
-  id SERIAL PRIMARY KEY,
-  name VARCHAR(255) NOT NULL,
-  position VARCHAR(100) NOT NULL,
-  representing VARCHAR(100) NOT NULL,
-  county_id INTEGER REFERENCES counties(id),
-  party VARCHAR(100),
-  election_date DATE,
-  funds_allocated DECIMAL(15, 2) DEFAULT 0,
-  funds_utilized DECIMAL(15, 2) DEFAULT 0,
-  attendance_percentage INTEGER DEFAULT 0,
-  projects_completed INTEGER DEFAULT 0,
-  total_projects INTEGER DEFAULT 0,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
--- Citizen Reports Schema
-CREATE TABLE citizen_reports (
-  id SERIAL PRIMARY KEY,
-  user_id INTEGER REFERENCES users(id),
-  title VARCHAR(255) NOT NULL,
-  description TEXT NOT NULL,
-  category VARCHAR(100) NOT NULL,
-  status VARCHAR(50) DEFAULT 'pending',
-  location VARCHAR(255),
-  county_id INTEGER REFERENCES counties(id),
-  evidence_urls TEXT[],
-  upvotes INTEGER DEFAULT 0,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
--- User Ratings Schema
-CREATE TABLE ratings (
-  id SERIAL PRIMARY KEY,
-  user_id INTEGER REFERENCES users(id),
-  leader_id INTEGER REFERENCES leaders(id),
-  project_id INTEGER REFERENCES projects(id),
-  rating INTEGER CHECK (rating BETWEEN 1 AND 5),
-  comment TEXT,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+```mermaid
+erDiagram
+    User {
+        int id PK
+        string email
+        string hashedPassword
+        string firstName
+        string lastName
+        string role
+        timestamp createdAt
+        timestamp updatedAt
+    }
+    
+    County {
+        int id PK
+        string name
+        string code
+        polygon boundaries
+    }
+    
+    Project {
+        int id PK
+        string name
+        string description
+        decimal budget
+        int countyId FK
+        int sectorId FK
+        date startDate
+        date endDate
+        float completionPercentage
+        timestamp createdAt
+        timestamp updatedAt
+    }
+    
+    Sector {
+        int id PK
+        string name
+        string code
+    }
+    
+    Leader {
+        int id PK
+        string name
+        string position
+        int countyId FK
+        date electionDate
+        date termEnd
+        float approvalRating
+        int attendanceRate
+        timestamp createdAt
+        timestamp updatedAt
+    }
+    
+    CitizenReport {
+        int id PK
+        int userId FK
+        int projectId FK
+        string title
+        string description
+        string status
+        point location
+        array images
+        timestamp createdAt
+        timestamp updatedAt
+    }
+    
+    Budget {
+        int id PK
+        int fiscalYearId FK
+        int countyId FK
+        int sectorId FK
+        decimal allocation
+        decimal expenditure
+        timestamp createdAt
+        timestamp updatedAt
+    }
+    
+    FiscalYear {
+        int id PK
+        string name
+        date startDate
+        date endDate
+    }
+    
+    ImpeachmentPetition {
+        int id PK
+        int leaderId FK
+        string reason
+        int signatureCount
+        string status
+        timestamp createdAt
+        timestamp updatedAt
+    }
+    
+    User ||--o{ CitizenReport : submits
+    County ||--o{ Project : has
+    County ||--o{ Leader : has
+    County ||--o{ Budget : receives
+    Sector ||--o{ Project : categorizes
+    Sector ||--o{ Budget : allocates
+    Project ||--o{ CitizenReport : receives
+    Leader ||--o{ ImpeachmentPetition : targets
+    FiscalYear ||--o{ Budget : contains
 ```
 
-### MongoDB Collections
+Our database design principles include:
 
-```javascript
-// Hot Topics Schema
-const HotTopicSchema = new Schema({
-  key: { type: String, required: true, unique: true },
-  title: { type: String, required: true },
-  status: { 
-    type: String, 
-    enum: ['Pending', 'Active', 'Resolved', 'Controversial'], 
-    default: 'Active' 
-  },
-  description: { type: String, required: true },
-  stats: { type: Map, of: String },
-  sentiment: {
-    support: { type: Number, default: 0 },
-    oppose: { type: Number, default: 0 },
-    neutral: { type: Number, default: 0 }
-  },
-  updates: [{
-    source: String,
-    title: String,
-    url: String,
-    date: { type: Date, default: Date.now }
-  }],
-  isActive: { type: Boolean, default: true },
-  priority: { type: Number, default: 0 },
-  createdAt: { type: Date, default: Date.now },
-  updatedAt: { type: Date, default: Date.now }
-});
-
-// Scandal Tracker Schema
-const ScandalSchema = new Schema({
-  title: { type: String, required: true },
-  description: { type: String, required: true },
-  amount: { type: Number, required: true },
-  institutions: [{ type: String }],
-  counties: [{ type: String }],
-  impactCalculations: [{
-    sector: { type: String },
-    lostOpportunities: { type: String },
-    estimatedValue: { type: Number }
-  }],
-  status: { 
-    type: String, 
-    enum: ['Alleged', 'Under Investigation', 'In Court', 'Prosecuted', 'Acquitted'],
-    default: 'Alleged'
-  },
-  createdAt: { type: Date, default: Date.now },
-  updatedAt: { type: Date, default: Date.now }
-});
-```
+- **Normalization**: Reduces data redundancy
+- **Indexing**: Optimizes query performance
+- **Temporal tracking**: Historical data preservation
+- **Spatial support**: Geolocation for projects and reports
 
 ---
 
-## 📥 Installation Guide
+## 📡 API Documentation
 
-### Prerequisites
-- Node.js (v16.0+)
-- PostgreSQL (v14.0+)
-- MongoDB (v5.0+)
-- Redis (v6.0+)
-
-### Local Development Setup
-
-```bash
-# Clone the repository
-git clone https://github.com/kuriabyte/truthkenya.git
-cd truthkenya
-
-# Install dependencies
-npm install
-
-# Set up environment variables
-cp .env.example .env
-# Edit .env with your configuration
-
-# Run database migrations
-npm run db:migrate
-
-# Seed the database with sample data
-npm run db:seed
-
-# Start the development server
-npm run dev
-```
-
-### Docker Setup
-
-```bash
-# Build and run with Docker Compose
-docker-compose up -d
-
-# View logs
-docker-compose logs -f
-
-# Stop containers
-docker-compose down
-```
-
-### Production Deployment
-
-```bash
-# Build for production
-npm run build
-
-# Start production server
-npm start
-```
-
----
-
-## 📝 API Documentation
+TruthKenya exposes a RESTful API with the following key endpoints:
 
 ### Authentication
-
-```
-POST /api/auth/register
-POST /api/auth/login
-POST /api/auth/refresh-token
-POST /api/auth/logout
-```
+- `POST /api/auth/register` - Register a new user
+- `POST /api/auth/login` - Login and receive tokens
+- `POST /api/auth/refresh` - Refresh access token
+- `POST /api/auth/logout` - Invalidate tokens
 
 ### Projects
-
-```
-GET /api/projects
-GET /api/projects/:id
-GET /api/projects/county/:countyId
-GET /api/projects/category/:category
-```
+- `GET /api/projects` - List all projects (with filtering)
+- `GET /api/projects/:id` - Get project details
+- `POST /api/projects/:id/reports` - Submit a citizen report
+- `GET /api/projects/:id/reports` - Get reports for a project
 
 ### Leaders
+- `GET /api/leaders` - List all leaders (with filtering)
+- `GET /api/leaders/:id` - Get leader profile
+- `POST /api/leaders/:id/ratings` - Submit leader rating
+- `POST /api/leaders/:id/impeachment` - Submit impeachment signature
 
-```
-GET /api/leaders
-GET /api/leaders/:id
-GET /api/leaders/county/:countyId
-GET /api/leaders/performance
-```
+### Budgets
+- `GET /api/budgets` - Get budget allocations (with filtering)
+- `GET /api/budgets/fiscal-years` - List fiscal years
+- `GET /api/budgets/sectors` - List budget sectors
+
+### Counties
+- `GET /api/counties` - List all counties
+- `GET /api/counties/:id` - Get county details
+- `GET /api/counties/:id/projects` - Get county projects
+- `GET /api/counties/:id/leaders` - Get county leaders
 
 ### Reports
+- `GET /api/reports` - List citizen reports (with filtering)
+- `POST /api/reports` - Create a new report
+- `GET /api/reports/:id` - Get report details
 
-```
-POST /api/reports
-GET /api/reports
-GET /api/reports/trending
-```
+### Analytics
+- `GET /api/analytics/dashboard` - Get dashboard statistics
+- `GET /api/analytics/corruption` - Get corruption statistics
+- `GET /api/analytics/performance` - Get performance rankings
 
-### Example API Response
-
-```json
-{
-  "status": "success",
-  "data": {
-    "projects": [
-      {
-        "id": 1,
-        "title": "Nairobi Expressway",
-        "description": "A 27km elevated highway connecting Jomo Kenyatta International Airport to Nairobi's Westlands area.",
-        "category": "Infrastructure",
-        "status": "Completed",
-        "county": "Nairobi",
-        "budget_allocation": 65000000,
-        "funds_utilized": 65000000,
-        "start_date": "2020-10-15",
-        "end_date": "2022-04-30",
-        "completion_percentage": 100,
-        "contractor": "China Road and Bridge Corporation",
-        "images": ["https://example.com/expressway1.jpg", "https://example.com/expressway2.jpg"]
-      }
-    ],
-    "pagination": {
-      "page": 1,
-      "limit": 10,
-      "total": 250,
-      "pages": 25
-    }
-  }
-}
-```
+All API endpoints include:
+- Pagination support
+- Filtering capabilities
+- Sorting options
+- Proper error handling
+- Rate limiting
 
 ---
 
-## 🛠️ Development Workflow
+## 🔮 Future Integrations
 
-### Branching Strategy
+TruthKenya has an ambitious roadmap for expanding functionality:
 
-- `main` - Production branch
-- `develop` - Development branch
-- `feature/*` - Feature branches
-- `bugfix/*` - Bug fix branches
-- `release/*` - Release branches
+### 1. 📱 Mobile App
+A dedicated mobile application to enable offline data collection and wider reach, especially in rural areas with limited connectivity.
 
-### Commit Conventions
+### 2. 🗣️ Multi-language Support
+Adding support for Swahili and other local languages to increase accessibility across Kenya.
 
-We follow the [Conventional Commits](https://www.conventionalcommits.org/) specification:
+### 3. 🛰️ Satellite Imagery Integration
+Partnership with satellite imagery providers to monitor infrastructure projects and verify completion claims.
 
-```
-feat: add hot topics tracking component
-fix: resolve leader profile loading issue
-docs: update API documentation
-style: format code with prettier
-refactor: restructure data processing pipeline
-test: add unit tests for authentication
-chore: update dependencies
-```
+### 4. 🔍 Procurement Monitoring System
+Integration with e-procurement systems to track government contracts and flag potential irregularities.
 
-### Pull Request Process
+### 5. 📊 Advanced Economic Impact Models
+Sophisticated economic models to predict the impact of government policies on different demographic groups.
 
-1. Create a feature branch from `develop`
-2. Implement your changes
-3. Write or update tests
-4. Submit a pull request to `develop`
-5. Request code review
-6. Address review comments
-7. Merge after approval
+### 6. 🔄 Blockchain Verification
+Implementation of blockchain technology for immutable record-keeping of government spending.
 
-### Testing Strategy
+### 7. 📰 Media Monitoring API
+Automated tracking of news mentions related to corruption cases and government projects.
 
-- Unit tests for individual components and functions
-- Integration tests for API endpoints
-- End-to-end tests for critical user flows
-- Accessibility testing using axe-core
-- Performance testing using Lighthouse
+### 8. 🔔 Personalized Alerts System
+Allow users to subscribe to alerts for specific projects, leaders, or geographic areas.
 
 ---
 
-## 🚧 Current Challenges
+## 🧩 Challenges & Solutions
 
-### Technical Challenges
+Building TruthKenya has presented unique challenges:
 
-1. **Data Reliability**
-   - Inconsistent data formats from government sources
-   - Manual data entry requirements for some datasets
-   - Data verification and fact-checking processes
+### 1. 📊 Data Availability
+**Challenge**: Government data is often inconsistent, outdated, or unavailable.  
+**Solution**: We've implemented a multi-source data collection approach combining official records, media reports, and verified citizen submissions.
 
-2. **Scale & Performance**
-   - Optimizing for low-bandwidth connections in rural areas
-   - Managing database growth with increasing user reports
-   - Ensuring real-time updates without excessive server load
+### 2. 🔒 Security Concerns
+**Challenge**: Protecting whistleblowers and preventing system abuse.  
+**Solution**: End-to-end encryption, anonymous reporting options, and robust verification processes.
 
-3. **Security Concerns**
-   - Protecting whistleblower identities
-   - Preventing malicious reporting
-   - Securing sensitive government data
+### 3. 🌐 Connectivity Issues
+**Challenge**: Many Kenyans have limited internet access.  
+**Solution**: Low-bandwidth mode, SMS integration, and offline capability for the future mobile app.
 
-### Operational Challenges
+### 4. 🛡️ Political Resistance
+**Challenge**: Potential pushback from political entities.  
+**Solution**: Strict factual accuracy, non-partisan approach, and transparent methodology.
 
-1. **User Verification**
-   - Limited access to official voter registration APIs
-   - Balancing verification with accessibility
+### 5. 📱 Digital Literacy
+**Challenge**: Varying levels of digital literacy among citizens.  
+**Solution**: Intuitive UI, educational resources, and community training initiatives.
 
-2. **Legal Considerations**
-   - Navigating defamation risks for corruption reporting
-   - Compliance with data protection regulations
-   - Managing official government responses
-
-3. **Community Management**
-   - Preventing platform misuse for political attacks
-   - Maintaining factual accuracy in user-generated content
-   - Building an effective moderation system
-
----
-
-## 🔮 Future Roadmap
-
-### Q2 2025
-- Blockchain-based verification for corruption reports
-- Advanced sentiment analysis for public opinion tracking
-- Expanded vernacular language support (Swahili, Kikuyu, Luo, etc.)
-
-### Q3 2025
-- AR visualizations for physical project locations
-- Integration with parliamentary voting records
-- Community-led investigation features
-
-### Q4 2025
-- Candidate comparison tools for 2027 elections
-- Expanded county-level data dashboards
-- Verified community journalist program
-
-### 2026
-- Machine learning for corruption pattern detection
-- Decentralized governance structure for platform oversight
-- API ecosystem for third-party civic tech integration
+### 6. 🔄 Real-time Data Updates
+**Challenge**: Keeping information current across multiple data sources.  
+**Solution**: Automated data ingestion pipelines, scheduled updates, and crowdsourced verification.
 
 ---
 
 ## 👥 Contributing
 
-We welcome contributions from developers, designers, data scientists, and civic activists.
+We welcome contributions to TruthKenya! Here's how you can help:
 
 ### Getting Started
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/my-feature`
+3. Commit changes: `git commit -am 'Add my feature'`
+4. Push to branch: `git push origin feature/my-feature`
+5. Submit a pull request
 
-1. Review open issues or create a new one
-2. Fork the repository
-3. Create your feature branch
-4. Submit a pull request
+### Contribution Guidelines
+- Follow the code style and conventions
+- Write tests for new features
+- Update documentation as needed
+- Respect the code of conduct
 
-### Contributor Guidelines
-
-- Follow code style and testing requirements
-- Update documentation for any new features
-- Respect our code of conduct
-
-### Areas We Need Help
-
-- Data visualization specialists
-- Kenyan language translators
-- Government data experts
-- UX researchers
-- Backend developers
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+### Areas We Need Help With
+- 🖥️ Frontend Development
+- 🔄 API Integrations
+- 📊 Data Visualization
+- 📱 Mobile Development
+- 🌐 Localization
+- 📝 Documentation
 
 ---
 
-## 🙏 Acknowledgments
+## 🌟 Team & Credits
 
-- The **Code for Kenya** community for their civic tech inspiration
-- **Transparency International Kenya** for data sources
-- **Open Government Partnership** for best practices
-- All the citizens who have contributed reports and feedback
+TruthKenya is led by:
+
+### Ian Kuria
+- **Lead Developer & Architect**
+- **Website**: [kuria.pro](https://kuria.pro)
+- **GitHub**: [@kuriabyte](https://github.com/kuriabyte)
+- **Email**: ian@truthkenya.com
+
+### Contributors
+Ian Kuria 
+- Data Visualization
+-  Backend Development
+-  UI/UX Design
+-  Content & Research
+
+### Special Thanks
+- Kenya National Bureau of Statistics
+- Transparency International Kenya
+- Open Institute
+
+---
+
+## 📜 License
+
+TruthKenya is released under the [MIT License](https://opensource.org/licenses/MIT).
 
 ---
 
-## 👨‍💻 Team
+## 📞 Contact
 
-### Core Team
-
-**Ian Kuria** - Lead Developer & Project Architect  
-[GitHub](https://github.com/kuriabyte) | [LinkedIn](https://linkedin.com/in/iankuria) | [Website](https://kuria.pro)
-
-**Contributors**
-- David Mwangi - Backend Developer
-- Jane Njeri - UX/UI Designer
-- Peter Omondi - Data Scientist
-
-### Contact Us
-
-📧 Email: info@truthkenya.org  
-🐦 Twitter: [@TruthKenyaOrg](https://twitter.com/TruthKenyaOrg)  
-📱 Telegram: [t.me/TruthKenya](https://t.me/TruthKenya)
+- **Website**: [truthkenya.com](https://truthkenya.com)
+- **Email**: info@truthkenya.com
+- **Twitter**: [@TruthKenya](https://twitter.com/truthkenya)
+- **GitHub**: [github.com/truthkenya](https://github.com/truthkenya)
+- 
 
 ---
+
+
 
 <p align="center">
-  <b>TruthKenya</b> - Empowering citizens, ensuring transparency, building a better Kenya 🇰🇪
+  <em>Building a more transparent Kenya, one data point at a time.</em><br>
+  <em>#TruthMatters #OpenKenya #CitizenEmpowerment</em>
 </p>
