@@ -1,4 +1,4 @@
-import { Leader } from "@/types/leaders";
+import { Leader, Project } from "@/types/leaders";
 
 /**
  * Fetches leaders data from the JSON file
@@ -6,6 +6,7 @@ import { Leader } from "@/types/leaders";
  */
 export async function fetchLeadersData(): Promise<Leader[]> {
   try {
+    // Use absolute path for public directory
     const response = await fetch('/data/leaders/leaders.json');
     if (!response.ok) {
       throw new Error(`Failed to fetch leaders data: ${response.status}`);
@@ -15,7 +16,8 @@ export async function fetchLeadersData(): Promise<Leader[]> {
     return data.leaders || [];
   } catch (error) {
     console.error("Error fetching leaders data:", error);
-    throw error;
+    // Return empty array instead of throwing to prevent page crashes
+    return [];
   }
 }
 
@@ -108,16 +110,12 @@ export function searchLeadersByName(
  * @returns Average completion rate as a percentage
  */
 export function calculateProjectCompletionRate(leader: Leader): number {
-  if (!leader.projects.length) {
+  if (!leader?.projects || !Array.isArray(leader.projects) || leader.projects.length === 0) {
     return 0;
   }
-  
-  const totalCompletion = leader.projects.reduce(
-    (sum, project) => sum + project.completion, 
-    0
-  );
-  
-  return Math.round(totalCompletion / leader.projects.length);
+
+  const completedProjects = leader.projects.filter(project => project.status === 'completed');
+  return (completedProjects.length / leader.projects.length) * 100;
 }
 
 /**
@@ -132,6 +130,16 @@ export function calculatePromiseFulfillment(leader: Leader): {
   pending: number;
   fulfillmentRate: number;
 } {
+  if (!leader?.promises || !Array.isArray(leader.promises)) {
+    return {
+      fulfilled: 0,
+      inProgress: 0,
+      broken: 0,
+      pending: 0,
+      fulfillmentRate: 0
+    };
+  }
+
   const fulfilled = leader.promises.filter(p => p.status === 'fulfilled').length;
   const inProgress = leader.promises.filter(p => p.status === 'in-progress').length;
   const broken = leader.promises.filter(p => p.status === 'broken').length;
@@ -155,7 +163,7 @@ export function calculatePromiseFulfillment(leader: Leader): {
  * @returns Attendance rate as a percentage
  */
 export function calculateAttendanceRate(leader: Leader): number {
-  if (!leader.attendance.length) {
+  if (!leader.attendance || !leader.attendance.length) {
     return 0;
   }
   
@@ -204,4 +212,53 @@ export function getUniqueParties(leaders: Leader[]): string[] {
   });
   
   return Array.from(parties).sort();
+}
+
+/**
+ * Calculates the total declared wealth
+ * @param wealth Array of wealth objects
+ * @returns Total declared wealth as a string
+ */
+export function getTotalDeclaredWealth(wealth: { year: number; amount: number }[]): string {
+  if (!wealth || wealth.length === 0) return 'KES 0';
+  
+  // Get the latest year's amount
+  const latestWealth = wealth.reduce((prev, current) => 
+    (current.year > prev.year) ? current : prev
+  );
+  
+  return `KES ${latestWealth.amount.toLocaleString()}`;
+}
+
+
+/**
+ * Calculates the leader's tenure
+ * @param electedDate The date the leader was elected
+ * @returns The leader's tenure as a string
+ */
+
+export function getLeaderTenure(electedDate: string, endDate?: string): string {
+  const startYear = new Date(electedDate).getFullYear();
+  const currentYear = new Date().getFullYear();
+  
+  if (endDate) {
+    const endYear = new Date(endDate).getFullYear();
+    return `${startYear} - ${endYear}`;
+  }
+  
+  return `${startYear} - Present`;
+  
+}
+
+
+/**
+ * Counts the number of active projects
+ * @param projects Array of project objects
+ * @returns Number of active projects
+ */
+
+
+export function countActiveProjects(projects: Project[]): number {
+  if (!projects) return 0;
+  return projects.filter(project => project.status === "ongoing").length;
 }

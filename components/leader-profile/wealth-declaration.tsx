@@ -1,69 +1,59 @@
 // components/leader-profile/wealth-declaration.tsx
-import { Card, CardContent } from "@/components/ui/card"
-import { TrendingUp, AlertCircle } from "lucide-react"
+import { Card } from "@/components/ui/card"
+import { WealthRecord } from "@/types/leaders"
 
 interface WealthDeclarationProps {
-  wealth: {
-    timeline: {
-      year: number
-      amount: string
-      assets: string[]
-    }[]
-    conflicts: string[]
-  }
+  wealth: WealthRecord[]
 }
 
-export const WealthDeclaration: React.FC<WealthDeclarationProps> = ({ wealth }) => {
+export function WealthDeclaration({ wealth }: WealthDeclarationProps) {
   return (
     <div className="space-y-6">
-      {wealth.timeline.map((entry, index) => (
-        <Card key={index}>
-          <CardContent className="p-6">
-            <div className="flex items-start justify-between mb-4">
-              <div>
-                <h3 className="font-semibold">Year {entry.year}</h3>
-                <div className="flex items-center gap-2 text-xl font-bold">
-                  <TrendingUp className="h-5 w-5 text-primary" />
-                  {entry.amount}
-                </div>
+      {wealth.map((record) => (
+        <Card key={record.year} className="p-6">
+          <div className="space-y-4">
+            <div className="flex items-center justify-between">
+              <h3 className="text-lg font-semibold">Year {record.year}</h3>
+              <div className="flex items-center gap-2">
+                <span className="text-2xl font-bold">
+                  KES {record.amount.toLocaleString()}
+                </span>
+                {record.growthPercent > 0 && (
+                  <span className="text-sm text-green-500">
+                    +{record.growthPercent}%
+                  </span>
+                )}
               </div>
             </div>
-            
-            <div className="space-y-4">
+
+            <div className="grid gap-4 sm:grid-cols-2">
               <div>
-                <h4 className="text-sm font-medium mb-2">Declared Assets:</h4>
-                <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                  {entry.assets.map((asset, i) => (
-                    <li key={i} className="text-sm flex items-center gap-2">
-                      <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+                <h4 className="font-medium mb-2">Assets</h4>
+                <ul className="space-y-1">
+                  {record.assets.map((asset, index) => (
+                    <li key={index} className="text-sm flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 rounded-full bg-green-500" />
                       {asset}
                     </li>
                   ))}
                 </ul>
               </div>
+
+              <div>
+                <h4 className="font-medium mb-2">Liabilities</h4>
+                <ul className="space-y-1">
+                  {record.liabilities.map((liability, index) => (
+                    <li key={index} className="text-sm flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 rounded-full bg-red-500" />
+                      {liability}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-          </CardContent>
+          </div>
         </Card>
       ))}
-
-      {wealth.conflicts.length > 0 && (
-        <Card className="border-destructive">
-          <CardContent className="p-6">
-            <div className="flex items-center gap-2 mb-4">
-              <AlertCircle className="h-5 w-5 text-destructive" />
-              <h3 className="font-semibold">Potential Conflicts of Interest</h3>
-            </div>
-            <ul className="space-y-2">
-              {wealth.conflicts.map((conflict, i) => (
-                <li key={i} className="text-sm text-destructive flex items-center gap-2">
-                  <span className="h-1.5 w-1.5 rounded-full bg-destructive" />
-                  {conflict}
-                </li>
-              ))}
-            </ul>
-          </CardContent>
-        </Card>
-      )}
     </div>
   )
 }

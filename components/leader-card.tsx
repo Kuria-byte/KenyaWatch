@@ -1,127 +1,168 @@
-import { Card, CardContent, CardHeader } from "@/components/ui/card"
-import { Progress } from "@/components/ui/progress"
-import { Star } from "lucide-react"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { ThumbsUp, ThumbsDown } from "lucide-react"
 import Link from "next/link"
-import { ExternalLink } from "lucide-react"
+import Image from "next/image"
+import { Card } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Leader } from "@/types/leaders"
+import { 
+  calculateAttendanceRate, 
+  calculateProjectCompletionRate,
+  getLeaderTenure,
+  getTotalDeclaredWealth,
+  countActiveProjects 
+} from "@/utils/leaders-utils"
 
 interface LeaderCardProps {
-  name: string
-  position: string
-  metrics: {
-    projectsExecuted: number
-    projectsPromised: number
-    fundsAllocated: string
-    fundsUtilized: string
-    attendance: string
-  }
-  approvalRating: {
-    performance: number
-    integrity: number
-    wouldVoteAgain: number
-  }
-  imageUrl: string
+  leader: Leader;
+  hideMetrics?: boolean;
 }
 
-export default function LeaderCard({ name, position, metrics, approvalRating, imageUrl }: LeaderCardProps) {
-  const projectCompletion = (metrics.projectsExecuted / metrics.projectsPromised) * 100
-  const profileUrl = `/leader/${encodeURIComponent(name.toLowerCase().replace(/\s+/g, '-'))}`
+export function LeaderCard({ leader, hideMetrics = false }: LeaderCardProps) {
+  // Safe calculations with error handling
+  const attendanceRate = (() => {
+    try {
+      return calculateAttendanceRate(leader)
+    } catch {
+      return 0
+    }
+  })()
+
+  const projectCompletionRate = (() => {
+    try {
+      return calculateProjectCompletionRate(leader)
+    } catch {
+      return 0
+    }
+  })()
+
+  const activeProjects = (() => {
+    try {
+      return countActiveProjects(leader.projects || [])
+    } catch {
+      return 0
+    }
+  })()
+
+  const scandals = leader.scandals?.length || 0
+  const tenure = getLeaderTenure(leader.electedDate, leader.endDate)
+  const wealthDisplay = getTotalDeclaredWealth(leader.wealth || [])
 
   return (
-    <Card>
-      <CardHeader className="pb-2">
-        <div className="flex items-center justify-between">
-          <Link 
-            href={profileUrl}
-            className="flex items-center gap-3 group hover:opacity-90 transition-opacity"
-          >
-            <div className="relative h-12 w-12 rounded-full overflow-hidden ring-2 ring-transparent group-hover:ring-primary/20 transition-all">
-              <Image 
-                src={imageUrl || "/placeholder.svg"} 
-                alt={name} 
-                fill 
-                className="object-cover" 
+    <Link href={`/leader/${leader.id}`} className="block">
+      <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+        <div className="p-4">
+          {/* Header Section */}
+          <div className="flex items-start gap-4">
+            <Avatar className="w-16 h-16 border">
+              <AvatarImage
+                src={leader.imageUrl}
+                alt={leader.name}
+                className="object-cover"
               />
-            </div>
-            <div className="group-hover:text-primary transition-colors">
-              <h3 className="font-semibold">{name}</h3>
-              <p className="text-sm text-muted-foreground">{position}</p>
-            </div>
-          </Link>
-        </div>
-      </CardHeader>
-      <CardContent className="space-y-4">
-        <div className="space-y-2">
-          <div className="flex justify-between text-sm">
-            <span>Projects Executed</span>
-            <span>
-              {metrics.projectsExecuted}/{metrics.projectsPromised}
-            </span>
-          </div>
-          <Progress value={projectCompletion} className="h-2" />
-        </div>
+              <AvatarFallback className="text-lg">
+                {leader.name.split(' ').map(n => n[0]).join('')}
+              </AvatarFallback>
+            </Avatar>
 
-        <div className="grid grid-cols-2 gap-2 text-sm">
-          <div>
-            <span className="text-muted-foreground">Funds Allocated:</span>
-            <p>{metrics.fundsAllocated}</p>
-          </div>
-          <div>
-            <span className="text-muted-foreground">Funds Utilized:</span>
-            <p>{metrics.fundsUtilized}</p>
-          </div>
-        </div>
-
-        <div>
-          <span className="text-muted-foreground">Attendance:</span>
-          <p>{metrics.attendance}</p>
-        </div>
-
-        <div className="space-y-2">
-          <h4 className="font-medium">Public Approval Rating</h4>
-          <div className="grid grid-cols-3 gap-2">
-            <div className="flex flex-col items-center">
-              <div className="flex items-center">
-                <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                <span className="ml-1 font-medium">{approvalRating.performance}</span>
+            <div className="flex-1 min-w-0">
+              <div className="flex items-start justify-between gap-2">
+                <div className="min-w-0">
+                  <h3 className="font-semibold text-lg leading-tight truncate">
+                    {leader.name}
+                  </h3>
+                  <p className="text-sm text-muted-foreground truncate">
+                    {leader.position}
+                  </p>
+                </div>
+                <Badge variant={leader.party === "UDA" ? "default" : "outline"} 
+                       className="shrink-0">
+                  {leader.party}
+                </Badge>
               </div>
-              <span className="text-xs text-muted-foreground">Performance</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="flex items-center">
-                <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                <span className="ml-1 font-medium">{approvalRating.integrity}</span>
+
+              <div className="mt-1 flex flex-wrap gap-2">
+                {leader.county && (
+                  <Badge variant="outline" className="text-xs">
+                    {leader.county}
+                  </Badge>
+                )}
+                {tenure && (
+                  <Badge variant="outline" className="text-xs">
+                    {tenure}
+                  </Badge>
+                )}
               </div>
-              <span className="text-xs text-muted-foreground">Integrity</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="flex items-center">
-                <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                <span className="ml-1 font-medium">{approvalRating.wouldVoteAgain}</span>
-              </div>
-              <span className="text-xs text-muted-foreground">Vote Again</span>
             </div>
           </div>
-        </div>
 
-        <div className="grid grid-cols-2 gap-2 mt-4">
-          <Button
-            variant="outline"
-            size="sm"
-            className="w-full bg-green-50 hover:bg-green-100 border-green-200 text-green-700"
-          >
-            <ThumbsUp className="w-4 h-4 mr-2" />
-            Vote Again
-          </Button>
-          <Button variant="outline" size="sm" className="w-full bg-red-50 hover:bg-red-100 border-red-200 text-red-700">
-            <ThumbsDown className="w-4 h-4 mr-2" />
-            Impeach
-          </Button>
+          {/* Only render metrics if not hidden */}
+          {!hideMetrics && (
+            <>
+              <div className="mt-4 grid grid-cols-2 gap-3">
+                <div className="space-y-1">
+                  <p className="text-sm text-muted-foreground">Approval Rating</p>
+                  <p className="font-semibold">
+                    {leader.approvalRating?.toFixed(1) || 'N/A'}/5
+                  </p>
+                </div>
+                <div className="space-y-1">
+                  <p className="text-sm text-muted-foreground">Declared Wealth</p>
+                  <p className="font-semibold">{wealthDisplay}</p>
+                </div>
+                <div className="space-y-1">
+                  <p className="text-sm text-muted-foreground">Active Projects</p>
+                  <p className="font-semibold">{activeProjects}</p>
+                </div>
+                <div className="space-y-1">
+                  <p className="text-sm text-muted-foreground">Controversies</p>
+                  <p className="font-semibold">{scandals}</p>
+                </div>
+              </div>
+
+              {/* Performance Indicators */}
+              <div className="mt-4 space-y-2">
+                <MetricBar 
+                  label="Attendance Rate"
+                  value={attendanceRate}
+                  suffix="%"
+                />
+                <MetricBar 
+                  label="Project Completion"
+                  value={projectCompletionRate}
+                  suffix="%"
+                />
+              </div>
+            </>
+          )}
         </div>
-      </CardContent>
-    </Card>
+      </Card>
+    </Link>
+  )
+}
+
+// Helper component for metric bars
+function MetricBar({ 
+  label, 
+  value, 
+  suffix = "" 
+}: { 
+  label: string; 
+  value: number; 
+  suffix?: string; 
+}) {
+  return (
+    <div className="space-y-1">
+      <div className="flex justify-between text-sm">
+        <span>{label}</span>
+        <span className="font-medium">{value}{suffix}</span>
+      </div>
+      <div className="h-2 bg-muted rounded-full overflow-hidden">
+        <div 
+          className="h-full bg-primary transition-all duration-500" 
+          style={{ width: `${Math.min(Math.max(value, 0), 100)}%` }}
+        />
+      </div>
+    </div>
   )
 }
 

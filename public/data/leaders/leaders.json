@@ -1,7 +1,2368 @@
+
 {
-  "leaders": [
+  "leaders":[
     {
-      "id": "william-ruto",
+      "id": "ahmed-abdullahi",
+      "name": "Ahmed Abdullahi",
+      "position": "Governor",
+      "county": "Wajir",
+      "party": "ODM",
+      "imageUrl": "/images/leaders/ahmed-abdullahi.jpg",
+      "electedDate": "2022-08-09",
+      "approvalRating": 3.3,
+      "totalVotes": 35533,
+      "contact": {
+        "email": "governor@wajir.go.ke",
+        "office": "County Headquarters, Wajir",
+        "socialMedia": {
+          "twitter": "@AhmedAbdullahi"
+        }
+      },
+      "education": [
+        "Master of Business Administration, University of Nairobi",
+        "Bachelor of Commerce, University of Nairobi"
+      ],
+      "projects": [
+        {
+          "id": "p88",
+          "name": "Wajir Water Access Program",
+          "status": "ongoing",
+          "budget": 200000000,
+          "spent": 120000000,
+          "completion": 60,
+          "startDate": "2022-11-15",
+          "endDate": "2025-11-15",
+          "beneficiaries": 700000,
+          "location": "Wajir County"
+        },
+        {
+          "id": "p89",
+          "name": "Livestock Development Initiative",
+          "status": "ongoing",
+          "budget": 150000000,
+          "spent": 75000000,
+          "completion": 50,
+          "startDate": "2023-02-01",
+          "endDate": "2025-02-01",
+          "beneficiaries": 500000,
+          "location": "Wajir County"
+        }
+      ],
+      "promises": [
+        {
+          "id": "pr128",
+          "description": "Improve water access",
+          "category": "Water",
+          "madeDate": "2022-06-15",
+          "dueDate": "2025-06-15",
+          "status": "in-progress",
+          "evidence": "https://example.com/evidence128"
+        },
+        {
+          "id": "pr129",
+          "description": "Enhance livestock sector",
+          "category": "Agriculture",
+          "madeDate": "2022-06-15",
+          "dueDate": "2025-06-15",
+          "status": "in-progress"
+        },
+        {
+          "id": "pr130",
+          "description": "Improve healthcare services",
+          "category": "Healthcare",
+          "madeDate": "2022-08-10",
+          "dueDate": "2026-08-10",
+          "status": "in-progress"
+        }
+      ],
+      "attendance": [
+        {
+          "period": "2023 Q1",
+          "present": 45,
+          "absent": 5,
+          "total": 50
+        },
+        {
+          "period": "2023 Q2",
+          "present": 46,
+          "absent": 4,
+          "total": 50
+        },
+        {
+          "period": "2023 Q3",
+          "present": 45,
+          "absent": 5,
+          "total": 50
+        },
+        {
+          "period": "2023 Q4",
+          "present": 46,
+          "absent": 4,
+          "total": 50
+        },
+        {
+          "period": "2024 Q1",
+          "present": 45,
+          "absent": 5,
+          "total": 50
+        },
+        {
+          "period": "2024 Q2",
+          "present": 46,
+          "absent": 4,
+          "total": 50
+        }
+      ],
+      "scandals": [],
+      "wealth": [
+        {
+          "year": 2022,
+          "amount": 140000000,
+          "growthPercent": 0,
+          "assets": ["Properties in Nairobi and Wajir", "Business Interests", "Land"],
+          "liabilities": ["Mortgage"]
+        },
+        {
+          "year": 2023,
+          "amount": 147000000,
+          "growthPercent": 5.0,
+          "assets": ["Properties in Nairobi and Wajir", "Business Interests", "Land", "Investments"],
+          "liabilities": ["Mortgage"]
+        },
+        {
+          "year": 2024,
+          "amount": 154000000,
+          "growthPercent": 4.76,
+          "assets": ["Properties in Nairobi and Wajir", "Business Interests", "Land", "Investments", "Livestock"],
+          "liabilities": ["Mortgage"]
+        }
+      ],
+      "keyAchievements": [
+        "Enhanced water access across the county",
+        "Improved livestock development initiatives",
+        "Strengthened healthcare service delivery",
+        "Advanced drought mitigation measures",
+        "Improved infrastructure in marginalized areas"
+      ]
+    },
+    {
+      "id": "jeremiah-lomorukai",
+      "name": "Jeremiah Lomorukai",
+      "position": "Governor",
+      "county": "Turkana",
+      "party": "ODM",
+      "imageUrl": "/images/leaders/jeremiah-lomorukai.jpg",
+      "electedDate": "2022-08-09",
+      "approvalRating": 3.5,
+      "totalVotes": 71392,
+      "contact": {
+        "email": "governor@turkana.go.ke",
+        "office": "County Headquarters, Lodwar",
+        "socialMedia": {
+          "twitter": "@JeremiahLomorukai"
+        }
+      },
+      "education": [
+        "Master of Arts in Political Science, University of Nairobi",
+        "Bachelor of Arts in Political Science, University of Nairobi"
+      ],
+      "projects": [
+        {
+          "id": "p90",
+          "name": "Turkana Water Resources Development",
+          "status": "ongoing",
+          "budget": 250000000,
+          "spent": 150000000,
+          "completion": 60,
+          "startDate": "2022-11-15",
+          "endDate": "2025-11-15",
+          "beneficiaries": 900000,
+          "location": "Turkana County"
+        },
+        {
+          "id": "p91",
+          "name": "Pastoral Communities Support Program",
+          "status": "ongoing",
+          "budget": 200000000,
+          "spent": 100000000,
+          "completion": 50,
+          "startDate": "2023-02-01",
+          "endDate": "2025-02-01",
+          "beneficiaries": 700000,
+          "location": "Turkana County"
+        }
+      ],
+      "promises": [
+        {
+          "id": "pr131",
+          "description": "Develop water resources",
+          "category": "Water",
+          "madeDate": "2022-06-15",
+          "dueDate": "2025-06-15",
+          "status": "in-progress",
+          "evidence": "https://example.com/evidence131"
+        },
+        {
+          "id": "pr132",
+          "description": "Support pastoral communities",
+          "category": "Agriculture",
+          "madeDate": "2022-06-15",
+          "dueDate": "2025-06-15",
+          "status": "in-progress"
+        },
+        {
+          "id": "pr133",
+          "description": "Improve healthcare services",
+          "category": "Healthcare",
+          "madeDate": "2022-08-10",
+          "dueDate": "2026-08-10",
+          "status": "in-progress"
+        }
+      ],
+      "attendance": [
+        {
+          "period": "2023 Q1",
+          "present": 46,
+          "absent": 4,
+          "total": 50
+        },
+        {
+          "period": "2023 Q2",
+          "present": 47,
+          "absent": 3,
+          "total": 50
+        },
+        {
+          "period": "2023 Q3",
+          "present": 46,
+          "absent": 4,
+          "total": 50
+        },
+        {
+          "period": "2023 Q4",
+          "present": 47,
+          "absent": 3,
+          "total": 50
+        },
+        {
+          "period": "2024 Q1",
+          "present": 46,
+          "absent": 4,
+          "total": 50
+        },
+        {
+          "period": "2024 Q2",
+          "present": 47,
+          "absent": 3,
+          "total": 50
+        }
+      ],
+      "scandals": [
+        {
+          "id": "s22",
+          "title": "Oil Revenue Dispute",
+          "date": "2023-06-15",
+          "description": "Controversy over county's share of oil revenue",
+          "status": "ongoing",
+          "impact": 500000000,
+          "sources": ["https://example.com/source22"]
+        }
+      ],
+      "wealth": [
+        {
+          "year": 2022,
+          "amount": 130000000,
+          "growthPercent": 0,
+          "assets": ["Properties in Nairobi and Turkana", "Business Interests", "Land"],
+          "liabilities": ["Mortgage"]
+        },
+        {
+          "year": 2023,
+          "amount": 136500000,
+          "growthPercent": 5.0,
+          "assets": ["Properties in Nairobi and Turkana", "Business Interests", "Land", "Investments"],
+          "liabilities": ["Mortgage"]
+        },
+        {
+          "year": 2024,
+          "amount": 143000000,
+          "growthPercent": 4.76,
+          "assets": ["Properties in Nairobi and Turkana", "Business Interests", "Land", "Investments", "Livestock"],
+          "liabilities": ["Mortgage"]
+        }
+      ],
+      "keyAchievements": [
+        "Advanced water resources development",
+        "Strengthened pastoral communities support",
+        "Improved healthcare service delivery",
+        "Enhanced drought resilience initiatives",
+        "Advanced oil resource benefit sharing"
+      ]
+    },
+    {
+      "id": "eric-mutai",
+      "name": "Eric Mutai",
+      "position": "Governor",
+      "county": "Kericho",
+      "party": "UDA",
+      "imageUrl": "/images/leaders/eric-mutai.jpg",
+      "electedDate": "2022-08-09",
+      "approvalRating": 3.6,
+      "totalVotes": 299712,
+      "contact": {
+        "email": "governor@kericho.go.ke",
+        "office": "County Headquarters, Kericho",
+        "socialMedia": {
+          "twitter": "@EricMutai"
+        }
+      },
+      "education": [
+        "PhD in Education, Moi University",
+        "Master of Education, Moi University",
+        "Bachelor of Education, Moi University"
+      ],
+      "projects": [
+        {
+          "id": "p92",
+          "name": "Kericho Tea Value Addition Program",
+          "status": "ongoing",
+          "budget": 120000000,
+          "spent": 72000000,
+          "completion": 60,
+          "startDate": "2022-11-15",
+          "endDate": "2024-11-15",
+          "beneficiaries": 600000,
+          "location": "Kericho County"
+        },
+        {
+          "id": "p93",
+          "name": "Education Excellence Initiative",
+          "status": "ongoing",
+          "budget": 100000000,
+          "spent": 50000000,
+          "completion": 50,
+          "startDate": "2023-02-01",
+          "endDate": "2025-02-01",
+          "beneficiaries": 400000,
+          "location": "Kericho County"
+        }
+      ],
+      "promises": [
+        {
+          "id": "pr134",
+          "description": "Enhance tea sector value addition",
+          "category": "Agriculture",
+          "madeDate": "2022-06-15",
+          "dueDate": "2025-06-15",
+          "status": "in-progress",
+          "evidence": "https://example.com/evidence134"
+        },
+        {
+          "id": "pr135",
+          "description": "Improve education standards",
+          "category": "Education",
+          "madeDate": "2022-06-15",
+          "dueDate": "2025-06-15",
+          "status": "in-progress"
+        },
+        {
+          "id": "pr136",
+          "description": "Enhance healthcare services",
+          "category": "Healthcare",
+          "madeDate": "2022-08-10",
+          "dueDate": "2026-08-10",
+          "status": "in-progress"
+        }
+      ],
+      "attendance": [
+        {
+          "period": "2023 Q1",
+          "present": 47,
+          "absent": 3,
+          "total": 50
+        },
+        {
+          "period": "2023 Q2",
+          "present": 48,
+          "absent": 2,
+          "total": 50
+        },
+        {
+          "period": "2023 Q3",
+          "present": 47,
+          "absent": 3,
+          "total": 50
+        },
+        {
+          "period": "2023 Q4",
+          "present": 48,
+          "absent": 2,
+          "total": 50
+        },
+        {
+          "period": "2024 Q1",
+          "present": 47,
+          "absent": 3,
+          "total": 50
+        },
+        {
+          "period": "2024 Q2",
+          "present": 48,
+          "absent": 2,
+          "total": 50
+        }
+      ],
+      "scandals": [],
+      "wealth": [
+        {
+          "year": 2022,
+          "amount": 110000000,
+          "growthPercent": 0,
+          "assets": ["Properties in Nairobi and Kericho", "Educational Institutions", "Land"],
+          "liabilities": ["Mortgage"]
+        },
+        {
+          "year": 2023,
+          "amount": 115500000,
+          "growthPercent": 5.0,
+          "assets": ["Properties in Nairobi and Kericho", "Educational Institutions", "Land", "Investments"],
+          "liabilities": ["Mortgage"]
+        },
+        {
+          "year": 2024,
+          "amount": 121000000,
+          "growthPercent": 4.76,
+          "assets": ["Properties in Nairobi and Kericho", "Educational Institutions", "Land", "Investments", "Tea Farms"],
+          "liabilities": ["Mortgage"]
+        }
+      ],
+      "keyAchievements": [
+        "Launched Tea Value Addition Program",
+        "Advanced Education Excellence Initiative",
+        "Improved healthcare service delivery",
+        "Enhanced agricultural extension services",
+        "Strengthened cooperative societies"
+      ]
+    },  
+    {
+      "id": "soipan-tuya",
+      "name": "Soipan Tuya",
+      "position": "Cabinet Secretary",
+      "ministry": "Environment, Climate Change and Forestry",
+      "party": "UDA",
+      "county": "Narok",
+      "imageUrl": "/images/leaders/soipan-tuya.jpg",
+      "appointedDate": "2022-10-27",
+      "approvalRating": 3.5,
+      "contact": {
+        "email": "cs@environment.go.ke",
+        "office": "NHIF Building, Nairobi",
+        "socialMedia": {
+          "twitter": "@SoipanTuya"
+        }
+      },
+      "education": [
+        "Master of Laws (LLM), American University",
+        "Bachelor of Laws (LLB), University of Nairobi",
+        "Diploma in Law, Kenya School of Law"
+      ],
+      "projects": [
+        {
+          "id": "p40",
+          "name": "Climate Change Adaptation Program",
+          "status": "ongoing",
+          "budget": 180000000,
+          "spent": 90000000,
+          "completion": 50,
+          "startDate": "2023-01-15",
+          "endDate": "2026-01-15",
+          "beneficiaries": 15000000,
+          "location": "Nationwide"
+        },
+        {
+          "id": "p41",
+          "name": "Forest Restoration Initiative",
+          "status": "ongoing",
+          "budget": 150000000,
+          "spent": 75000000,
+          "completion": 50,
+          "startDate": "2023-03-01",
+          "endDate": "2025-03-01",
+          "beneficiaries": 10000000,
+          "location": "Nationwide"
+        }
+      ],
+      "promises": [
+        {
+          "id": "pr56",
+          "description": "Increase forest cover to 15%",
+          "category": "Forestry",
+          "madeDate": "2022-10-27",
+          "dueDate": "2027-10-27",
+          "status": "in-progress",
+          "evidence": "https://example.com/evidence56"
+        },
+        {
+          "id": "pr57",
+          "description": "Implement climate change adaptation measures",
+          "category": "Climate Change",
+          "madeDate": "2022-10-27",
+          "dueDate": "2026-10-27",
+          "status": "in-progress"
+        },
+        {
+          "id": "pr58",
+          "description": "Enhance environmental conservation",
+          "category": "Environment",
+          "madeDate": "2023-01-15",
+          "dueDate": "2025-01-15",
+          "status": "in-progress"
+        }
+      ],
+      "attendance": [
+        {
+          "period": "2023 Q1",
+          "present": 47,
+          "absent": 3,
+          "total": 50
+        },
+        {
+          "period": "2023 Q2",
+          "present": 48,
+          "absent": 2,
+          "total": 50
+        },
+        {
+          "period": "2023 Q3",
+          "present": 46,
+          "absent": 4,
+          "total": 50
+        },
+        {
+          "period": "2023 Q4",
+          "present": 47,
+          "absent": 3,
+          "total": 50
+        },
+        {
+          "period": "2024 Q1",
+          "present": 48,
+          "absent": 2,
+          "total": 50
+        },
+        {
+          "period": "2024 Q2",
+          "present": 47,
+          "absent": 3,
+          "total": 50
+        }
+      ],
+      "scandals": [],
+      "wealth": [
+        {
+          "year": 2022,
+          "amount": 140000000,
+          "growthPercent": 0,
+          "assets": ["Properties in Nairobi and Narok", "Law Firm", "Land"],
+          "liabilities": ["Mortgage"]
+        },
+        {
+          "year": 2023,
+          "amount": 148000000,
+          "growthPercent": 5.71,
+          "assets": ["Properties in Nairobi and Narok", "Law Firm", "Land", "Investments"],
+          "liabilities": ["Mortgage"]
+        },
+        {
+          "year": 2024,
+          "amount": 155000000,
+          "growthPercent": 4.73,
+          "assets": ["Properties in Nairobi and Narok", "Law Firm", "Land", "Investments", "Green Energy Stocks"],
+          "liabilities": ["Mortgage"]
+        }
+      ],
+      "keyAchievements": [
+        "Initiated Climate Change Adaptation Program",
+        "Launched Forest Restoration Initiative",
+        "Enhanced environmental conservation efforts",
+        "Strengthened climate change policy framework",
+        "Improved waste management systems"
+      ]
+    },
+    {
+      "id": "zacharia-mjomba",
+      "name": "Zacharia Mwangi Njeru",
+      "position": "Cabinet Secretary",
+      "ministry": "Water, Sanitation and Irrigation",
+      "party": "UDA",
+      "county": "Kirinyaga",
+      "imageUrl": "/images/leaders/zacharia-njeru.jpg",
+      "appointedDate": "2022-10-27",
+      "approvalRating": 3.4,
+      "contact": {
+        "email": "cs@water.go.ke",
+        "office": "Maji House, Nairobi",
+        "socialMedia": {
+          "twitter": "@ZachariaNjeru"
+        }
+      },
+      "education": [
+        "Master of Business Administration, University of Nairobi",
+        "Bachelor of Commerce, University of Nairobi"
+      ],
+      "projects": [
+        {
+          "id": "p42",
+          "name": "National Water Harvesting Program",
+          "status": "ongoing",
+          "budget": 200000000,
+          "spent": 100000000,
+          "completion": 50,
+          "startDate": "2023-01-15",
+          "endDate": "2026-01-15",
+          "beneficiaries": 20000000,
+          "location": "Nationwide"
+        },
+        {
+          "id": "p43",
+          "name": "Irrigation Expansion Initiative",
+          "status": "ongoing",
+          "budget": 180000000,
+          "spent": 90000000,
+          "completion": 50,
+          "startDate": "2023-03-01",
+          "endDate": "2025-03-01",
+          "beneficiaries": 5000000,
+          "location": "Agricultural Regions"
+        }
+      ],
+      "promises": [
+        {
+          "id": "pr59",
+          "description": "Expand access to clean water",
+          "category": "Water",
+          "madeDate": "2022-10-27",
+          "dueDate": "2026-10-27",
+          "status": "in-progress",
+          "evidence": "https://example.com/evidence59"
+        },
+        {
+          "id": "pr60",
+          "description": "Improve sanitation services",
+          "category": "Sanitation",
+          "madeDate": "2022-10-27",
+          "dueDate": "2025-10-27",
+          "status": "in-progress"
+        },
+        {
+          "id": "pr61",
+          "description": "Increase land under irrigation",
+          "category": "Irrigation",
+          "madeDate": "2023-01-15",
+          "dueDate": "2026-01-15",
+          "status": "in-progress"
+        }
+      ],
+      "attendance": [
+        {
+          "period": "2023 Q1",
+          "present": 46,
+          "absent": 4,
+          "total": 50
+        },
+        {
+          "period": "2023 Q2",
+          "present": 47,
+          "absent": 3,
+          "total": 50
+        },
+        {
+          "period": "2023 Q3",
+          "present": 48,
+          "absent": 2,
+          "total": 50
+        },
+        {
+          "period": "2023 Q4",
+          "present": 46,
+          "absent": 4,
+          "total": 50
+        },
+        {
+          "period": "2024 Q1",
+          "present": 47,
+          "absent": 3,
+          "total": 50
+        },
+        {
+          "period": "2024 Q2",
+          "present": 46,
+          "absent": 4,
+          "total": 50
+        }
+      ],
+      "scandals": [],
+      "wealth": [
+        {
+          "year": 2022,
+          "amount": 160000000,
+          "growthPercent": 0,
+          "assets": ["Properties in Nairobi and Kirinyaga", "Business Interests", "Land"],
+          "liabilities": ["Mortgage"]
+        },
+        {
+          "year": 2023,
+          "amount": 170000000,
+          "growthPercent": 6.25,
+          "assets": ["Properties in Nairobi and Kirinyaga", "Business Interests", "Land", "Investments"],
+          "liabilities": ["Mortgage"]
+        },
+        {
+          "year": 2024,
+          "amount": 178000000,
+          "growthPercent": 4.71,
+          "assets": ["Properties in Nairobi and Kirinyaga", "Business Interests", "Land", "Investments", "Shares"],
+          "liabilities": ["Mortgage", "Business Loan"]
+        }
+      ],
+      "keyAchievements": [
+        "Launched National Water Harvesting Program",
+        "Initiated Irrigation Expansion Initiative",
+        "Improved water access in underserved areas",
+        "Enhanced sanitation infrastructure",
+        "Strengthened water resource management"
+      ]
+    },
+    {
+      "id": "ezekiel-machogu",
+      "name": "Ezekiel Machogu",
+      "position": "Cabinet Secretary",
+      "ministry": "Education",
+      "party": "UDA",
+      "county": "Kisii",
+      "imageUrl": "/images/leaders/ezekiel-machogu.jpg",
+      "appointedDate": "2022-10-27",
+      "approvalRating": 3.3,
+      "contact": {
+        "email": "cs@education.go.ke",
+        "office": "Jogoo House, Nairobi",
+        "socialMedia": {
+          "twitter": "@EzekielMachogu"
+        }
+      },
+      "education": [
+        "Master of Business Administration, University of Nairobi",
+        "Bachelor of Arts, University of Nairobi"
+      ],
+      "projects": [
+        {
+          "id": "p44",
+          "name": "Education Reform Implementation",
+          "status": "ongoing",
+          "budget": 250000000,
+          "spent": 125000000,
+          "completion": 50,
+          "startDate": "2023-01-15",
+          "endDate": "2026-01-15",
+          "beneficiaries": 15000000,
+          "location": "Nationwide"
+        },
+        {
+          "id": "p45",
+          "name": "School Infrastructure Development",
+          "status": "ongoing",
+          "budget": 200000000,
+          "spent": 100000000,
+          "completion": 50,
+          "startDate": "2023-03-01",
+          "endDate": "2025-03-01",
+          "beneficiaries": 5000000,
+          "location": "Nationwide"
+        }
+      ],
+      "promises": [
+        {
+          "id": "pr62",
+          "description": "Implement education reforms",
+          "category": "Education",
+          "madeDate": "2022-10-27",
+          "dueDate": "2026-10-27",
+          "status": "in-progress",
+          "evidence": "https://example.com/evidence62"
+        },
+        {
+          "id": "pr63",
+          "description": "Improve school infrastructure",
+          "category": "Education",
+          "madeDate": "2022-10-27",
+          "dueDate": "2025-10-27",
+          "status": "in-progress"
+        },
+        {
+          "id": "pr64",
+          "description": "Enhance teacher welfare",
+          "category": "Education",
+          "madeDate": "2023-01-15",
+          "dueDate": "2024-12-31",
+          "status": "in-progress"
+        }
+      ],
+      "attendance": [
+        {
+          "period": "2023 Q1",
+          "present": 47,
+          "absent": 3,
+          "total": 50
+        },
+        {
+          "period": "2023 Q2",
+          "present": 46,
+          "absent": 4,
+          "total": 50
+        },
+        {
+          "period": "2023 Q3",
+          "present": 45,
+          "absent": 5,
+          "total": 50
+        },
+        {
+          "period": "2023 Q4",
+          "present": 47,
+          "absent": 3,
+          "total": 50
+        },
+        {
+          "period": "2024 Q1",
+          "present": 46,
+          "absent": 4,
+          "total": 50
+        },
+        {
+          "period": "2024 Q2",
+          "present": 47,
+          "absent": 3,
+          "total": 50
+        }
+      ],
+      "scandals": [
+        {
+          "id": "s13",
+          "title": "Examination Results Controversy",
+          "date": "2023-12-20",
+          "description": "Controversy over improved national examination results without clear explanation",
+          "status": "ongoing",
+          "impact": 0,
+          "sources": ["https://example.com/source13"]
+        }
+      ],
+      "wealth": [
+        {
+          "year": 2022,
+          "amount": 180000000,
+          "growthPercent": 0,
+          "assets": ["Properties in Nairobi and Kisii", "Education Institutions", "Land"],
+          "liabilities": ["Mortgage"]
+        },
+        {
+          "year": 2023,
+          "amount": 190000000,
+          "growthPercent": 5.56,
+          "assets": ["Properties in Nairobi and Kisii", "Education Institutions", "Land", "Investments"],
+          "liabilities": ["Mortgage"]
+        },
+        {
+          "year": 2024,
+          "amount": 200000000,
+          "growthPercent": 5.26,
+          "assets": ["Properties in Nairobi and Kisii", "Education Institutions", "Land", "Investments", "Shares"],
+          "liabilities": ["Mortgage", "Business Loan"]
+        }
+      ],
+      "keyAchievements": [
+        "Advanced Education Reform Implementation",
+        "Initiated School Infrastructure Development",
+        "Improved national examination systems",
+        "Enhanced digital learning programs",
+        "Strengthened teacher training and development"
+      ]
+    },
+    {
+      "id": "alfred-mutua",
+      "name": "Alfred Mutua",
+      "position": "Cabinet Secretary",
+      "ministry": "Mining, Blue Economy and Maritime Affairs",
+      "party": "UDA",
+      "county": "Machakos",
+      "imageUrl": "/images/leaders/alfred-mutua.jpg",
+      "appointedDate": "2022-10-27",
+      "approvalRating": 3.6,
+      "contact": {
+        "email": "cs@mining.go.ke",
+        "office": "NSSF Building, Nairobi",
+        "socialMedia": {
+          "twitter": "@DrAlfredMutua"
+        }
+      },
+      "education": [
+        "PhD in Communication, University of Western Sydney",
+        "Master of Arts in Communication, Eastern Washington University",
+        "Bachelor of Arts in Journalism, Whitworth College"
+      ],
+      "projects": [
+        {
+          "id": "p46",
+          "name": "Mining Sector Revitalization",
+          "status": "ongoing",
+          "budget": 150000000,
+          "spent": 75000000,
+          "completion": 50,
+          "startDate": "2023-01-15",
+          "endDate": "2025-01-15",
+          "beneficiaries": 500000,
+          "location": "Mining Regions"
+        },
+        {
+          "id": "p47",
+          "name": "Blue Economy Development Program",
+          "status": "ongoing",
+          "budget": 180000000,
+          "spent": 72000000,
+          "completion": 40,
+          "startDate": "2023-03-01",
+          "endDate": "2026-03-01",
+          "beneficiaries": 2000000,
+          "location": "Coastal Regions"
+        }
+      ],
+      "promises": [
+        {
+          "id": "pr65",
+          "description": "Develop the mining sector",
+          "category": "Mining",
+          "madeDate": "2022-10-27",
+          "dueDate": "2025-10-27",
+          "status": "in-progress",
+          "evidence": "https://example.com/evidence65"
+        },
+        {
+          "id": "pr66",
+          "description": "Expand blue economy opportunities",
+          "category": "Blue Economy",
+          "madeDate": "2022-10-27",
+          "dueDate": "2026-10-27",
+          "status": "in-progress"
+        },
+        {
+          "id": "pr67",
+          "description": "Enhance maritime security",
+          "category": "Maritime Affairs",
+          "madeDate": "2023-01-15",
+          "dueDate": "2025-01-15",
+          "status": "in-progress"
+        }
+      ],
+      "attendance": [
+        {
+          "period": "2023 Q1",
+          "present": 46,
+          "absent": 4,
+          "total": 50
+        },
+        {
+          "period": "2023 Q2",
+          "present": 47,
+          "absent": 3,
+          "total": 50
+        },
+        {
+          "period": "2023 Q3",
+          "present": 48,
+          "absent": 2,
+          "total": 50
+        },
+        {
+          "period": "2023 Q4",
+          "present": 47,
+          "absent": 3,
+          "total": 50
+        },
+        {
+          "period": "2024 Q1",
+          "present": 46,
+          "absent": 4,
+          "total": 50
+        },
+        {
+          "period": "2024 Q2",
+          "present": 47,
+          "absent": 3,
+          "total": 50
+        }
+      ],
+      "scandals": [],
+      "wealth": [
+        {
+          "year": 2022,
+          "amount": 350000000,
+          "growthPercent": 0,
+          "assets": ["Properties in Nairobi and Machakos", "Media Company", "Land"],
+          "liabilities": ["Mortgage"]
+        },
+        {
+          "year": 2023,
+          "amount": 370000000,
+          "growthPercent": 5.71,
+          "assets": ["Properties in Nairobi and Machakos", "Media Company", "Land", "Investments"],
+          "liabilities": ["Mortgage"]
+        },
+        {
+          "year": 2024,
+          "amount": 385000000,
+          "growthPercent": 4.05,
+          "assets": ["Properties in Nairobi and Machakos", "Media Company", "Land", "Investments", "Shares"],
+          "liabilities": ["Mortgage", "Business Loan"]
+        }
+      ],
+      "keyAchievements": [
+        "Initiated Mining Sector Revitalization",
+        "Launched Blue Economy Development Program",
+        "Improved maritime security framework",
+        "Enhanced mining sector regulations",
+        "Attracted investments in blue economy"
+      ]
+    },
+    {
+      "id": "onesmus-kipchumba",
+      "name": "Onesmus Kipchumba Mugyenyi",
+      "position": "Cabinet Secretary",
+      "ministry": "Agriculture and Livestock Development",
+      "party": "UDA",
+      "county": "Elgeyo Marakwet",
+      "imageUrl": "/images/leaders/onesmus-kipchumba.jpg",
+      "appointedDate": "2022-10-27",
+      "approvalRating": 3.2,
+      "contact": {
+        "email": "cs@agriculture.go.ke",
+        "office": "Kilimo House, Nairobi",
+        "socialMedia": {
+          "twitter": "@OnesmusKipchumba"
+        }
+      },
+      "education": [
+        "Master of Science in Agricultural Economics, University of Nairobi",
+        "Bachelor of Science in Agriculture, University of Nairobi"
+      ],
+      "projects": [
+        {
+          "id": "p48",
+          "name": "Agricultural Mechanization Program",
+          "status": "ongoing",
+          "budget": 180000000,
+          "spent": 90000000,
+          "completion": 50,
+          "startDate": "2023-01-15",
+          "endDate": "2025-01-15",
+          "beneficiaries": 3000000,
+          "location": "Nationwide"
+        },
+        {
+          "id": "p49",
+          "name": "Livestock Development Initiative",
+          "status": "ongoing",
+          "budget": 150000000,
+          "spent": 75000000,
+          "completion": 50,
+          "startDate": "2023-03-01",
+          "endDate": "2025-03-01",
+          "beneficiaries": 2000000,
+          "location": "Nationwide"
+        }
+      ],
+      "promises": [
+        {
+          "id": "pr68",
+          "description": "Enhance agricultural productivity",
+          "category": "Agriculture",
+          "madeDate": "2022-10-27",
+          "dueDate": "2025-10-27",
+          "status": "in-progress",
+          "evidence": "https://example.com/evidence68"
+        },
+        {
+          "id": "pr69",
+          "description": "Improve livestock development",
+          "category": "Livestock",
+          "madeDate": "2022-10-27",
+          "dueDate": "2025-10-27",
+          "status": "in-progress"
+        },
+        {
+          "id": "pr70",
+          "description": "Support food security initiatives",
+          "category": "Agriculture",
+          "madeDate": "2023-01-15",
+          "dueDate": "2026-01-15",
+          "status": "in-progress"
+        }
+      ],
+      "attendance": [
+        {
+          "period": "2023 Q1",
+          "present": 45,
+          "absent": 5,
+          "total": 50
+        },
+        {
+          "period": "2023 Q2",
+          "present": 46,
+          "absent": 4,
+          "total": 50
+        },
+        {
+          "period": "2023 Q3",
+          "present": 47,
+          "absent": 3,
+          "total": 50
+        },
+        {
+          "period": "2023 Q4",
+          "present": 46,
+          "absent": 4,
+          "total": 50
+        },
+        {
+          "period": "2024 Q1",
+          "present": 45,
+          "absent": 5,
+          "total": 50
+        },
+        {
+          "period": "2024 Q2",
+          "present": 46,
+          "absent": 4,
+          "total": 50
+        }
+      ],
+      "scandals": [],
+      "wealth": [
+        {
+          "year": 2022,
+          "amount": 120000000,
+          "growthPercent": 0,
+          "assets": ["Properties in Nairobi and Elgeyo Marakwet", "Farms", "Land"],
+          "liabilities": ["Farm Loans"]
+        },
+        {
+          "year": 2023,
+          "amount": 128000000,
+          "growthPercent": 6.67,
+          "assets": ["Properties in Nairobi and Elgeyo Marakwet", "Farms", "Land", "Agribusiness"],
+          "liabilities": ["Farm Loans"]
+        },
+        {
+          "year": 2024,
+          "amount": 135000000,
+          "growthPercent": 5.47,
+          "assets": ["Properties in Nairobi and Elgeyo Marakwet", "Farms", "Land", "Agribusiness", "Shares"],
+          "liabilities": ["Farm Loans", "Mortgage"]
+        }
+      ],
+      "keyAchievements": [
+        "Launched Agricultural Mechanization Program",
+        "Initiated Livestock Development Initiative",
+        "Enhanced agricultural productivity",
+        "Improved food security measures",
+        "Strengthened agricultural value chains"
+      ]
+    },
+    {
+      "id": "njuguna-ndungu",
+      "name": "Njuguna Ndung'u",
+      "position": "Cabinet Secretary",
+      "ministry": "Treasury and Economic Planning",
+      "party": "UDA",
+      "county": "Kiambu",
+      "imageUrl": "/images/leaders/njuguna-ndungu.jpg",
+      "appointedDate": "2022-10-27",
+      "approvalRating": 3.0,
+      "contact": {
+        "email": "cs@treasury.go.ke",
+        "office": "Treasury Building, Nairobi",
+        "socialMedia": {
+          "twitter": "@NjugunaNdungu"
+        }
+      },
+      "education": [
+        "PhD in Economics, University of Gothenburg",
+        "Master of Arts in Economics, University of Nairobi",
+        "Bachelor of Arts in Economics, University of Nairobi"
+      ],
+      "projects": [
+        {
+          "id": "p50",
+          "name": "Economic Recovery Strategy",
+          "status": "ongoing",
+          "budget": 300000000,
+          "spent": 180000000,
+          "completion": 60,
+          "startDate": "2023-01-01",
+          "endDate": "2025-12-31",
+          "beneficiaries": 47000000,
+          "location": "Nationwide"
+        },
+        {
+          "id": "p51",
+          "name": "Public Finance Management Reforms",
+          "status": "ongoing",
+          "budget": 200000000,
+          "spent": 100000000,
+          "completion": 50,
+          "startDate": "2023-03-01",
+          "endDate": "2025-03-01",
+          "beneficiaries": 47000000,
+          "location": "Nationwide"
+        }
+      ],
+      "promises": [
+        {
+          "id": "pr71",
+          "description": "Reduce public debt",
+          "category": "Finance",
+          "madeDate": "2022-10-27",
+          "dueDate": "2027-10-27",
+          "status": "in-progress",
+          "evidence": "https://example.com/evidence71"
+        },
+        {
+          "id": "pr72",
+          "description": "Enhance revenue collection",
+          "category": "Finance",
+          "madeDate": "2022-10-27",
+          "dueDate": "2025-10-27",
+          "status": "in-progress"
+        },
+        {
+          "id": "pr73",
+          "description": "Implement economic growth strategies",
+          "category": "Economic Planning",
+          "madeDate": "2023-01-15",
+          "dueDate": "2026-01-15",
+          "status": "in-progress"
+        }
+      ],
+      "attendance": [
+        {
+          "period": "2023 Q1",
+          "present": 47,
+          "absent": 3,
+          "total": 50
+        },
+        {
+          "period": "2023 Q2",
+          "present": 48,
+          "absent": 2,
+          "total": 50
+        },
+        {
+          "period": "2023 Q3",
+          "present": 47,
+          "absent": 3,
+          "total": 50
+        },
+        {
+          "period": "2023 Q4",
+          "present": 48,
+          "absent": 2,
+          "total": 50
+        },
+        {
+          "period": "2024 Q1",
+          "present": 47,
+          "absent": 3,
+          "total": 50
+        },
+        {
+          "period": "2024 Q2",
+          "present": 48,
+          "absent": 2,
+          "total": 50
+        }
+      ],
+      "scandals": [
+        {
+          "id": "s14",
+          "title": "Finance Bill 2023 Protests",
+          "date": "2023-06-20",
+          "description": "Protests against controversial tax measures in Finance Bill 2023",
+          "status": "concluded",
+          "impact": 500000000,
+          "sources": ["https://example.com/source14"]
+        }
+      ],
+      "wealth": [
+        {
+          "year": 2022,
+          "amount": 280000000,
+          "growthPercent": 0,
+          "assets": ["Properties in Nairobi and Kiambu", "Investments", "Land"],
+          "liabilities": ["Mortgage"]
+        },
+        {
+          "year": 2023,
+          "amount": 295000000,
+          "growthPercent": 5.36,
+          "assets": ["Properties in Nairobi and Kiambu", "Investments", "Land", "Shares"],
+          "liabilities": ["Mortgage"]
+        },
+        {
+          "year": 2024,
+          "amount": 310000000,
+          "growthPercent": 5.08,
+          "assets": ["Properties in Nairobi and Kiambu", "Investments", "Land", "Shares", "Treasury Bonds"],
+          "liabilities": ["Mortgage"]
+        }
+      ],
+      "keyAchievements": [
+        "Developed Economic Recovery Strategy",
+        "Initiated Public Finance Management Reforms",
+        "Enhanced revenue collection systems",
+        "Improved debt management framework",
+        "Strengthened economic planning mechanisms"
+      ]
+    },
+    {
+      "id": "ababu-namwamba",
+      "name": "Ababu Namwamba",
+      "position": "Cabinet Secretary",
+      "ministry": "Youth Affairs, Creative Economy and Sports",
+      "party": "UDA",
+      "county": "Busia",
+      "imageUrl": "/images/leaders/ababu-namwamba.jpg",
+      "appointedDate": "2022-10-27",
+      "approvalRating": 3.5,
+      "contact": {
+        "email": "cs@youth.go.ke",
+        "office": "Kencom House, Nairobi",
+        "socialMedia": {
+          "twitter": "@AbabuNamwamba"
+        }
+      },
+      "education": [
+        "Master of Laws (LLM), American University Washington College of Law",
+        "Bachelor of Laws (LLB), University of Nairobi",
+        "Diploma in Law, Kenya School of Law"
+      ],
+      "projects": [
+        {
+          "id": "p52",
+          "name": "Youth Empowerment Program",
+          "status": "ongoing",
+          "budget": 150000000,
+          "spent": 90000000,
+          "completion": 60,
+          "startDate": "2023-01-15",
+          "endDate": "2025-01-15",
+          "beneficiaries": 2000000,
+          "location": "Nationwide"
+        },
+        {
+          "id": "p53",
+          "name": "Sports Infrastructure Development",
+          "status": "ongoing",
+          "budget": 180000000,
+          "spent": 90000000,
+          "completion": 50,
+          "startDate": "2023-03-01",
+          "endDate": "2026-03-01",
+          "beneficiaries": 5000000,
+          "location": "Nationwide"
+        }
+      ],
+      "promises": [
+        {
+          "id": "pr74",
+          "description": "Empower youth through skills development",
+          "category": "Youth Affairs",
+          "madeDate": "2022-10-27",
+          "dueDate": "2025-10-27",
+          "status": "in-progress",
+          "evidence": "https://example.com/evidence74"
+        },
+        {
+          "id": "pr75",
+          "description": "Develop sports infrastructure",
+          "category": "Sports",
+          "madeDate": "2022-10-27",
+          "dueDate": "2026-10-27",
+          "status": "in-progress"
+        },
+        {
+          "id": "pr76",
+          "description": "Support creative economy growth",
+          "category": "Creative Economy",
+          "madeDate": "2023-01-15",
+          "dueDate": "2025-01-15",
+          "status": "in-progress"
+        }
+      ],
+      "attendance": [
+        {
+          "period": "2023 Q1",
+          "present": 46,
+          "absent": 4,
+          "total": 50
+        },
+        {
+          "period": "2023 Q2",
+          "present": 47,
+          "absent": 3,
+          "total": 50
+        },
+        {
+          "period": "2023 Q3",
+          "present": 48,
+          "absent": 2,
+          "total": 50
+        },
+        {
+          "period": "2023 Q4",
+          "present": 47,
+          "absent": 3,
+          "total": 50
+        },
+        {
+          "period": "2024 Q1",
+          "present": 46,
+          "absent": 4,
+          "total": 50
+        },
+        {
+          "period": "2024 Q2",
+          "present": 47,
+          "absent": 3,
+          "total": 50
+        }
+      ],
+      "scandals": [],
+      "wealth": [
+        {
+          "year": 2022,
+          "amount": 170000000,
+          "growthPercent": 0,
+          "assets": ["Properties in Nairobi and Busia", "Law Firm", "Land"],
+          "liabilities": ["Mortgage"]
+        },
+        {
+          "year": 2023,
+          "amount": 180000000,
+          "growthPercent": 5.88,
+          "assets": ["Properties in Nairobi and Busia", "Law Firm", "Land", "Investments"],
+          "liabilities": ["Mortgage"]
+        },
+        {
+          "year": 2024,
+          "amount": 190000000,
+          "growthPercent": 5.56,
+          "assets": ["Properties in Nairobi and Busia", "Law Firm", "Land", "Investments", "Sports Academy"],
+          "liabilities": ["Mortgage", "Business Loan"]
+        }
+      ],
+      "keyAchievements": [
+        "Launched Youth Empowerment Program",
+        "Initiated Sports Infrastructure Development",
+        "Enhanced creative economy framework",
+        "Improved youth participation in governance",
+        "Strengthened sports development programs"
+      ]
+       },
+    {
+      "id": "rebecca-miano",
+      "name": "Rebecca Miano",
+      "position": "Cabinet Secretary",
+      "ministry": "Investments, Trade and Industry",
+      "party": "UDA",
+      "county": "Nyeri",
+      "imageUrl": "/images/leaders/rebecca-miano.jpg",
+      "appointedDate": "2022-10-27",
+      "approvalRating": 3.7,
+      "contact": {
+        "email": "cs@trade.go.ke",
+        "office": "NSSF Building, Nairobi",
+        "socialMedia": {
+          "twitter": "@RebeccaMiano"
+        }
+      },
+      "education": [
+        "Master of Laws (LLM), University of Nairobi",
+        "Bachelor of Laws (LLB), University of Nairobi",
+        "Diploma in Law, Kenya School of Law"
+      ],
+      "projects": [
+        {
+          "id": "p28",
+          "name": "Trade Facilitation Program",
+          "status": "ongoing",
+          "budget": 150000000,
+          "spent": 75000000,
+          "completion": 50,
+          "startDate": "2023-01-15",
+          "endDate": "2025-01-15",
+          "beneficiaries": 20000000,
+          "location": "Nationwide"
+        },
+        {
+          "id": "p29",
+          "name": "Investment Promotion Initiative",
+          "status": "ongoing",
+          "budget": 120000000,
+          "spent": 60000000,
+          "completion": 50,
+          "startDate": "2023-03-01",
+          "endDate": "2025-03-01",
+          "beneficiaries": 5000000,
+          "location": "Nationwide"
+        }
+      ],
+      "promises": [
+        {
+          "id": "pr38",
+          "description": "Attract KES 1 trillion in investments",
+          "category": "Economy",
+          "madeDate": "2022-10-27",
+          "dueDate": "2027-10-27",
+          "status": "in-progress",
+          "evidence": "https://example.com/evidence38"
+        },
+        {
+          "id": "pr39",
+          "description": "Boost international trade relations",
+          "category": "Trade",
+          "madeDate": "2022-10-27",
+          "dueDate": "2024-10-27",
+          "status": "in-progress"
+        },
+        {
+          "id": "pr40",
+          "description": "Support local industries growth",
+          "category": "Industry",
+          "madeDate": "2023-01-15",
+          "dueDate": "2026-01-15",
+          "status": "in-progress"
+        }
+      ],
+      "attendance": [
+        {
+          "period": "2023 Q1",
+          "present": 48,
+          "absent": 2,
+          "total": 50
+        },
+        {
+          "period": "2023 Q2",
+          "present": 49,
+          "absent": 1,
+          "total": 50
+        },
+        {
+          "period": "2023 Q3",
+          "present": 48,
+          "absent": 2,
+          "total": 50
+        },
+        {
+          "period": "2023 Q4",
+          "present": 47,
+          "absent": 3,
+          "total": 50
+        },
+        {
+          "period": "2024 Q1",
+          "present": 48,
+          "absent": 2,
+          "total": 50
+        },
+        {
+          "period": "2024 Q2",
+          "present": 49,
+          "absent": 1,
+          "total": 50
+        }
+      ],
+      "scandals": [],
+      "wealth": [
+        {
+          "year": 2022,
+          "amount": 290000000,
+          "growthPercent": 0,
+          "assets": ["Properties in Nairobi and Nyeri", "Shares in Companies", "Investments"],
+          "liabilities": ["Mortgage"]
+        },
+        {
+          "year": 2023,
+          "amount": 310000000,
+          "growthPercent": 6.9,
+          "assets": ["Properties in Nairobi and Nyeri", "Shares in Companies", "Investments", "Land"],
+          "liabilities": ["Mortgage"]
+        },
+        {
+          "year": 2024,
+          "amount": 325000000,
+          "growthPercent": 4.84,
+          "assets": ["Properties in Nairobi and Nyeri", "Shares in Companies", "Investments", "Land", "Business Interests"],
+          "liabilities": ["Mortgage"]
+        }
+      ],
+      "keyAchievements": [
+        "Launched Trade Facilitation Program",
+        "Initiated Investment Promotion Initiative",
+        "Strengthened international trade relations",
+        "Supported local industries development",
+        "Improved business regulatory environment"
+      ]
+    },
+    {
+      "id": "aisha-jumwa",
+      "name": "Aisha Jumwa",
+      "position": "Cabinet Secretary",
+      "ministry": "Gender, Culture and the Arts",
+      "party": "UDA",
+      "county": "Kilifi",
+      "imageUrl": "/images/leaders/aisha-jumwa.jpg",
+      "appointedDate": "2022-10-27",
+      "approvalRating": 2.9,
+      "contact": {
+        "email": "cs@gender.go.ke",
+        "office": "NSSF Building, Nairobi",
+        "socialMedia": {
+          "twitter": "@AishaJumwa"
+        }
+      },
+      "education": [
+        "Diploma in Leadership and Governance, Kenya School of Government"
+      ],
+      "projects": [
+        {
+          "id": "p30",
+          "name": "Women Empowerment Fund",
+          "status": "ongoing",
+          "budget": 100000000,
+          "spent": 60000000,
+          "completion": 60,
+          "startDate": "2023-01-15",
+          "endDate": "2025-01-15",
+          "beneficiaries": 500000,
+          "location": "Nationwide"
+        },
+        {
+          "id": "p31",
+          "name": "Cultural Heritage Preservation Program",
+          "status": "ongoing",
+          "budget": 80000000,
+          "spent": 32000000,
+          "completion": 40,
+          "startDate": "2023-03-01",
+          "endDate": "2025-03-01",
+          "beneficiaries": 2000000,
+          "location": "Nationwide"
+        }
+      ],
+      "promises": [
+        {
+          "id": "pr41",
+          "description": "Enhance women's economic empowerment",
+          "category": "Gender",
+          "madeDate": "2022-10-27",
+          "dueDate": "2025-10-27",
+          "status": "in-progress",
+          "evidence": "https://example.com/evidence41"
+        },
+        {
+          "id": "pr42",
+          "description": "Preserve and promote cultural heritage",
+          "category": "Culture",
+          "madeDate": "2022-10-27",
+          "dueDate": "2024-10-27",
+          "status": "in-progress"
+        },
+        {
+          "id": "pr43",
+          "description": "Support artists and creative industries",
+          "category": "Arts",
+          "madeDate": "2023-01-15",
+          "dueDate": "2025-01-15",
+          "status": "in-progress"
+        }
+      ],
+      "attendance": [
+        {
+          "period": "2023 Q1",
+          "present": 45,
+          "absent": 5,
+          "total": 50
+        },
+        {
+          "period": "2023 Q2",
+          "present": 43,
+          "absent": 7,
+          "total": 50
+        },
+        {
+          "period": "2023 Q3",
+          "present": 44,
+          "absent": 6,
+          "total": 50
+        },
+        {
+          "period": "2023 Q4",
+          "present": 45,
+          "absent": 5,
+          "total": 50
+        },
+        {
+          "period": "2024 Q1",
+          "present": 43,
+          "absent": 7,
+          "total": 50
+        },
+        {
+          "period": "2024 Q2",
+          "present": 44,
+          "absent": 6,
+          "total": 50
+        }
+      ],
+      "scandals": [
+        {
+          "id": "s11",
+          "title": "Murder Case",
+          "date": "2019-10-15",
+          "description": "Charged with murder over 2017 electoral violence incident",
+          "status": "ongoing",
+          "impact": 0,
+          "sources": ["https://example.com/source11"]
+        },
+        {
+          "id": "s12",
+          "title": "CDF Mismanagement",
+          "date": "2021-06-10",
+          "description": "Allegations of mismanagement of Constituency Development Funds",
+          "status": "under-investigation",
+          "impact": 20000000,
+          "sources": ["https://example.com/source12"]
+        }
+      ],
+      "wealth": [
+        {
+          "year": 2022,
+          "amount": 150000000,
+          "growthPercent": 0,
+          "assets": ["Properties in Nairobi and Kilifi", "Business Interests"],
+          "liabilities": ["Bank Loans"]
+        },
+        {
+          "year": 2023,
+          "amount": 160000000,
+          "growthPercent": 6.67,
+          "assets": ["Properties in Nairobi and Kilifi", "Business Interests", "Land"],
+          "liabilities": ["Bank Loans"]
+        },
+        {
+          "year": 2024,
+          "amount": 168000000,
+          "growthPercent": 5.0,
+          "assets": ["Properties in Nairobi and Kilifi", "Business Interests", "Land", "Investments"],
+          "liabilities": ["Bank Loans", "Mortgage"]
+        }
+      ],
+      "keyAchievements": [
+        "Established Women Empowerment Fund",
+        "Launched Cultural Heritage Preservation Program",
+        "Enhanced gender mainstreaming in government policies",
+        "Supported artists through economic challenges",
+        "Initiated gender-based violence prevention programs"
+      ]
+    },
+    {
+      "id": "simon-chelugui",
+      "name": "Simon Chelugui",
+      "position": "Cabinet Secretary",
+      "ministry": "Cooperatives and MSMEs Development",
+      "party": "UDA",
+      "county": "Baringo",
+      "imageUrl": "/images/leaders/simon-chelugui.jpg",
+      "appointedDate": "2022-10-27",
+      "approvalRating": 3.4,
+      "contact": {
+        "email": "cs@cooperatives.go.ke",
+        "office": "NSSF Building, Nairobi",
+        "socialMedia": {
+          "twitter": "@SimonChelugui"
+        }
+      },
+      "education": [
+        "Master of Business Administration, University of Nairobi",
+        "Bachelor of Commerce, University of Nairobi"
+      ],
+      "projects": [
+        {
+          "id": "p32",
+          "name": "Cooperative Societies Revitalization",
+          "status": "ongoing",
+          "budget": 120000000,
+          "spent": 72000000,
+          "completion": 60,
+          "startDate": "2023-01-15",
+          "endDate": "2025-01-15",
+          "beneficiaries": 3000000,
+          "location": "Nationwide"
+        },
+        {
+          "id": "p33",
+          "name": "MSMEs Support Program",
+          "status": "ongoing",
+          "budget": 150000000,
+          "spent": 75000000,
+          "completion": 50,
+          "startDate": "2023-03-01",
+          "endDate": "2025-03-01",
+          "beneficiaries": 2000000,
+          "location": "Nationwide"
+        }
+      ],
+      "promises": [
+        {
+          "id": "pr44",
+          "description": "Revitalize cooperative movement",
+          "category": "Cooperatives",
+          "madeDate": "2022-10-27",
+          "dueDate": "2025-10-27",
+          "status": "in-progress",
+          "evidence": "https://example.com/evidence44"
+        },
+        {
+          "id": "pr45",
+          "description": "Support micro, small and medium enterprises",
+          "category": "MSMEs",
+          "madeDate": "2022-10-27",
+          "dueDate": "2024-10-27",
+          "status": "in-progress"
+        },
+        {
+          "id": "pr46",
+          "description": "Enhance access to finance for MSMEs",
+          "category": "Finance",
+          "madeDate": "2023-01-15",
+          "dueDate": "2025-01-15",
+          "status": "in-progress"
+        }
+      ],
+      "attendance": [
+        {
+          "period": "2023 Q1",
+          "present": 47,
+          "absent": 3,
+          "total": 50
+        },
+        {
+          "period": "2023 Q2",
+          "present": 46,
+          "absent": 4,
+          "total": 50
+        },
+        {
+          "period": "2023 Q3",
+          "present": 45,
+          "absent": 5,
+          "total": 50
+        },
+        {
+          "period": "2023 Q4",
+          "present": 47,
+          "absent": 3,
+          "total": 50
+        },
+        {
+          "period": "2024 Q1",
+          "present": 46,
+          "absent": 4,
+          "total": 50
+        },
+        {
+          "period": "2024 Q2",
+          "present": 47,
+          "absent": 3,
+          "total": 50
+        }
+      ],
+      "scandals": [],
+      "wealth": [
+        {
+          "year": 2022,
+          "amount": 200000000,
+          "growthPercent": 0,
+          "assets": ["Properties in Nairobi and Baringo", "Farming Interests", "Shares"],
+          "liabilities": ["Mortgage"]
+        },
+        {
+          "year": 2023,
+          "amount": 210000000,
+          "growthPercent": 5.0,
+          "assets": ["Properties in Nairobi and Baringo", "Farming Interests", "Shares", "Investments"],
+          "liabilities": ["Mortgage"]
+        },
+        {
+          "year": 2024,
+          "amount": 220000000,
+          "growthPercent": 4.76,
+          "assets": ["Properties in Nairobi and Baringo", "Farming Interests", "Shares", "Investments", "Land"],
+          "liabilities": ["Mortgage", "Business Loan"]
+        }
+      ],
+      "keyAchievements": [
+        "Revitalized cooperative movement",
+        "Established MSMEs Support Program",
+        "Enhanced access to finance for small businesses",
+        "Strengthened cooperative governance",
+        "Improved regulatory framework for MSMEs"
+      ]
+    },
+    {
+      "id": "florence-bore",
+      "name": "Florence Bore",
+      "position": "Cabinet Secretary",
+      "ministry": "Labour and Social Protection",
+      "party": "UDA",
+      "county": "Kericho",
+      "imageUrl": "/images/leaders/florence-bore.jpg",
+      "appointedDate": "2022-10-27",
+      "approvalRating": 3.2,
+      "contact": {
+        "email": "cs@labour.go.ke",
+        "office": "NSSF Building, Nairobi",
+        "socialMedia": {
+          "twitter": "@FlorenceBore"
+        }
+      },
+      "education": [
+        "PhD in Education, Moi University",
+        "Master of Education, Moi University",
+        "Bachelor of Education, Moi University"
+      ],
+      "projects": [
+        {
+          "id": "p34",
+          "name": "Social Protection Enhancement",
+          "status": "ongoing",
+          "budget": 130000000,
+          "spent": 65000000,
+          "completion": 50,
+          "startDate": "2023-01-15",
+          "endDate": "2025-01-15",
+          "beneficiaries": 2000000,
+          "location": "Nationwide"
+        },
+        {
+          "id": "p35",
+          "name": "Labor Rights Awareness Campaign",
+          "status": "ongoing",
+          "budget": 70000000,
+          "spent": 42000000,
+          "completion": 60,
+          "startDate": "2023-03-01",
+          "endDate": "2025-03-01",
+          "beneficiaries": 5000000,
+          "location": "Nationwide"
+        }
+      ],
+      "promises": [
+        {
+          "id": "pr47",
+          "description": "Enhance social protection programs",
+          "category": "Social Protection",
+          "madeDate": "2022-10-27",
+          "dueDate": "2025-10-27",
+          "status": "in-progress",
+          "evidence": "https://example.com/evidence47"
+        },
+        {
+          "id": "pr48",
+          "description": "Improve labor conditions and rights",
+          "category": "Labour",
+          "madeDate": "2022-10-27",
+          "dueDate": "2024-10-27",
+          "status": "in-progress"
+        },
+        {
+          "id": "pr49",
+          "description": "Support vulnerable groups",
+          "category": "Social Protection",
+          "madeDate": "2023-01-15",
+          "dueDate": "2025-01-15",
+          "status": "in-progress"
+        }
+      ],
+      "attendance": [
+        {
+          "period": "2023 Q1",
+          "present": 46,
+          "absent": 4,
+          "total": 50
+        },
+        {
+          "period": "2023 Q2",
+          "present": 45,
+          "absent": 5,
+          "total": 50
+        },
+        {
+          "period": "2023 Q3",
+          "present": 46,
+          "absent": 4,
+          "total": 50
+        },
+        {
+          "period": "2023 Q4",
+          "present": 47,
+          "absent": 3,
+          "total": 50
+        },
+        {
+          "period": "2024 Q1",
+          "present": 45,
+          "absent": 5,
+          "total": 50
+        },
+        {
+          "period": "2024 Q2",
+          "present": 46,
+          "absent": 4,
+          "total": 50
+        }
+      ],
+      "scandals": [],
+      "wealth": [
+        {
+          "year": 2022,
+          "amount": 110000000,
+          "growthPercent": 0,
+          "assets": ["Properties in Nairobi and Kericho", "Educational Institutions", "Land"],
+          "liabilities": ["Mortgage"]
+        },
+        {
+          "year": 2023,
+          "amount": 115000000,
+          "growthPercent": 4.55,
+          "assets": ["Properties in Nairobi and Kericho", "Educational Institutions", "Land", "Investments"],
+          "liabilities": ["Mortgage"]
+        },
+        {
+          "year": 2024,
+          "amount": 120000000,
+          "growthPercent": 4.35,
+          "assets": ["Properties in Nairobi and Kericho", "Educational Institutions", "Land", "Investments", "Shares"],
+          "liabilities": ["Mortgage"]
+        }
+      ],
+      "keyAchievements": [
+        "Enhanced social protection programs",
+        "Improved labor conditions and rights awareness",
+        "Supported vulnerable groups",
+        "Reformed child protection systems",
+        "Strengthened labor dispute resolution mechanisms"
+      ]
+    },
+    {
+      "id": "alice-wahome",
+      "name": "Alice Wahome",
+      "position": "Cabinet Secretary",
+      "ministry": "Lands, Public Works, Housing and Urban Development",
+      "party": "UDA",
+      "county": "Murang'a",
+      "imageUrl": "/images/leaders/alice-wahome.jpg",
+      "appointedDate": "2022-10-27",
+      "approvalRating": 3.1,
+      "contact": {
+        "email": "cs@lands.go.ke",
+        "office": "Ardhi House, Nairobi",
+        "socialMedia": {
+          "twitter": "@AliceWahome"
+        }
+      },
+      "education": [
+        "Master of Laws (LLM), University of Nairobi",
+        "Bachelor of Laws (LLB), University of Nairobi",
+        "Diploma in Law, Kenya School of Law"
+      ],
+      "projects": [
+        {
+          "id": "p36",
+          "name": "Land Digitization Program",
+          "status": "ongoing",
+          "budget": 180000000,
+          "spent": 108000000,
+          "completion": 60,
+          "startDate": "2023-01-15",
+          "endDate": "2025-01-15",
+          "beneficiaries": 10000000,
+          "location": "Nationwide"
+        },
+        {
+          "id": "p37",
+          "name": "Urban Housing Development",
+          "status": "ongoing",
+          "budget": 250000000,
+          "spent": 125000000,
+          "completion": 50,
+          "startDate": "2023-03-01",
+          "endDate": "2026-03-01",
+          "beneficiaries": 500000,
+          "location": "Urban Centers"
+        }
+      ],
+      "promises": [
+        {
+          "id": "pr50",
+          "description": "Digitize land records",
+          "category": "Lands",
+          "madeDate": "2022-10-27",
+          "dueDate": "2025-10-27",
+          "status": "in-progress",
+          "evidence": "https://example.com/evidence50"
+        },
+        {
+          "id": "pr51",
+          "description": "Expand affordable housing",
+          "category": "Housing",
+          "madeDate": "2022-10-27",
+          "dueDate": "2026-10-27",
+          "status": "in-progress"
+        },
+        {
+          "id": "pr52",
+          "description": "Enhance urban development planning",
+          "category": "Urban Development",
+          "madeDate": "2023-01-15",
+          "dueDate": "2025-01-15",
+          "status": "in-progress"
+        }
+      ],
+      "attendance": [
+        {
+          "period": "2023 Q1",
+          "present": 45,
+          "absent": 5,
+          "total": 50
+        },
+        {
+          "period": "2023 Q2",
+          "present": 46,
+          "absent": 4,
+          "total": 50
+        },
+        {
+          "period": "2023 Q3",
+          "present": 44,
+          "absent": 6,
+          "total": 50
+        },
+        {
+          "period": "2023 Q4",
+          "present": 45,
+          "absent": 5,
+          "total": 50
+        },
+        {
+          "period": "2024 Q1",
+          "present": 46,
+          "absent": 4,
+          "total": 50
+        },
+        {
+          "period": "2024 Q2",
+          "present": 45,
+          "absent": 5,
+          "total": 50
+        }
+      ],
+      "scandals": [],
+      "wealth": [
+        {
+          "year": 2022,
+          "amount": 180000000,
+          "growthPercent": 0,
+          "assets": ["Properties in Nairobi and Murang'a", "Law Firm", "Land"],
+          "liabilities": ["Mortgage"]
+        },
+        {
+          "year": 2023,
+          "amount": 190000000,
+          "growthPercent": 5.56,
+          "assets": ["Properties in Nairobi and Murang'a", "Law Firm", "Land", "Real Estate Investments"],
+          "liabilities": ["Mortgage"]
+        },
+        {
+          "year": 2024,
+          "amount": 200000000,
+          "growthPercent": 5.26,
+          "assets": ["Properties in Nairobi and Murang'a", "Law Firm", "Land", "Real Estate Investments", "Shares"],
+          "liabilities": ["Mortgage", "Business Loan"]
+        }
+      ],
+      "keyAchievements": [
+        "Initiated Land Digitization Program",
+        "Advanced Urban Housing Development",
+        "Reformed land registration processes",
+        "Improved public works implementation",
+        "Enhanced urban planning frameworks"
+      ]
+    },
+    {
+      "id": "peninah-malonza",
+      "name": "Peninah Malonza",
+      "position": "Cabinet Secretary",
+      "ministry": "Tourism, Wildlife and Heritage",
+      "party": "UDA",
+      "county": "Kitui",
+      "imageUrl": "/images/leaders/peninah-malonza.jpg",
+      "appointedDate": "2022-10-27",
+      "approvalRating": 3.3,
+      "contact": {
+        "email": "cs@tourism.go.ke",
+        "office": "NSSF Building, Nairobi",
+        "socialMedia": {
+          "twitter": "@PeninahMalonza"
+        }
+      },
+      "education": [
+        "Master of Business Administration, University of Nairobi",
+        "Bachelor of Arts in Sociology, University of Nairobi"
+      ],
+      "projects": [
+        {
+          "id": "p38",
+          "name": "Tourism Recovery Initiative",
+          "status": "ongoing",
+          "budget": 150000000,
+          "spent": 90000000,
+          "completion": 60,
+          "startDate": "2023-01-15",
+          "endDate": "2025-01-15",
+          "beneficiaries": 1000000,
+          "location": "Nationwide"
+        },
+        {
+          "id": "p39",
+          "name": "Wildlife Conservation Program",
+          "status": "ongoing",
+          "budget": 120000000,
+          "spent": 60000000,
+          "completion": 50,
+          "startDate": "2023-03-01",
+          "endDate": "2025-03-01",
+          "beneficiaries": 500000,
+          "location": "Conservation Areas"
+        }
+      ],
+      "promises": [
+        {
+          "id": "pr53",
+          "description": "Revitalize tourism sector post-COVID",
+          "category": "Tourism",
+          "madeDate": "2022-10-27",
+          "dueDate": "2025-10-27",
+          "status": "in-progress",
+          "evidence": "https://example.com/evidence53"
+        },
+        {
+          "id": "pr54",
+          "description": "Enhance wildlife conservation efforts",
+          "category": "Wildlife",
+          "madeDate": "2022-10-27",
+          "dueDate": "2024-10-27",
+          "status": "in-progress"
+        },
+        {
+          "id": "pr55",
+          "description": "Preserve and promote cultural heritage",
+          "category": "Heritage",
+          "madeDate": "2023-01-15",
+          "dueDate": "2025-01-15",
+          "status": "in-progress"
+        }
+      ],
+      "attendance": [
+        {
+          "period": "2023 Q1",
+          "present": 46,
+          "absent": 4,
+          "total": 50
+        },
+        {
+          "period": "2023 Q2",
+          "present": 45,
+          "absent": 5,
+          "total": 50
+        },
+        {
+          "period": "2023 Q3",
+          "present": 47,
+          "absent": 3,
+          "total": 50
+        },
+        {
+          "period": "2023 Q4",
+          "present": 46,
+          "absent": 4,
+          "total": 50
+        },
+        {
+          "period": "2024 Q1",
+          "present": 45,
+          "absent": 5,
+          "total": 50
+        },
+        {
+          "period": "2024 Q2",
+          "present": 47,
+          "absent": 3,
+          "total": 50
+        }
+      ],
+      "scandals": [],
+      "wealth": [
+        {
+          "year": 2022,
+          "amount": 95000000,
+          "growthPercent": 0,
+          "assets": ["Properties in Nairobi and Kitui", "Tourism Business", "Land"],
+          "liabilities": ["Business Loan"]
+        },
+        {
+          "year": 2023,
+          "amount": 100000000,
+          "growthPercent": 5.26,
+          "assets": ["Properties in Nairobi and Kitui", "Tourism Business", "Land", "Investments"],
+          "liabilities": ["Business Loan"]
+        },
+        {
+          "year": 2024,
+          "amount": 105000000,
+          "growthPercent": 5.0,
+          "assets": ["Properties in Nairobi and Kitui", "Tourism Business", "Land", "Investments", "Shares"],
+          "liabilities": ["Business Loan", "Mortgage"]
+        }
+      ],
+      "keyAchievements": [
+        "Launched Tourism Recovery Initiative",
+        "Strengthened Wildlife Conservation Program",
+        "Enhanced heritage site preservation",
+        "Improved tourism marketing strategies",
+        "Developed community-based tourism initiatives"
+      ]
+  },
+  {
+    "id": "william-ruto",
       "name": "William Ruto",
       "position": "President",
       "party": "UDA",
@@ -20,72 +2381,225 @@
         "PhD in Plant Ecology, University of Nairobi",
         "MSc in Plant Ecology, University of Nairobi",
         "BSc in Botany and Zoology, University of Nairobi"
+      ]
+    },
+    {
+      "id": "aden-duale",
+      "name": "Aden Duale",
+      "position": "Cabinet Secretary",
+      "ministry": "Defence",
+      "party": "UDA",
+      "county": "Garissa",
+      "imageUrl": "/images/leaders/aden-duale.jpg",
+      "appointedDate": "2022-10-27",
+      "approvalRating": 3.6,
+      "contact": {
+        "email": "cs@defence.go.ke",
+        "office": "Ulinzi House, Nairobi",
+        "socialMedia": {
+          "twitter": "@HonAdenDuale"
+        }
+      },
+      "education": [
+        "Master of Business Administration, Moi University",
+        "Bachelor of Economics, Moi University"
       ],
       "projects": [
         {
-          "id": "p1",
-          "name": "Affordable Housing Program",
+          "id": "p22",
+          "name": "Defence Modernization Program",
+          "status": "ongoing",
+          "budget": 200000000,
+          "spent": 100000000,
+          "completion": 50,
+          "startDate": "2023-01-10",
+          "endDate": "2026-01-10",
+          "beneficiaries": 47000000,
+          "location": "Nationwide"
+        },
+        {
+          "id": "p23",
+          "name": "Border Security Enhancement",
+          "status": "ongoing",
+          "budget": 150000000,
+          "spent": 75000000,
+          "completion": 50,
+          "startDate": "2023-03-15",
+          "endDate": "2025-03-15",
+          "beneficiaries": 10000000,
+          "location": "Border Regions"
+        }
+      ],
+      "promises": [
+        {
+          "id": "pr29",
+          "description": "Modernize defence forces",
+          "category": "Defence",
+          "madeDate": "2022-10-27",
+          "dueDate": "2026-10-27",
+          "status": "in-progress",
+          "evidence": "https://example.com/evidence29"
+        },
+        {
+          "id": "pr30",
+          "description": "Enhance border security",
+          "category": "Security",
+          "madeDate": "2022-10-27",
+          "dueDate": "2025-10-27",
+          "status": "in-progress"
+        },
+        {
+          "id": "pr31",
+          "description": "Strengthen counter-terrorism capabilities",
+          "category": "Security",
+          "madeDate": "2023-01-15",
+          "dueDate": "2025-01-15",
+          "status": "in-progress"
+        }
+      ],
+      "attendance": [
+        {
+          "period": "2023 Q1",
+          "present": 46,
+          "absent": 4,
+          "total": 50
+        },
+        {
+          "period": "2023 Q2",
+          "present": 47,
+          "absent": 3,
+          "total": 50
+        },
+        {
+          "period": "2023 Q3",
+          "present": 48,
+          "absent": 2,
+          "total": 50
+        },
+        {
+          "period": "2023 Q4",
+          "present": 47,
+          "absent": 3,
+          "total": 50
+        },
+        {
+          "period": "2024 Q1",
+          "present": 46,
+          "absent": 4,
+          "total": 50
+        },
+        {
+          "period": "2024 Q2",
+          "present": 47,
+          "absent": 3,
+          "total": 50
+        }
+      ],
+      "scandals": [],
+      "wealth": [
+        {
+          "year": 2022,
+          "amount": 370000000,
+          "growthPercent": 0,
+          "assets": ["Properties in Nairobi and Garissa", "Livestock", "Business Interests"],
+          "liabilities": ["Mortgage"]
+        },
+        {
+          "year": 2023,
+          "amount": 390000000,
+          "growthPercent": 5.41,
+          "assets": ["Properties in Nairobi and Garissa", "Livestock", "Business Interests", "Shares"],
+          "liabilities": ["Mortgage"]
+        },
+        {
+          "year": 2024,
+          "amount": 405000000,
+          "growthPercent": 3.85,
+          "assets": ["Properties in Nairobi and Garissa", "Livestock", "Business Interests", "Shares", "Land"],
+          "liabilities": ["Mortgage", "Business Loan"]
+        }
+      ],
+      "keyAchievements": [
+        "Initiated Defence Modernization Program",
+        "Enhanced border security operations",
+        "Strengthened military training programs",
+        "Improved military welfare systems",
+        "Coordinated regional security initiatives"
+      ]
+    },
+    {
+      "id": "susan-nakhumicha",
+      "name": "Susan Nakhumicha",
+      "position": "Cabinet Secretary",
+      "ministry": "Health",
+      "party": "UDA",
+      "county": "Trans Nzoia",
+      "imageUrl": "/images/leaders/susan-nakhumicha.jpg",
+      "appointedDate": "2022-10-27",
+      "approvalRating": 3.5,
+      "contact": {
+        "email": "cs@health.go.ke",
+        "office": "Afya House, Nairobi",
+        "socialMedia": {
+          "twitter": "@SusanNakhumicha"
+        }
+      },
+      "education": [
+        "PhD in Supply Chain Management, Jomo Kenyatta University",
+        "Master of Business Administration, University of Nairobi",
+        "Bachelor of Pharmacy, University of Nairobi"
+      ],
+      "projects": [
+        {
+          "id": "p24",
+          "name": "Universal Health Coverage Implementation",
           "status": "ongoing",
           "budget": 250000000,
-          "spent": 175000000,
+          "spent": 150000000,
           "completion": 60,
-          "startDate": "2022-10-01",
-          "endDate": "2025-12-31",
-          "beneficiaries": 50000,
+          "startDate": "2023-01-01",
+          "endDate": "2026-01-01",
+          "beneficiaries": 40000000,
           "location": "Nationwide"
         },
         {
-          "id": "p2",
-          "name": "Universal Health Coverage",
+          "id": "p25",
+          "name": "Healthcare Infrastructure Expansion",
           "status": "ongoing",
           "budget": 180000000,
-          "spent": 115000000,
-          "completion": 65,
-          "startDate": "2022-11-15",
-          "endDate": "2025-12-31",
-          "beneficiaries": 2500000,
-          "location": "Nationwide"
-        },
-        {
-          "id": "p3",
-          "name": "Digital Economy Blueprint",
-          "status": "ongoing",
-          "budget": 120000000,
-          "spent": 75000000,
-          "completion": 55,
-          "startDate": "2023-03-01",
-          "endDate": "2026-03-01",
-          "beneficiaries": 3000000,
+          "spent": 90000000,
+          "completion": 50,
+          "startDate": "2023-03-10",
+          "endDate": "2025-03-10",
+          "beneficiaries": 25000000,
           "location": "Nationwide"
         }
       ],
       "promises": [
         {
-          "id": "pr1",
-          "description": "Create 4 million jobs for youths",
-          "category": "Employment",
-          "madeDate": "2022-06-15",
-          "dueDate": "2026-06-15",
+          "id": "pr32",
+          "description": "Implement Universal Health Coverage",
+          "category": "Healthcare",
+          "madeDate": "2022-10-27",
+          "dueDate": "2026-10-27",
           "status": "in-progress",
-          "evidence": "https://example.com/evidence1"
+          "evidence": "https://example.com/evidence32"
         },
         {
-          "id": "pr2",
-          "description": "Establish Hustler Fund for small businesses",
-          "category": "Economy",
-          "madeDate": "2022-06-15",
-          "dueDate": "2023-12-31",
-          "status": "fulfilled",
-          "evidence": "https://example.com/evidence2"
+          "id": "pr33",
+          "description": "Enhance healthcare infrastructure",
+          "category": "Healthcare",
+          "madeDate": "2022-10-27",
+          "dueDate": "2025-10-27",
+          "status": "in-progress"
         },
         {
-          "id": "pr3",
-          "description": "Reform the education system with CBC implementation",
-          "category": "Education",
-          "madeDate": "2022-08-15",
+          "id": "pr34",
+          "description": "Improve healthcare worker welfare",
+          "category": "Healthcare",
+          "madeDate": "2023-01-15",
           "dueDate": "2024-12-31",
-          "status": "in-progress",
-          "evidence": "https://example.com/evidence3"
+          "status": "in-progress"
         }
       ],
       "attendance": [
@@ -97,341 +2611,136 @@
         },
         {
           "period": "2023 Q2",
-          "present": 42,
-          "absent": 8,
+          "present": 46,
+          "absent": 4,
           "total": 50
         },
         {
           "period": "2023 Q3",
-          "present": 43,
-          "absent": 7,
+          "present": 47,
+          "absent": 3,
           "total": 50
         },
         {
           "period": "2023 Q4",
-          "present": 44,
-          "absent": 6,
+          "present": 48,
+          "absent": 2,
           "total": 50
         },
         {
           "period": "2024 Q1",
-          "present": 40,
-          "absent": 10,
+          "present": 47,
+          "absent": 3,
           "total": 50
         },
         {
           "period": "2024 Q2",
-          "present": 43,
-          "absent": 7,
+          "present": 46,
+          "absent": 4,
           "total": 50
         }
       ],
-      "scandals": [
-        {
-          "id": "s1",
-          "title": "Controversial Land Acquisition",
-          "date": "2023-05-10",
-          "description": "Allegations of irregular acquisition of land in Nairobi",
-          "status": "under-investigation",
-          "impact": 50000000,
-          "sources": ["https://example.com/source1"]
-        },
-        {
-          "id": "s2",
-          "title": "Tax Reform Protests",
-          "date": "2023-06-20",
-          "description": "Public protests against Finance Bill 2023 leading to multiple deaths",
-          "status": "ongoing",
-          "impact": 500000000,
-          "sources": ["https://example.com/source2"]
-        }
-      ],
+      "scandals": [],
       "wealth": [
         {
           "year": 2022,
-          "amount": 7000000000,
+          "amount": 120000000,
           "growthPercent": 0,
-          "assets": ["Land in Sugoi", "Hotels", "Farms"],
-          "liabilities": ["Bank Loans"]
+          "assets": ["Properties in Nairobi and Trans Nzoia", "Pharmaceutical Interests"],
+          "liabilities": ["Mortgage"]
         },
         {
           "year": 2023,
-          "amount": 7500000000,
-          "growthPercent": 7.14,
-          "assets": ["Land in Sugoi", "Hotels", "Farms", "New Properties"],
-          "liabilities": ["Bank Loans"]
+          "amount": 125000000,
+          "growthPercent": 4.17,
+          "assets": ["Properties in Nairobi and Trans Nzoia", "Pharmaceutical Interests", "Investments"],
+          "liabilities": ["Mortgage"]
         },
         {
           "year": 2024,
-          "amount": 7800000000,
+          "amount": 130000000,
           "growthPercent": 4.0,
-          "assets": ["Land in Sugoi", "Hotels", "Farms", "New Properties", "International Investments"],
-          "liabilities": ["Bank Loans", "Corporate Debt"]
+          "assets": ["Properties in Nairobi and Trans Nzoia", "Pharmaceutical Interests", "Investments", "Shares"],
+          "liabilities": ["Mortgage"]
         }
       ],
-      "legislativeRecord": {
-        "billsSponsored": 18,
-        "billsPassed": 12,
-        "motions": 23,
-        "committees": ["National Security", "Finance", "Implementation"]
-      },
       "keyAchievements": [
-        "Launched Hustler Fund",
-        "Initiated Affordable Housing Program",
-        "Reformed NHIF to Social Health Insurance Fund",
-        "Implemented Digital Economy Blueprint",
-        "Expanded road infrastructure nationwide"
+        "Advanced Universal Health Coverage Implementation",
+        "Expanded healthcare infrastructure",
+        "Improved healthcare supply chain management",
+        "Enhanced healthcare worker training programs",
+        "Strengthened disease surveillance systems"
       ]
     },
     {
-      "id": "rigathi-gachagua",
-      "name": "Rigathi Gachagua",
-      "position": "Former Deputy President",
-      "party": "UDA",
-      "imageUrl": "/images/leaders/rigathi-gachagua.jpg",
-      "electedDate": "2022-08-15",
-      "approvalRating": 2.5,
-      "totalVotes": 7176141,
-      "contact": {
-        "email": "rg@deputypresident.go.ke",
-        "office": "Harambee House Annex, Nairobi",
-        "socialMedia": {
-          "twitter": "@RigathiGachagua"
-        }
-      },
-      "education": [
-        "Bachelor of Arts in Political Science, University of Nairobi",
-        "Diploma in Business Management, Kenya Institute of Management"
-      ],
-      "projects": [
-        {
-          "id": "p4",
-          "name": "Coffee Sector Reforms",
-          "status": "ongoing",
-          "budget": 120000000,
-          "spent": 72000000,
-          "completion": 60,
-          "startDate": "2023-01-15",
-          "endDate": "2025-12-31",
-          "beneficiaries": 500000,
-          "location": "Central Kenya"
-        },
-        {
-          "id": "p5",
-          "name": "Mt. Kenya Economic Revival",
-          "status": "ongoing",
-          "budget": 85000000,
-          "spent": 40000000,
-          "completion": 45,
-          "startDate": "2023-04-01",
-          "endDate": "2026-04-01",
-          "beneficiaries": 350000,
-          "location": "Central Kenya"
-        }
-      ],
-      "promises": [
-        {
-          "id": "pr4",
-          "description": "Reform coffee sector to benefit farmers",
-          "category": "Agriculture",
-          "madeDate": "2022-06-15",
-          "dueDate": "2024-12-31",
-          "status": "in-progress",
-          "evidence": "https://example.com/evidence4"
-        },
-        {
-          "id": "pr5",
-          "description": "Ensure equitable resource distribution",
-          "category": "Governance",
-          "madeDate": "2022-06-15",
-          "dueDate": "2026-06-15",
-          "status": "in-progress"
-        },
-        {
-          "id": "pr6",
-          "description": "Support small-scale farmers in Mt. Kenya region",
-          "category": "Agriculture",
-          "madeDate": "2022-10-10",
-          "dueDate": "2025-10-10",
-          "status": "in-progress"
-        }
-      ],
-      "attendance": [
-        {
-          "period": "2023 Q1",
-          "present": 40,
-          "absent": 10,
-          "total": 50
-        },
-        {
-          "period": "2023 Q2",
-          "present": 38,
-          "absent": 12,
-          "total": 50
-        },
-        {
-          "period": "2023 Q3",
-          "present": 41,
-          "absent": 9,
-          "total": 50
-        },
-        {
-          "period": "2023 Q4",
-          "present": 42,
-          "absent": 8,
-          "total": 50
-        },
-        {
-          "period": "2024 Q1",
-          "present": 39,
-          "absent": 11,
-          "total": 50
-        },
-        {
-          "period": "2024 Q2",
-          "present": 40,
-          "absent": 10,
-          "total": 50
-        }
-      ],
-      "scandals": [
-        {
-          "id": "s3",
-          "title": "Asset Freeze Case",
-          "date": "2022-07-28",
-          "description": "Court case regarding frozen assets worth KES 5.8 billion",
-          "status": "cleared",
-          "impact": 5800000000,
-          "sources": ["https://example.com/source3"]
-        },
-        {
-          "id": "s4",
-          "title": "Controversial Coffee Remarks",
-          "date": "2023-11-15",
-          "description": "Controversial statements about regional economic preferences",
-          "status": "resolved",
-          "impact": 0,
-          "sources": ["https://example.com/source4"]
-        }
-      ],
-      "wealth": [
-        {
-          "year": 2022,
-          "amount": 5800000000,
-          "growthPercent": 0,
-          "assets": ["Land in Mathira", "Commercial Properties"],
-          "liabilities": ["Legal Fees"]
-        },
-        {
-          "year": 2023,
-          "amount": 6000000000,
-          "growthPercent": 3.45,
-          "assets": ["Land in Mathira", "Commercial Properties", "Shares"],
-          "liabilities": ["Legal Fees"]
-        },
-        {
-          "year": 2024,
-          "amount": 6200000000,
-          "growthPercent": 3.33,
-          "assets": ["Land in Mathira", "Commercial Properties", "Shares", "Coffee Investments"],
-          "liabilities": ["Legal Fees", "Business Loans"]
-        }
-      ],
-      "legislativeRecord": {
-        "billsSponsored": 7,
-        "billsPassed": 4,
-        "motions": 12,
-        "committees": ["Agriculture", "Regional Development"]
-      },
-      "keyAchievements": [
-        "Initiated Coffee Sector Reforms",
-        "Championed Mt. Kenya economic interests",
-        "Launched cooperative societies revitalization program",
-        "Led agricultural subsidies initiatives"
-      ]
-    },
-    {
-      "id": "kipchumba-murkomen",
-      "name": "Kipchumba Murkomen",
+      "id": "davis-chirchir",
+      "name": "Davis Chirchir",
       "position": "Cabinet Secretary",
-      "ministry": "Transport and Infrastructure",
+      "ministry": "Energy",
       "party": "UDA",
-      "county": "Elgeyo Marakwet",
-      "imageUrl": "/images/leaders/kipchumba-murkomen.jpg",
+      "county": "Kericho",
+      "imageUrl": "/images/leaders/davis-chirchir.jpg",
       "appointedDate": "2022-10-27",
-      "approvalRating": 3.7,
+      "approvalRating": 3.3,
       "contact": {
-        "email": "cs@transport.go.ke",
-        "office": "Transcom House, Nairobi",
+        "email": "cs@energy.go.ke",
+        "office": "Nyayo House, Nairobi",
         "socialMedia": {
-          "twitter": "@KipchumbaMurkomen"
+          "twitter": "@DavisChirchir"
         }
       },
       "education": [
-        "Master of Laws (LLM), American University Washington College of Law",
-        "Bachelor of Laws (LLB), University of Nairobi"
+        "Master of Business Administration, Royal Holloway, University of London",
+        "Bachelor of Science in Computer Science, University of Nairobi"
       ],
       "projects": [
         {
-          "id": "p6",
-          "name": "Nairobi Expressway",
-          "status": "completed",
-          "budget": 850000000,
-          "spent": 850000000,
-          "completion": 100,
-          "startDate": "2020-10-15",
-          "endDate": "2022-05-14",
-          "beneficiaries": 1000000,
-          "location": "Nairobi"
-        },
-        {
-          "id": "p7",
-          "name": "JKIA-Westlands Highway Expansion",
+          "id": "p26",
+          "name": "Renewable Energy Expansion",
           "status": "ongoing",
           "budget": 300000000,
-          "spent": 210000000,
-          "completion": 70,
-          "startDate": "2023-01-10",
-          "endDate": "2025-01-10",
-          "beneficiaries": 800000,
-          "location": "Nairobi"
+          "spent": 150000000,
+          "completion": 50,
+          "startDate": "2023-01-15",
+          "endDate": "2026-01-15",
+          "beneficiaries": 25000000,
+          "location": "Nationwide"
         },
         {
-          "id": "p8",
-          "name": "Rural Roads Rehabilitation Program",
+          "id": "p27",
+          "name": "Last Mile Connectivity Project Phase III",
           "status": "ongoing",
-          "budget": 250000000,
-          "spent": 125000000,
-          "completion": 50,
-          "startDate": "2023-05-20",
-          "endDate": "2025-12-31",
-          "beneficiaries": 1500000,
+          "budget": 200000000,
+          "spent": 120000000,
+          "completion": 60,
+          "startDate": "2023-03-01",
+          "endDate": "2025-03-01",
+          "beneficiaries": 5000000,
           "location": "Nationwide"
         }
       ],
       "promises": [
         {
-          "id": "pr7",
-          "description": "Complete all stalled road projects",
-          "category": "Infrastructure",
+          "id": "pr35",
+          "description": "Expand renewable energy capacity",
+          "category": "Energy",
           "madeDate": "2022-10-27",
-          "dueDate": "2025-10-27",
+          "dueDate": "2026-10-27",
           "status": "in-progress",
-          "evidence": "https://example.com/evidence5"
+          "evidence": "https://example.com/evidence35"
         },
         {
-          "id": "pr8",
-          "description": "Revitalize Kenya Airways",
-          "category": "Transport",
+          "id": "pr36",
+          "description": "Reduce electricity costs",
+          "category": "Energy",
           "madeDate": "2022-10-27",
-          "dueDate": "2024-12-31",
-          "status": "in-progress",
-          "evidence": "https://example.com/evidence6"
+          "dueDate": "2024-10-27",
+          "status": "in-progress"
         },
         {
-          "id": "pr9",
-          "description": "Modernize railway infrastructure",
-          "category": "Transport",
+          "id": "pr37",
+          "description": "Achieve universal electricity access",
+          "category": "Energy",
           "madeDate": "2023-01-15",
           "dueDate": "2026-01-15",
           "status": "in-progress"
@@ -440,323 +2749,14 @@
       "attendance": [
         {
           "period": "2023 Q1",
-          "present": 48,
-          "absent": 2,
+          "present": 46,
+          "absent": 4,
           "total": 50
         },
         {
           "period": "2023 Q2",
-          "present": 47,
-          "absent": 3,
-          "total": 50
-        },
-        {
-          "period": "2023 Q3",
-          "present": 49,
-          "absent": 1,
-          "total": 50
-        },
-        {
-          "period": "2023 Q4",
-          "present": 48,
-          "absent": 2,
-          "total": 50
-        },
-        {
-          "period": "2024 Q1",
-          "present": 47,
-          "absent": 3,
-          "total": 50
-        },
-        {
-          "period": "2024 Q2",
-          "present": 48,
-          "absent": 2,
-          "total": 50
-        }
-      ],
-      "scandals": [],
-      "wealth": [
-        {
-          "year": 2022,
-          "amount": 300000000,
-          "growthPercent": 0,
-          "assets": ["Properties in Nairobi", "Law Firm"],
-          "liabilities": ["Mortgage"]
-        },
-        {
-          "year": 2023,
-          "amount": 320000000,
-          "growthPercent": 6.67,
-          "assets": ["Properties in Nairobi", "Law Firm", "Shares"],
-          "liabilities": ["Mortgage"]
-        },
-        {
-          "year": 2024,
-          "amount": 345000000,
-          "growthPercent": 7.81,
-          "assets": ["Properties in Nairobi", "Law Firm", "Shares", "Land in Eldoret"],
-          "liabilities": ["Mortgage", "Car Loan"]
-        }
-      ],
-      "keyAchievements": [
-        "Completed Nairobi Expressway",
-        "Initiated reforms in transport sector",
-        "Improved road maintenance across the country",
-        "Launched Rural Roads Rehabilitation Program",
-        "Restructured Kenya Airways operations"
-      ]
-    },
-    {
-      "id": "kithure-kindiki",
-      "name": "Kithure Kindiki",
-      "position": "Vice President",
-      "ministry": "Interior and National Administration",
-      "party": "UDA",
-      "county": "Tharaka Nithi",
-      "imageUrl": "/images/leaders/kithure-kindiki.jpg",
-      "appointedDate": "2022-10-27",
-      "approvalRating": 3.9,
-      "contact": {
-        "email": "cs@interior.go.ke",
-        "office": "Harambee House, Nairobi",
-        "socialMedia": {
-          "twitter": "@KindikiKithure"
-        }
-      },
-      "education": [
-        "PhD in International Law, University of Pretoria",
-        "Master of Laws (LLM), University of Pretoria",
-        "Bachelor of Laws (LLB), University of Nairobi"
-      ],
-      "projects": [
-        {
-          "id": "p9",
-          "name": "National Security Enhancement Program",
-          "status": "ongoing",
-          "budget": 180000000,
-          "spent": 90000000,
-          "completion": 50,
-          "startDate": "2023-01-15",
-          "endDate": "2025-01-15",
-          "beneficiaries": 47000000,
-          "location": "Nationwide"
-        },
-        {
-          "id": "p10",
-          "name": "Police Housing Project",
-          "status": "ongoing",
-          "budget": 120000000,
-          "spent": 60000000,
-          "completion": 45,
-          "startDate": "2023-03-10",
-          "endDate": "2025-06-10",
-          "beneficiaries": 100000,
-          "location": "Nationwide"
-        }
-      ],
-      "promises": [
-        {
-          "id": "pr10",
-          "description": "Enhance national security and combat terrorism",
-          "category": "Security",
-          "madeDate": "2022-10-27",
-          "dueDate": "2025-10-27",
-          "status": "in-progress",
-          "evidence": "https://example.com/evidence7"
-        },
-        {
-          "id": "pr11",
-          "description": "Reform police service",
-          "category": "Security",
-          "madeDate": "2022-10-27",
-          "dueDate": "2024-12-31",
-          "status": "in-progress"
-        },
-        {
-          "id": "pr12",
-          "description": "Improve police housing and welfare",
-          "category": "Security",
-          "madeDate": "2023-01-15",
-          "dueDate": "2025-12-31",
-          "status": "in-progress"
-        }
-      ],
-      "attendance": [
-        {
-          "period": "2023 Q1",
-          "present": 48,
-          "absent": 2,
-          "total": 50
-        },
-        {
-          "period": "2023 Q2",
-          "present": 49,
-          "absent": 1,
-          "total": 50
-        },
-        {
-          "period": "2023 Q3",
-          "present": 50,
-          "absent": 0,
-          "total": 50
-        },
-        {
-          "period": "2023 Q4",
-          "present": 49,
-          "absent": 1,
-          "total": 50
-        },
-        {
-          "period": "2024 Q1",
-          "present": 48,
-          "absent": 2,
-          "total": 50
-        },
-        {
-          "period": "2024 Q2",
-          "present": 49,
-          "absent": 1,
-          "total": 50
-        }
-      ],
-      "scandals": [],
-      "wealth": [
-        {
-          "year": 2022,
-          "amount": 350000000,
-          "growthPercent": 0,
-          "assets": ["Properties in Nairobi", "Law Firm", "Land in Tharaka Nithi"],
-          "liabilities": ["Mortgage"]
-        },
-        {
-          "year": 2023,
-          "amount": 365000000,
-          "growthPercent": 4.29,
-          "assets": ["Properties in Nairobi", "Law Firm", "Land in Tharaka Nithi", "Shares"],
-          "liabilities": ["Mortgage"]
-        },
-        {
-          "year": 2024,
-          "amount": 380000000,
-          "growthPercent": 4.11,
-          "assets": ["Properties in Nairobi", "Law Firm", "Land in Tharaka Nithi", "Shares", "Investments"],
-          "liabilities": ["Mortgage"]
-        }
-      ],
-      "keyAchievements": [
-        "Enhanced national security operations",
-        "Initiated police service reforms",
-        "Launched Police Housing Project",
-        "Improved border security measures",
-        "Coordinated disaster response mechanisms"
-      ]
-    },
-    {
-      "id": "johnson-sakaja",
-      "name": "Johnson Sakaja",
-      "position": "Governor",
-      "county": "Nairobi",
-      "party": "UDA",
-      "imageUrl": "/images/leaders/johnson-sakaja.jpg",
-      "electedDate": "2022-08-09",
-      "approvalRating": 3.3,
-      "totalVotes": 699392,
-      "contact": {
-        "email": "governor@nairobi.go.ke",
-        "office": "City Hall, Nairobi",
-        "socialMedia": {
-          "twitter": "@SakajaJohnson"
-        }
-      },
-      "education": [
-        "Bachelor of Science in Actuarial Science, University of Nairobi"
-      ],
-      "projects": [
-        {
-          "id": "p11",
-          "name": "Nairobi Rivers Restoration",
-          "status": "ongoing",
-          "budget": 200000000,
-          "spent": 120000000,
-          "completion": 60,
-          "startDate": "2022-11-01",
-          "endDate": "2024-12-31",
-          "beneficiaries": 4500000,
-          "location": "Nairobi"
-        },
-        {
-          "id": "p12",
-          "name": "Dandora Dumpsite Relocation",
-          "status": "ongoing",
-          "budget": 150000000,
-          "spent": 60000000,
-          "completion": 40,
-          "startDate": "2023-02-15",
-          "endDate": "2025-02-15",
-          "beneficiaries": 1000000,
-          "location": "Nairobi"
-        },
-        {
-          "id": "p13",
-          "name": "Nairobi Smart City Initiative",
-          "status": "ongoing",
-          "budget": 180000000,
-          "spent": 54000000,
-          "completion": 30,
-          "startDate": "2023-06-01",
-          "endDate": "2026-06-01",
-          "beneficiaries": 4500000,
-          "location": "Nairobi"
-        }
-      ],
-      "promises": [
-        {
-          "id": "pr13",
-          "description": "Clean up Nairobi Rivers",
-          "category": "Environment",
-          "madeDate": "2022-06-15",
-          "dueDate": "2024-12-31",
-          "status": "in-progress",
-          "evidence": "https://example.com/evidence8"
-        },
-        {
-          "id": "pr14",
-          "description": "Relocate Dandora Dumpsite",
-          "category": "Environment",
-          "madeDate": "2022-06-15",
-          "dueDate": "2025-06-15",
-          "status": "in-progress"
-        },
-        {
-          "id": "pr15",
-          "description": "Provide free NHIF cover for vulnerable households",
-          "category": "Healthcare",
-          "madeDate": "2022-06-15",
-          "dueDate": "2023-06-15",
-          "status": "fulfilled",
-          "evidence": "https://example.com/evidence9"
-        },
-        {
-          "id": "pr16",
-          "description": "Transform Nairobi into a Smart City",
-          "category": "Urban Development",
-          "madeDate": "2023-01-15",
-          "dueDate": "2026-06-15",
-          "status": "in-progress"
-        }
-      ],
-      "attendance": [
-        {
-          "period": "2023 Q1",
-          "present": 49,
-          "absent": 1,
-          "total": 50
-        },
-        {
-          "period": "2023 Q2",
-          "present": 48,
-          "absent": 2,
+          "present": 45,
+          "absent": 5,
           "total": 50
         },
         {
@@ -786,53 +2786,103 @@
       ],
       "scandals": [
         {
-          "id": "s5",
-          "title": "Academic Credentials Controversy",
-          "date": "2022-06-14",
-          "description": "Questions raised about university degree",
-          "status": "cleared",
-          "impact": 0,
-          "sources": ["https://example.com/source5"]
-        },
-        {
-          "id": "s6",
-          "title": "County Financial Management Issues",
-          "date": "2023-09-10",
-          "description": "Allegations of mismanagement of county funds",
-          "status": "under-investigation",
-          "impact": 75000000,
-          "sources": ["https://example.com/source6"]
+          "id": "s10",
+          "title": "Chicken Gate Scandal",
+          "date": "2014-03-01",
+          "description": "Alleged involvement in electoral materials procurement scandal",
+          "status": "historical",
+          "impact": 50000000,
+          "sources": ["https://example.com/source10"]
         }
       ],
       "wealth": [
         {
           "year": 2022,
-          "amount": 250000000,
+          "amount": 280000000,
           "growthPercent": 0,
-          "assets": ["Properties in Nairobi", "Business Interests"],
-          "liabilities": ["Business Loans"]
+          "assets": ["Properties in Nairobi and Kericho", "IT Company", "Shares"],
+          "liabilities": ["Mortgage"]
         },
         {
           "year": 2023,
-          "amount": 270000000,
-          "growthPercent": 8.0,
-          "assets": ["Properties in Nairobi", "Business Interests", "Investments"],
-          "liabilities": ["Business Loans"]
+          "amount": 295000000,
+          "growthPercent": 5.36,
+          "assets": ["Properties in Nairobi and Kericho", "IT Company", "Shares", "Land"],
+          "liabilities": ["Mortgage"]
         },
         {
           "year": 2024,
-          "amount": 285000000,
-          "growthPercent": 5.56,
-          "assets": ["Properties in Nairobi", "Business Interests", "Investments", "Real Estate"],
-          "liabilities": ["Business Loans", "Mortgage"]
+          "amount": 310000000,
+          "growthPercent": 5.08,
+          "assets": ["Properties in Nairobi and Kericho", "IT Company", "Shares", "Land", "Energy Investments"],
+          "liabilities": ["Mortgage", "Business Loan"]
         }
       ],
       "keyAchievements": [
-        "Initiated Nairobi Rivers Restoration",
-        "Improved garbage collection",
-        "Provided free NHIF cover for vulnerable households",
-        "Launched Nairobi Smart City Initiative",
-        "Improved urban transport systems"
+        "Expanded renewable energy capacity",
+        "Advanced Last Mile Connectivity Project",
+        "Reduced electricity costs",
+        "Streamlined energy sector regulations",
+        "Attracted investment in energy infrastructure"
+      ]
+    },
+    {
+      "id": "aden-duale",
+      "name": "Aden Duale",
+      "position": "Cabinet Secretary",
+      "ministry": "Defence",
+      "party": "UDA",
+      "county": "Garissa",
+      "imageUrl": "/images/leaders/aden-duale.jpg",
+      "appointedDate": "2022-10-27",
+      "approvalRating": 3.6,
+      "contact": {
+        "email": "cs@defence.go.ke",
+        "office": "Ulinzi House, Nairobi",
+        "socialMedia": {
+          "twitter": "@HonAdenDuale"
+        }
+      },
+      "education": [
+        "Master of Business Administration, Moi University",
+        "Bachelor of Economics, Moi University"
+      ],
+      "projects": [
+        {
+          "id": "p22",
+          "name": "Defence Modernization Program",
+          "status": "ongoing",
+          "budget": 200000000,
+          "spent": 100000000,
+          "completion": 50,
+          "startDate": "2023-01-10",
+          "endDate": "2026-01-10",
+          "beneficiaries": 47000000,
+          "location": "Nationwide"
+        },
+        {
+          "id": "p23",
+          "name": "Border Security Enhancement",
+          "status": "ongoing",
+          "budget": 150000000,
+          "spent": 75000000,
+          "completion": 50,
+          "startDate": "2023-03-15",
+          "endDate": "2025-03-15",
+          "beneficiaries": 10000000,
+          "location": "Border Regions"
+        }
+      ],
+      "promises": [
+        {
+          "id": "pr29",
+          "description": "Modernize defence forces",
+          "category": "Defence",
+          "madeDate": "2022-10-27",
+          "dueDate": "2026-10-27",
+          "status": "in-progress",
+          "evidence": "https://example.com/evidence29"
+        }
       ]
     },
     {
@@ -858,7 +2908,7 @@
       ],
       "projects": [
         {
-          "id": "p14",
+          "id": "p16",
           "name": "County Oversight Framework",
           "status": "completed",
           "budget": 50000000,
@@ -870,7 +2920,7 @@
           "location": "Nairobi"
         },
         {
-          "id": "p15",
+          "id": "p17",
           "name": "Youth Employment Initiative",
           "status": "ongoing",
           "budget": 80000000,
@@ -884,25 +2934,25 @@
       ],
       "promises": [
         {
-          "id": "pr17",
+          "id": "pr20",
           "description": "Enhance county government oversight",
           "category": "Governance",
           "madeDate": "2022-06-15",
           "dueDate": "2023-06-15",
           "status": "fulfilled",
-          "evidence": "https://example.com/evidence10"
+          "evidence": "https://example.com/evidence20"
         },
         {
-          "id": "pr18",
+          "id": "pr21",
           "description": "Champion youth employment initiatives",
           "category": "Employment",
           "madeDate": "2022-06-15",
           "dueDate": "2024-06-15",
           "status": "in-progress",
-          "evidence": "https://example.com/evidence11"
+          "evidence": "https://example.com/evidence21"
         },
         {
-          "id": "pr19",
+          "id": "pr22",
           "description": "Advocate for increased county funding",
           "category": "Governance",
           "madeDate": "2023-01-10",
@@ -997,6 +3047,839 @@
         "localInitiatives": 12,
         "communityFeedback": 8.5
       }
+    },
+    {
+      "id": "moses-wetangula",
+      "name": "Moses Wetangula",
+      "position": "Speaker of the National Assembly",
+      "party": "Ford Kenya",
+      "imageUrl": "/images/leaders/moses-wetangula.jpg",
+      "electedDate": "2022-09-08",
+      "approvalRating": 3.6,
+      "contact": {
+        "email": "speaker@parliament.go.ke",
+        "office": "Parliament Buildings, Nairobi",
+        "socialMedia": {
+          "twitter": "@Wetangulam"
+        }
+      },
+      "education": [
+        "Bachelor of Laws (LLB), University of Nairobi",
+        "Diploma in Law, Kenya School of Law"
+      ],
+      "projects": [
+        {
+          "id": "p18",
+          "name": "Parliamentary Digital Transformation",
+          "status": "ongoing",
+          "budget": 120000000,
+          "spent": 72000000,
+          "completion": 60,
+          "startDate": "2022-12-10",
+          "endDate": "2024-12-31",
+          "beneficiaries": 47000000,
+          "location": "Nationwide"
+        },
+        {
+          "id": "p19",
+          "name": "Public Participation Enhancement",
+          "status": "ongoing",
+          "budget": 80000000,
+          "spent": 40000000,
+          "completion": 50,
+          "startDate": "2023-03-15",
+          "endDate": "2025-03-15",
+          "beneficiaries": 47000000,
+          "location": "Nationwide"
+        }
+      ],
+      "promises": [
+        {
+          "id": "pr23",
+          "description": "Enhance legislative efficiency",
+          "category": "Governance",
+          "madeDate": "2022-09-08",
+          "dueDate": "2024-09-08",
+          "status": "in-progress",
+          "evidence": "https://example.com/evidence23"
+        },
+        {
+          "id": "pr24",
+          "description": "Digitize parliamentary processes",
+          "category": "Governance",
+          "madeDate": "2022-10-15",
+          "dueDate": "2024-12-31",
+          "status": "in-progress"
+        },
+        {
+          "id": "pr25",
+          "description": "Enhance public participation in legislation",
+          "category": "Governance",
+          "madeDate": "2023-01-10",
+          "dueDate": "2025-01-10",
+          "status": "in-progress"
+        }
+      ],
+      "attendance": [
+        {
+          "period": "2023 Q1",
+          "present": 48,
+          "absent": 2,
+          "total": 50
+        },
+        {
+          "period": "2023 Q2",
+          "present": 49,
+          "absent": 1,
+          "total": 50
+        },
+        {
+          "period": "2023 Q3",
+          "present": 47,
+          "absent": 3,
+          "total": 50
+        },
+        {
+          "period": "2023 Q4",
+          "present": 48,
+          "absent": 2,
+          "total": 50
+        },
+        {
+          "period": "2024 Q1",
+          "present": 46,
+          "absent": 4,
+          "total": 50
+        },
+        {
+          "period": "2024 Q2",
+          "present": 48,
+          "absent": 2,
+          "total": 50
+        }
+      ],
+      "scandals": [
+        {
+          "id": "s9",
+          "title": "Tokyo Embassy Scandal",
+          "date": "2010-05-15",
+          "description": "Allegations of impropriety in the purchase of embassy property in Tokyo",
+          "status": "closed",
+          "impact": 1200000000,
+          "sources": ["https://example.com/source9"]
+        }
+      ],
+      "wealth": [
+        {
+          "year": 2022,
+          "amount": 400000000,
+          "growthPercent": 0,
+          "assets": ["Properties in Nairobi and Bungoma", "Law Firm", "Farming Interests"],
+          "liabilities": ["Mortgage"]
+        },
+        {
+          "year": 2023,
+          "amount": 420000000,
+          "growthPercent": 5.0,
+          "assets": ["Properties in Nairobi and Bungoma", "Law Firm", "Farming Interests", "Investments"],
+          "liabilities": ["Mortgage"]
+        },
+        {
+          "year": 2024,
+          "amount": 435000000,
+          "growthPercent": 3.57,
+          "assets": ["Properties in Nairobi and Bungoma", "Law Firm", "Farming Interests", "Investments", "Shares"],
+          "liabilities": ["Mortgage", "Business Loan"]
+        }
+      ],
+      "legislativeRecord": {
+        "billsOverseen": 85,
+        "billsPassed": 60,
+        "specialSessions": 12,
+        "committees": ["House Business Committee", "Parliamentary Service Commission"]
+      },
+      "keyAchievements": [
+        "Initiated Parliamentary Digital Transformation",
+        "Enhanced legislative efficiency",
+        "Improved public participation in legislation",
+        "Strengthened parliamentary oversight of executive",
+        "Streamlined legislative processes"
+      ]
+    },
+ 
+    {
+      "id": "kithure-kindiki",
+      "name": "Kithure Kindiki",
+      "position": "Deputy President",
+      "party": "UDA",
+      "imageUrl": "/images/leaders/kithure-kindiki.jpg",
+      "electedDate": "2024-07-20",
+      "approvalRating": 3.9,
+      "contact": {
+        "email": "dp@deputypresident.go.ke",
+        "office": "Harambee House Annex, Nairobi",
+        "socialMedia": {
+          "twitter": "@KindikiKithure"
+        }
+      },
+      "education": [
+        "PhD in International Law, University of Pretoria",
+        "Master of Laws (LLM), University of Pretoria",
+        "Bachelor of Laws (LLB), University of Nairobi"
+      ],
+      "projects": [
+        {
+          "id": "p4",
+          "name": "National Security Enhancement Program",
+          "status": "ongoing",
+          "budget": 180000000,
+          "spent": 90000000,
+          "completion": 50,
+          "startDate": "2023-01-15",
+          "endDate": "2025-01-15",
+          "beneficiaries": 47000000,
+          "location": "Nationwide"
+        },
+        {
+          "id": "p5",
+          "name": "Police Housing Project",
+          "status": "ongoing",
+          "budget": 120000000,
+          "spent": 60000000,
+          "completion": 45,
+          "startDate": "2023-03-10",
+          "endDate": "2025-06-10",
+          "beneficiaries": 100000,
+          "location": "Nationwide"
+        }
+      ],
+      "promises": [
+        {
+          "id": "pr4",
+          "description": "Enhance national security and combat terrorism",
+          "category": "Security",
+          "madeDate": "2024-07-20",
+          "dueDate": "2027-07-20",
+          "status": "in-progress",
+          "evidence": "https://example.com/evidence4"
+        },
+        {
+          "id": "pr5",
+          "description": "Reform police service",
+          "category": "Security",
+          "madeDate": "2024-07-20",
+          "dueDate": "2026-12-31",
+          "status": "in-progress"
+        },
+        {
+          "id": "pr6",
+          "description": "Strengthen governance in security sector",
+          "category": "Governance",
+          "madeDate": "2024-08-15",
+          "dueDate": "2027-08-15",
+          "status": "in-progress"
+        }
+      ],
+      "attendance": [
+        {
+          "period": "2024 Q3",
+          "present": 48,
+          "absent": 2,
+          "total": 50
+        },
+        {
+          "period": "2024 Q4",
+          "present": 49,
+          "absent": 1,
+          "total": 50
+        }
+      ],
+      "scandals": [],
+      "wealth": [
+        {
+          "year": 2022,
+          "amount": 350000000,
+          "growthPercent": 0,
+          "assets": ["Properties in Nairobi", "Law Firm", "Land in Tharaka Nithi"],
+          "liabilities": ["Mortgage"]
+        },
+        {
+          "year": 2023,
+          "amount": 365000000,
+          "growthPercent": 4.29,
+          "assets": ["Properties in Nairobi", "Law Firm", "Land in Tharaka Nithi", "Shares"],
+          "liabilities": ["Mortgage"]
+        },
+        {
+          "year": 2024,
+          "amount": 380000000,
+          "growthPercent": 4.11,
+          "assets": ["Properties in Nairobi", "Law Firm", "Land in Tharaka Nithi", "Shares", "Investments"],
+          "liabilities": ["Mortgage"]
+        }
+      ],
+      "legislativeRecord": {
+        "billsSponsored": 14,
+        "billsPassed": 9,
+        "motions": 18,
+        "committees": ["National Security", "Justice and Legal Affairs"]
+      },
+      "keyAchievements": [
+        "Enhanced national security operations",
+        "Initiated police service reforms",
+        "Launched Police Housing Project",
+        "Improved border security measures",
+        "Coordinated disaster response mechanisms"
+      ]
+    },
+    {
+      "id": "rigathi-gachagua",
+      "name": "Rigathi Gachagua",
+      "position": "Former Deputy President",
+      "party": "UDA",
+      "imageUrl": "/images/leaders/rigathi-gachagua.jpg",
+      "electedDate": "2022-08-15",
+      "approvalRating": 2.5,
+      "totalVotes": 7176141,
+      "contact": {
+        "email": "rg@deputypresident.go.ke",
+        "office": "Harambee House Annex, Nairobi",
+        "socialMedia": {
+          "twitter": "@RigathiGachagua"
+        }
+      },
+      "education": [
+        "Bachelor of Arts in Political Science, University of Nairobi",
+        "Diploma in Business Management, Kenya Institute of Management"
+      ],
+      "projects": [
+        {
+          "id": "p6",
+          "name": "Coffee Sector Reforms",
+          "status": "ongoing",
+          "budget": 120000000,
+          "spent": 72000000,
+          "completion": 60,
+          "startDate": "2023-01-15",
+          "endDate": "2025-12-31",
+          "beneficiaries": 500000,
+          "location": "Central Kenya"
+        },
+        {
+          "id": "p7",
+          "name": "Mt. Kenya Economic Revival",
+          "status": "ongoing",
+          "budget": 85000000,
+          "spent": 40000000,
+          "completion": 45,
+          "startDate": "2023-04-01",
+          "endDate": "2026-04-01",
+          "beneficiaries": 350000,
+          "location": "Central Kenya"
+        }
+      ],
+      "promises": [
+        {
+          "id": "pr7",
+          "description": "Reform coffee sector to benefit farmers",
+          "category": "Agriculture",
+          "madeDate": "2022-06-15",
+          "dueDate": "2024-12-31",
+          "status": "in-progress",
+          "evidence": "https://example.com/evidence7"
+        },
+        {
+          "id": "pr8",
+          "description": "Ensure equitable resource distribution",
+          "category": "Governance",
+          "madeDate": "2022-06-15",
+          "dueDate": "2026-06-15",
+          "status": "in-progress"
+        },
+        {
+          "id": "pr9",
+          "description": "Support small-scale farmers in Mt. Kenya region",
+          "category": "Agriculture",
+          "madeDate": "2022-10-10",
+          "dueDate": "2025-10-10",
+          "status": "in-progress"
+        }
+      ],
+      "attendance": [
+        {
+          "period": "2023 Q1",
+          "present": 40,
+          "absent": 10,
+          "total": 50
+        },
+        {
+          "period": "2023 Q2",
+          "present": 38,
+          "absent": 12,
+          "total": 50
+        },
+        {
+          "period": "2023 Q3",
+          "present": 41,
+          "absent": 9,
+          "total": 50
+        },
+        {
+          "period": "2023 Q4",
+          "present": 42,
+          "absent": 8,
+          "total": 50
+        },
+        {
+          "period": "2024 Q1",
+          "present": 39,
+          "absent": 11,
+          "total": 50
+        },
+        {
+          "period": "2024 Q2",
+          "present": 40,
+          "absent": 10,
+          "total": 50
+        }
+      ],
+      "scandals": [
+        {
+          "id": "s3",
+          "title": "Asset Freeze Case",
+          "date": "2022-07-28",
+          "description": "Court case regarding frozen assets worth KES 5.8 billion",
+          "status": "cleared",
+          "impact": 5800000000,
+          "sources": ["https://example.com/source3"]
+        },
+        {
+          "id": "s4",
+          "title": "Controversial Coffee Remarks",
+          "date": "2023-11-15",
+          "description": "Controversial statements about regional economic preferences",
+          "status": "resolved",
+          "impact": 0,
+          "sources": ["https://example.com/source4"]
+        },
+        {
+          "id": "s5",
+          "title": "Impeachment",
+          "date": "2024-07-15",
+          "description": "Impeached by Parliament due to gross misconduct allegations",
+          "status": "concluded",
+          "impact": 0,
+          "sources": ["https://example.com/source5"]
+        }
+      ],
+      "wealth": [
+        {
+          "year": 2022,
+          "amount": 5800000000,
+          "growthPercent": 0,
+          "assets": ["Land in Mathira", "Commercial Properties"],
+          "liabilities": ["Legal Fees"]
+        },
+        {
+          "year": 2023,
+          "amount": 6000000000,
+          "growthPercent": 3.45,
+          "assets": ["Land in Mathira", "Commercial Properties", "Shares"],
+          "liabilities": ["Legal Fees"]
+        },
+        {
+          "year": 2024,
+          "amount": 6200000000,
+          "growthPercent": 3.33,
+          "assets": ["Land in Mathira", "Commercial Properties", "Shares", "Coffee Investments"],
+          "liabilities": ["Legal Fees", "Business Loans"]
+        }
+      ],
+      "legislativeRecord": {
+        "billsSponsored": 7,
+        "billsPassed": 4,
+        "motions": 12,
+        "committees": ["Agriculture", "Regional Development"]
+      },
+      "keyAchievements": [
+        "Initiated Coffee Sector Reforms",
+        "Championed Mt. Kenya economic interests",
+        "Launched cooperative societies revitalization program",
+        "Led agricultural subsidies initiatives"
+      ]
+    },
+    {
+      "id": "kipchumba-murkomen",
+      "name": "Kipchumba Murkomen",
+      "position": "Cabinet Secretary",
+      "ministry": "Transport and Infrastructure",
+      "party": "UDA",
+      "county": "Elgeyo Marakwet",
+      "imageUrl": "/images/leaders/kipchumba-murkomen.jpg",
+      "appointedDate": "2022-10-27",
+      "approvalRating": 3.7,
+      "contact": {
+        "email": "cs@transport.go.ke",
+        "office": "Transcom House, Nairobi",
+        "socialMedia": {
+          "twitter": "@KipchumbaMurkomen"
+        }
+      },
+      "education": [
+        "Master of Laws (LLM), American University Washington College of Law",
+        "Bachelor of Laws (LLB), University of Nairobi"
+      ],
+      "projects": [
+        {
+          "id": "p8",
+          "name": "Nairobi Expressway",
+          "status": "completed",
+          "budget": 850000000,
+          "spent": 850000000,
+          "completion": 100,
+          "startDate": "2020-10-15",
+          "endDate": "2022-05-14",
+          "beneficiaries": 1000000,
+          "location": "Nairobi"
+        },
+        {
+          "id": "p9",
+          "name": "JKIA-Westlands Highway Expansion",
+          "status": "ongoing",
+          "budget": 300000000,
+          "spent": 210000000,
+          "completion": 70,
+          "startDate": "2023-01-10",
+          "endDate": "2025-01-10",
+          "beneficiaries": 800000,
+          "location": "Nairobi"
+        },
+        {
+          "id": "p10",
+          "name": "Rural Roads Rehabilitation Program",
+          "status": "ongoing",
+          "budget": 250000000,
+          "spent": 125000000,
+          "completion": 50,
+          "startDate": "2023-05-20",
+          "endDate": "2025-12-31",
+          "beneficiaries": 1500000,
+          "location": "Nationwide"
+        }
+      ],
+      "promises": [
+        {
+          "id": "pr10",
+          "description": "Complete all stalled road projects",
+          "category": "Infrastructure",
+          "madeDate": "2022-10-27",
+          "dueDate": "2025-10-27",
+          "status": "in-progress",
+          "evidence": "https://example.com/evidence10"
+        },
+        {
+          "id": "pr11",
+          "description": "Revitalize Kenya Airways",
+          "category": "Transport",
+          "madeDate": "2022-10-27",
+          "dueDate": "2024-12-31",
+          "status": "in-progress",
+          "evidence": "https://example.com/evidence11"
+        },
+        {
+          "id": "pr12",
+          "description": "Modernize railway infrastructure",
+          "category": "Transport",
+          "madeDate": "2023-01-15",
+          "dueDate": "2026-01-15",
+          "status": "in-progress"
+        }
+      ],
+      "attendance": [
+        {
+          "period": "2023 Q1",
+          "present": 48,
+          "absent": 2,
+          "total": 50
+        },
+        {
+          "period": "2023 Q2",
+          "present": 47,
+          "absent": 3,
+          "total": 50
+        },
+        {
+          "period": "2023 Q3",
+          "present": 49,
+          "absent": 1,
+          "total": 50
+        },
+        {
+          "period": "2023 Q4",
+          "present": 48,
+          "absent": 2,
+          "total": 50
+        },
+        {
+          "period": "2024 Q1",
+          "present": 47,
+          "absent": 3,
+          "total": 50
+        },
+        {
+          "period": "2024 Q2",
+          "present": 48,
+          "absent": 2,
+          "total": 50
+        }
+      ],
+      "scandals": [],
+      "wealth": [
+        {
+          "year": 2022,
+          "amount": 300000000,
+          "growthPercent": 0,
+          "assets": ["Properties in Nairobi", "Law Firm"],
+          "liabilities": ["Mortgage"]
+        },
+        {
+          "year": 2023,
+          "amount": 320000000,
+          "growthPercent": 6.67,
+          "assets": ["Properties in Nairobi", "Law Firm", "Shares"],
+          "liabilities": ["Mortgage"]
+        },
+        {
+          "year": 2024,
+          "amount": 345000000,
+          "growthPercent": 7.81,
+          "assets": ["Properties in Nairobi", "Law Firm", "Shares", "Land in Eldoret"],
+          "liabilities": ["Mortgage", "Car Loan"]
+        }
+      ],
+      "keyAchievements": [
+        "Completed Nairobi Expressway",
+        "Initiated reforms in transport sector",
+        "Improved road maintenance across the country",
+        "Launched Rural Roads Rehabilitation Program",
+        "Restructured Kenya Airways operations"
+      ]
+    },
+    {
+      "id": "musalia-mudavadi",
+      "name": "Musalia Mudavadi",
+      "position": "Prime Cabinet Secretary",
+      "ministry": "Foreign and Diaspora Affairs",
+      "party": "ANC",
+      "county": "Kakamega",
+      "imageUrl": "/images/leaders/musalia-mudavadi.jpg",
+      "appointedDate": "2022-10-27",
+      "approvalRating": 3.5,
+      "contact": {
+        "email": "pcs@cabinetoffice.go.ke",
+        "office": "Harambee House, Nairobi",
+        "socialMedia": {
+          "twitter": "@MusaliaMudavadi"
+        }
+      },
+      "education": [
+        "Master of Business Administration, University of Nairobi",
+        "Bachelor of Arts in Land Economics, University of Nairobi"
+      ],
+      "projects": [
+        {
+          "id": "p11",
+          "name": "Government Coordination Framework",
+          "status": "ongoing",
+          "budget": 120000000,
+          "spent": 84000000,
+          "completion": 70,
+          "startDate": "2023-01-10",
+          "endDate": "2024-12-31",
+          "beneficiaries": 47000000,
+          "location": "Nationwide"
+        },
+        {
+          "id": "p12",
+          "name": "Diaspora Investment Program",
+          "status": "ongoing",
+          "budget": 150000000,
+          "spent": 60000000,
+          "completion": 40,
+          "startDate": "2023-04-15",
+          "endDate": "2025-04-15",
+          "beneficiaries": 3000000,
+          "location": "International"
+        }
+      ],
+      "promises": [
+        {
+          "id": "pr13",
+          "description": "Enhance government coordination",
+          "category": "Governance",
+          "madeDate": "2022-10-27",
+          "dueDate": "2024-10-27",
+          "status": "in-progress",
+          "evidence": "https://example.com/evidence13"
+        },
+        {
+          "id": "pr14",
+          "description": "Strengthen Kenya's diplomatic relations",
+          "category": "Foreign Affairs",
+          "madeDate": "2022-10-27",
+          "dueDate": "2025-10-27",
+          "status": "in-progress"
+        },
+        {
+          "id": "pr15",
+          "description": "Boost diaspora investments in Kenya",
+          "category": "Economy",
+          "madeDate": "2023-01-15",
+          "dueDate": "2025-01-15",
+          "status": "in-progress"
+        }
+      ],
+      "attendance": [
+        {
+          "period": "2023 Q1",
+          "present": 46,
+          "absent": 4,
+          "total": 50
+        },
+        {
+          "period": "2023 Q2",
+          "present": 47,
+          "absent": 3,
+          "total": 50
+        },
+        {
+          "period": "2023 Q3",
+          "present": 48,
+          "absent": 2,
+          "total": 50
+        },
+        {
+          "period": "2023 Q4",
+          "present": 49,
+          "absent": 1,
+          "total": 50
+        },
+        {
+          "period": "2024 Q1",
+          "present": 47,
+          "absent": 3,
+          "total": 50
+        },
+        {
+          "period": "2024 Q2",
+          "present": 48,
+          "absent": 2,
+          "total": 50
+        }
+      ],
+      "scandals": [
+        {
+          "id": "s6",
+          "title": "Goldenberg Connection",
+          "date": "1990s",
+          "description": "Alleged connection to the Goldenberg scandal during his tenure as Finance Minister",
+          "status": "historical",
+          "impact": 1000000000,
+          "sources": ["https://example.com/source6"]
+        }
+      ],
+      "wealth": [
+        {
+          "year": 2022,
+          "amount": 4000000000,
+          "growthPercent": 0,
+          "assets": ["Properties in Nairobi and Kakamega", "Investment Companies", "Land"],
+          "liabilities": ["Bank Loans"]
+        },
+        {
+          "year": 2023,
+          "amount": 4200000000,
+          "growthPercent": 5.0,
+          "assets": ["Properties in Nairobi and Kakamega", "Investment Companies", "Land", "Shares"],
+          "liabilities": ["Bank Loans"]
+        },
+        {
+          "year": 2024,
+          "amount": 4300000000,
+          "growthPercent": 2.38,
+          "assets": ["Properties in Nairobi and Kakamega", "Investment Companies", "Land", "Shares", "Foreign Investments"],
+          "liabilities": ["Bank Loans", "Mortgage"]
+        }
+      ],
+      "keyAchievements": [
+        "Established Government Coordination Framework",
+        "Expanded Kenya's diplomatic relations",
+        "Launched Diaspora Investment Program",
+        "Improved interministerial coordination",
+        "Enhanced Kenya's regional standing"
+      ]
+    },
+    {
+      "id": "johnson-sakaja",
+      "name": "Johnson Sakaja",
+      "position": "Governor",
+      "county": "Nairobi",
+      "party": "UDA",
+      "imageUrl": "/images/leaders/johnson-sakaja.jpg",
+      "electedDate": "2022-08-09",
+      "approvalRating": 3.3,
+      "totalVotes": 699392,
+      "contact": {
+        "email": "governor@nairobi.go.ke",
+        "office": "City Hall, Nairobi",
+        "socialMedia": {
+          "twitter": "@SakajaJohnson"
+        }
+      },
+      "education": [
+        "Bachelor of Science in Actuarial Science, University of Nairobi"
+      ],
+      "projects": [
+        {
+          "id": "p13",
+          "name": "Nairobi Rivers Restoration",
+          "status": "ongoing",
+          "budget": 200000000,
+          "spent": 120000000,
+          "completion": 60,
+          "startDate": "2022-11-01",
+          "endDate": "2024-12-31",
+          "beneficiaries": 4500000,
+          "location": "Nairobi"
+        },
+        {
+          "id": "p14",
+          "name": "Dandora Dumpsite Relocation",
+          "status": "ongoing",
+          "budget": 150000000,
+          "spent": 60000000,
+          "completion": 40,
+          "startDate": "2023-02-15",
+          "endDate": "2025-02-15",
+          "beneficiaries": 1000000,
+          "location": "Nairobi"
+        },
+        {
+          "id": "p15",
+          "name": "Nairobi Smart City Initiative",
+          "status": "ongoing",
+          "budget": 180000000,
+          "spent": 54000000,
+          "completion": 30,
+          "startDate": "2023-06-01",
+          "endDate": "2026-06-01",
+          "beneficiaries": 4500000,
+          "location": "Nairobi"
+        }
+
+
+
+  ]
     }
   ]
 }

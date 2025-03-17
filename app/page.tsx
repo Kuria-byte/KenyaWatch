@@ -30,65 +30,49 @@ import {
   Book,
   Heart,
 } from "lucide-react"
-import LeaderCard from "@/components/leader-card"
+import { LeaderCard } from "@/components/leader-card"
 import { HotTopics } from "@/components/hot-topics/HotTopics"
 import PerformanceLeaderboard from "@/components/performance-leaderboard"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { AnimatePresence } from "framer-motion"
 import { ThemeToggle } from "@/components/theme-toggle"
-import { BudgetVisualization } from "@/components/budget-visualization"
 import { ScandalTracker } from "@/components/scandal-tracker"
-import { AnimatedGreeting } from "@/components/animated-greeting"
-import { ErrorBoundary } from "@/components/error-boundary"
-import BudgetTreemap from "@/components/budget-treemap"
-import DebtGrowthChart from "@/components/debt-growth-chart"
-import CountyPerformanceChart from "@/components/county-performance-chart"
 import { PriceImpactTracker } from "@/components/price-impact-tracker"
 import { ExpandableStat } from "@/components/expanadable-stats"
 import { WelcomeSection } from "@/components/welcome-section"
 import DataVisualizationPanel from "@/components/data-visualization/DataVisualizationPanel"
+import { fetchLeadersData } from "@/utils/leaders-utils"
+import { Leader } from "@/types/leaders"
+import { Skeleton } from "@/components/ui/skeleton"
 
-// Real Kenyan political figures data
-const leaders = [
-  {
-    name: "Johnson Sakaja",
-    position: "Governor, Nairobi County",
-    metrics: {
-      projectsExecuted: 15,
-      projectsPromised: 35,
-      fundsAllocated: "KES 38.8B",
-      fundsUtilized: "KES 28.2B",
-      attendance: "78%",
-    },
-    approvalRating: {
-      performance: 3.2,
-      integrity: 3.5,
-      wouldVoteAgain: 3.1,
-    },
-    imageUrl: "/placeholder.svg?height=100&width=100", // Replace with actual image
-  },
-  {
-    name: "Kimani Ichung'wah",
-    position: "MP, Kikuyu Constituency",
-    metrics: {
-      projectsExecuted: 12,
-      projectsPromised: 20,
-      fundsAllocated: "KES 137M",
-      fundsUtilized: "KES 98M",
-      attendance: "92%",
-    },
-    approvalRating: {
-      performance: 4.1,
-      integrity: 3.8,
-      wouldVoteAgain: 3.9,
-    },
-    imageUrl: "/placeholder.svg?height=100&width=100", // Replace with actual image
-  },
-  // Add more leaders...
-]
 
-export default function Dashboard() {
+
+function Dashboard() {
+  const [leaders, setLeaders] = useState<Leader[]>([])
+  const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
+    useEffect(() => {
+      const loadLeaders = async () => {
+        try {
+          setIsLoading(true)
+          const data = await fetchLeadersData()
+          setLeaders(data)
+          setError(null)
+        } catch (err) {
+          console.error("Error loading leaders data:", err)
+          setError("Failed to load leaders data. Please try again later.")
+        } finally {
+          setIsLoading(false)
+        }
+      }
+  
+      loadLeaders()
+    }, [])
+
+  const featuredLeaders = leaders.slice(0, 3)
+  const hasLeaders = featuredLeaders.length > 0
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -507,90 +491,34 @@ export default function Dashboard() {
               <CardDescription>Track performance metrics for elected officials</CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="flex items-center justify-between mb-4">
-                <div className="relative w-full max-w-sm">
-                  <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
-                  <Input placeholder="Search for a leader..." className="pl-8" />
+              {isLoading ? (
+                <div className="space-y-4">
+                  {Array(3).fill(0).map((_, i) => (
+                    <Skeleton key={i} className="h-[200px] w-full" />
+                  ))}
                 </div>
-                <div className="flex gap-2">
-                  <Button variant="outline" size="sm">
-                    <ChevronLeft className="h-4 w-4" />
-                  </Button>
-                  <Button variant="outline" size="sm">
-                    <ChevronRight className="h-4 w-4" />
-                  </Button>
+              ) : error ? (
+                <div className="text-center py-8">
+                  <p className="text-muted-foreground">{error}</p>
                 </div>
-              </div>
-
-              <div className="relative">
-                {/* Add fade indicators for scroll */}
-                <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none md:hidden" />
-                <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none md:hidden" />
-                
-                {/* Container for horizontal scrolling */}
-                <div className="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 overflow-x-auto pb-4 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0 snap-x snap-mandatory">
-                  {/* Update LeaderCard container to support snap scrolling */}
-                  <div className="min-w-[300px] md:min-w-0 snap-center">
-                    <LeaderCard
-                      name="Johnson Sakaja"
-                      position="Governor, Nairobi County"
-                      metrics={{
-                        projectsExecuted: 15,
-                        projectsPromised: 35,
-                        fundsAllocated: "KES 38.8B",
-                        fundsUtilized: "KES 28.2B",
-                        attendance: "78%",
-                      }}
-                      approvalRating={{
-                        performance: 3.2,
-                        integrity: 3.5,
-                        wouldVoteAgain: 3.1,
-                      }}
-                      imageUrl="/placeholder.svg?height=100&width=100"
-                    />
-                  </div>
-
-                  <div className="min-w-[300px] md:min-w-0 snap-center">
-                    <LeaderCard
-                      name="Kimani Ichung'wah"
-                      position="MP, Kikuyu Constituency"
-                      metrics={{
-                        projectsExecuted: 12,
-                        projectsPromised: 20,
-                        fundsAllocated: "KES 137M",
-                        fundsUtilized: "KES 98M",
-                        attendance: "92%",
-                      }}
-                      approvalRating={{
-                        performance: 4.1,
-                        integrity: 3.8,
-                        wouldVoteAgain: 3.9,
-                      }}
-                      imageUrl="/placeholder.svg?height=100&width=100"
-                    />
-                  </div>
-
-                  <div className="min-w-[300px] md:min-w-0 snap-center">
-                    <LeaderCard
-                      name="David Kamau"
-                      position="MCA, Eastern Ward"
-                      metrics={{
-                        projectsExecuted: 5,
-                        projectsPromised: 10,
-                        fundsAllocated: "KES 50M",
-                        fundsUtilized: "KES 25M",
-                        attendance: "78%",
-                      }}
-                      approvalRating={{
-                        performance: 3.1,
-                        integrity: 3.5,
-                        wouldVoteAgain: 3.0,
-                      }}
-                      imageUrl="/placeholder.svg?height=100&width=100"
-                    />
+              ) : hasLeaders ? (
+                <div className="relative">
+                  <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none md:hidden" />
+                  <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none md:hidden" />
+                  
+                  <div className="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 overflow-x-auto pb-4 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0 snap-x snap-mandatory">
+                    {featuredLeaders.map((leader: Leader) => (
+                      <div key={leader.id} className="min-w-[300px] md:min-w-0 snap-center">
+                        <LeaderCard leader={leader} />
+                      </div>
+                    ))}
                   </div>
                 </div>
-              </div>
+              ) : (
+                <div className="text-center py-8">
+                  <p className="text-muted-foreground">No leaders data available.</p>
+                </div>
+              )}
             </CardContent>
           </Card>
         </motion.section>
@@ -669,8 +597,8 @@ export default function Dashboard() {
                   <div className="space-y-2">
                     <div className="flex items-center justify-between text-sm">
                       <span>Healthcare</span>
-                      <span>42%</span>
-                    </div>
+                      <span>42% </span>               
+                          </div>
                     <Progress value={42} className="h-2" />
                     
                     <div className="flex items-center justify-between text-sm">
@@ -759,3 +687,5 @@ export default function Dashboard() {
     </div>
   )
 }
+
+export default Dashboard;

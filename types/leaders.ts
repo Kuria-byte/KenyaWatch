@@ -109,4 +109,8 @@ export interface Leader {
     localInitiatives: number; // Number of local initiatives started
     communityFeedback: number; // Rating based on community feedback (1-10)
   };
+  quickStats?: {
+    scandalCount: number;
+    // ...other quick stats
+  };
 }
