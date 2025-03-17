@@ -130,7 +130,7 @@ export default function Dashboard() {
             <a href="/leaders" className="text-sm font-medium hover:text-primary">
               Leaders
             </a>
-            <a href="#" className="text-sm font-medium hover:text-primary">
+            <a href="projects" className="text-sm font-medium hover:text-primary">
               Projects
             </a>
             <a href="#" className="text-sm font-medium hover:text-primary">
