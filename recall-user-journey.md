@@ -12,7 +12,7 @@
 1. **Authentication Process**
    - National ID/Voter Registration Verification
    - Phone Number Confirmation
-   - Two-Factor Authentication
+   <!-- - Two-Factor Authentication -->
    
 ### Information Gathering Screen
 ```

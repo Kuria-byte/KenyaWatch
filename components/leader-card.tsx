@@ -1,8 +1,12 @@
+import { useState } from "react"
+import { RecallModal } from "./recall-modal"
 import Link from "next/link"
 import Image from "next/image"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { VoteIcon, AlertTriangleIcon } from "lucide-react"
 import { Leader } from "@/types/leaders"
 import { 
   calculateAttendanceRate, 
@@ -18,6 +22,7 @@ interface LeaderCardProps {
 }
 
 export function LeaderCard({ leader, hideMetrics = false }: LeaderCardProps) {
+const [showRecallModal, setShowRecallModal] = useState(false)
   // Safe calculations with error handling
   const attendanceRate = (() => {
     try {
@@ -48,6 +53,7 @@ export function LeaderCard({ leader, hideMetrics = false }: LeaderCardProps) {
   const wealthDisplay = getTotalDeclaredWealth(leader.wealth || [])
 
   return (
+<>
     <Link href={`/leader/${leader.id}`} className="block">
       <Card className="overflow-hidden hover:shadow-lg transition-shadow">
         <div className="p-4">
@@ -132,11 +138,38 @@ export function LeaderCard({ leader, hideMetrics = false }: LeaderCardProps) {
                   suffix="%"
                 />
               </div>
+
+              {/* CTA Buttons */}
+              <div className="mt-4 grid grid-cols-2 gap-3">
+                <Button 
+variant="destructive" 
+size="sm" 
+className="w-full"
+                    onClick={(e) => {
+                      e.preventDefault()
+                      setShowRecallModal(true)
+                    }}
+>
+                  <AlertTriangleIcon className="w-4 h-4 mr-2" />
+                  Recall
+                </Button>
+                <Button variant="secondary" size="sm" className="w-full">
+                  <VoteIcon className="w-4 h-4 mr-2" />
+                  Vote Again
+                </Button>
+              </div>
             </>
           )}
         </div>
       </Card>
     </Link>
+
+      <RecallModal 
+        leader={leader}
+        open={showRecallModal}
+        onClose={() => setShowRecallModal(false)}
+      />
+    </>
   )
 }
 
@@ -165,4 +198,3 @@ function MetricBar({
     </div>
   )
 }
-
